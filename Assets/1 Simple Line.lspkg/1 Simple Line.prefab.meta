@@ -1,0 +1,101 @@
+- !<AssetImportMetadata/13ad9c72-d205-4ffa-46a9-741f573cfbcf>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 842c616c-f151-47f6-a0ae-370ccda67aae
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 842c616c-f151-47f6-a0ae-370ccda67aae
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 2f58ddfc-344e-435e-9071-731c1a51e0fb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/2b173fab-18c1-4e51-4791-2c24b6b0ffbe>
+  PrefabRemaps:
+    []
+  Name: WireTool
+  Enabled: true
+  ScriptAsset: !<reference> f1216dda-7520-4144-8ef2-888a80b0982b
+  ScriptInputsDefault:
+    enableDebugging: true
+    renderLineStrip: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      enableDebugging: false
+      renderLineStrip: false
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/2f58ddfc-344e-435e-9071-731c1a51e0fb>
+  Prototype: !<ObjectOwner/b00bf79f-05aa-4816-8afa-32085b1bee70>
+    PackagePath: ""
+    objects:
+      - !<own> 48d22cf7-2fe4-428a-6608-39ca2c70090c
+- !<SceneObject/4496c314-0b9e-482f-764a-db7c7dd64508>
+  PrefabRemaps:
+    []
+  Name: WireTool
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2b173fab-18c1-4e51-4791-2c24b6b0ffbe
+- !<SceneObject/48d22cf7-2fe4-428a-6608-39ca2c70090c>
+  PrefabRemaps:
+    []
+  Name: 1 Simple Line
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4496c314-0b9e-482f-764a-db7c7dd64508
+    - !<own> 71a447fb-f041-4b28-5c4c-7366f117c1ac
+  Components:
+    []
+- !<SceneObject/71a447fb-f041-4b28-5c4c-7366f117c1ac>
+  PrefabRemaps:
+    []
+  Name: Simple Line
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8192189a-57f2-472c-7f5c-f531a6520731
+- !<ScriptComponent/8192189a-57f2-472c-7f5c-f531a6520731>
+  PrefabRemaps:
+    []
+  Name: Simple Line
+  Enabled: true
+  ScriptAsset: !<reference> c17f54ee-2c7c-4744-ac0c-3c5ef8fae2ee
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      lineMaterial: !<reference.Material> e6373480-8190-4eb5-8d85-453be1287c6f
+  ScriptTypes:
+    "":
+      {}

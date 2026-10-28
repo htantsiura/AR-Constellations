@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/0848ba60-80ec-4984-94b5-110e0ceb6729>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 65196938-d180-4472-b0c4-8619e8a4175f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 65196938-d180-4472-b0c4-8619e8a4175f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bd9df3c0-23f4-4c14-aa6e-1cd6937058b8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bd9df3c0-23f4-4c14-aa6e-1cd6937058b8>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 64d243be-ba52-4f05-99f8-58a2c4caa905
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    c_LabelPrefab: false
+    lineMaterial: false
+    s_LabelPrefab: false
+    universe: false
+    wireToolComponent: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - universe: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      c_LabelPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      s_LabelPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      lineMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      wireToolComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject universe
+    - // @input Asset.ObjectPrefab c_LabelPrefab
+    - // @input Asset.ObjectPrefab s_LabelPrefab
+    - // @input Asset.Material lineMaterial
+    - // @input Component.ScriptComponent wireToolComponent
