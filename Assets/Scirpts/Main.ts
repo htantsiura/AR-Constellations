@@ -8,25 +8,23 @@ import { createConstellation, createLine } from "./Creators";
 @component
 export class MapCreator extends BaseScriptComponent {
 
-    @input universe!: SceneObject
+    @input 
+    universe!: SceneObject
 
-    @input c_LabelPrefab!: ObjectPrefab
+    @input 
+    c_LabelPrefab!: ObjectPrefab
 
-    @input s_LabelPrefab!: ObjectPrefab
+    @input 
+    s_LabelPrefab!: ObjectPrefab
 
-    @input lineMaterial!: Material
+    @input 
+    lineMaterial!: Material
 
-    @input wireToolComponent!: ScriptComponent;
+    @input 
+    wireToolComponent!: ScriptComponent;
 
     onAwake() {
         if(!this.c_LabelPrefab || !this.universe) return;
-
-        mappingConstellationDistances(
-            ConstellationData,
-            StarsData,
-            linearDisCatalog,
-            logarithDisCatalog
-        )
 
         ConstellationData.forEach((item) => {
             createConstellation(item, this.universe, this.c_LabelPrefab, IS_LOGARITH)
@@ -54,7 +52,5 @@ export class MapCreator extends BaseScriptComponent {
 
         //creating a line
         createLine(this.universe, 'Orion', this.lineMaterial, this.wireToolComponent)
-
-
     }
 }

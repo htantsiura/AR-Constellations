@@ -1,25 +1,68 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 779
+    size: 822
     values:
+      - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.mat
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph
-      - Materials
       - Materials/PBR.mat
+      - Materials/color.ss_graph
       - Materials/icon 2.ss_graph
       - Materials/icon_constell.mat
       - Materials/icon_star.mat
       - Materials/object_icon.ss_graph
       - Materials/pbr.ss_graph
+      - Materials/sun.mat
       - PBR 2.mat
       - PBR.mat
+      - Primitive Pack.lspkg
+      - Primitive Pack.lspkg/Materials
+      - Primitive Pack.lspkg/Materials/primitive_sample_material.mat
+      - Primitive Pack.lspkg/Meshes
+      - Primitive Pack.lspkg/Meshes/Capsule.mesh
+      - Primitive Pack.lspkg/Meshes/Cone.mesh
+      - Primitive Pack.lspkg/Meshes/Cube.mesh
+      - Primitive Pack.lspkg/Meshes/Cylinder.mesh
+      - Primitive Pack.lspkg/Meshes/Disc.mesh
+      - Primitive Pack.lspkg/Meshes/Head.mesh
+      - Primitive Pack.lspkg/Meshes/Joint.mesh
+      - Primitive Pack.lspkg/Meshes/LeftFoot.mesh
+      - Primitive Pack.lspkg/Meshes/LeftHand.mesh
+      - Primitive Pack.lspkg/Meshes/LeftJoint.mesh
+      - Primitive Pack.lspkg/Meshes/LeftJoint_2.mesh
+      - Primitive Pack.lspkg/Meshes/LeftJoint_3.mesh
+      - Primitive Pack.lspkg/Meshes/LeftLower_Arm.mesh
+      - Primitive Pack.lspkg/Meshes/LeftShin.mesh
+      - Primitive Pack.lspkg/Meshes/LeftThigh.mesh
+      - Primitive Pack.lspkg/Meshes/LeftUpper_Arm.mesh
+      - Primitive Pack.lspkg/Meshes/Pelvis.mesh
+      - Primitive Pack.lspkg/Meshes/Plane.mesh
+      - Primitive Pack.lspkg/Meshes/Platonic.mesh
+      - Primitive Pack.lspkg/Meshes/Pyramid.mesh
+      - Primitive Pack.lspkg/Meshes/Right_Hand.mesh
+      - Primitive Pack.lspkg/Meshes/Right_Lower_Arm.mesh
+      - Primitive Pack.lspkg/Meshes/Right_Shin.mesh
+      - Primitive Pack.lspkg/Meshes/Right_Thigh.mesh
+      - Primitive Pack.lspkg/Meshes/Right_Upper_Arm.mesh
+      - Primitive Pack.lspkg/Meshes/Sphere.mesh
+      - Primitive Pack.lspkg/Meshes/Torus.mesh
+      - Primitive Pack.lspkg/Meshes/Tube.mesh
+      - Primitive Pack.lspkg/Meshes/Upper_Body.mesh
+      - Primitive Pack.lspkg/PrimitivePack__PLACE_IN_SCENE.prefab
+      - Primitive Pack.lspkg/Shaders
+      - Primitive Pack.lspkg/Shaders/primitive_sample_material.ss_graph
+      - Primitive Pack.lspkg/package.native
+      - Scirpts
+      - Scirpts/Config.ts
+      - Scirpts/Creators.ts
+      - Scirpts/Data
       - Scirpts/Data/ConstellationData.ts
       - Scirpts/Data/LinesData_SnT.ts
       - Scirpts/Data/StarsData.ts
-      - Scirpts/MapCreator.ts
+      - Scirpts/Main.ts
       - Scirpts/Utils.ts
       - Scirpts/WireTool.js
       - SpectaclesInteractionKit.lspkg
