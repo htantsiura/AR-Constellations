@@ -1,28 +1,27 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 780
+    size: 779
     values:
-      - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
-      - 1 Simple Line.lspkg/WireTool
-      - 1 Simple Line.lspkg/WireTool/1 Simple Line
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.mat
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph
-      - 1 Simple Line.lspkg/WireTool/WireTool.js
+      - Materials
       - Materials/PBR.mat
       - Materials/icon 2.ss_graph
       - Materials/icon_constell.mat
       - Materials/icon_star.mat
       - Materials/object_icon.ss_graph
       - Materials/pbr.ss_graph
+      - PBR 2.mat
       - PBR.mat
-      - Scirpts
       - Scirpts/Data/ConstellationData.ts
+      - Scirpts/Data/LinesData_SnT.ts
       - Scirpts/Data/StarsData.ts
       - Scirpts/MapCreator.ts
       - Scirpts/Utils.ts
+      - Scirpts/WireTool.js
       - SpectaclesInteractionKit.lspkg
       - SpectaclesInteractionKit.lspkg/Assets
       - SpectaclesInteractionKit.lspkg/Assets/Audio

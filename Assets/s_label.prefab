@@ -1,20 +1,25 @@
-- !<ObjectPrefab/f986807e-6a09-4694-a313-d1b92d4658c1>
+- !<ObjectPrefab/9902bf3f-6652-404d-924a-dc94a01c495e>
   PackagePath: ""
   objects:
-    - !<own> 64230eb9-7ab4-4def-b729-5d0e2e8b70c7
+    - !<own> faff3e80-0355-4034-aac0-4f5ca820f6fb
   LazyLoading: false
   RetainAssets: true
-- !<LookAtComponent/0f8df4a8-27d9-416b-ad72-b41dad6cbd91>
+- !<SceneObject/3681afec-ddab-4721-930b-cc3715b9ac4c>
   PrefabRemaps:
     []
-  Name: Look At
+  Name: Text
   Enabled: true
-  LookAtMode: LookAtPoint
-  AimVectors: ZAimYUp
-  WorldUpVector: SceneY
-  Target: !<reference> 00000000-0000-0065-0000-000000000064
-  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-- !<Text/238cf608-9a7a-477f-86a6-983b099639fe>
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8eaba6ed-6213-40ec-8fdd-2879e793f5a0
+- !<Text/8eaba6ed-6213-40ec-8fdd-2879e793f5a0>
   PrefabRemaps:
     []
   Name: Text
@@ -95,7 +100,17 @@
     CapitalizationOverride: AllUpper
   DepthTest: false
   TwoSided: false
-- !<RenderMeshVisual/604f9593-abf3-4278-8541-591212fc5926>
+- !<LookAtComponent/9930e01c-09c6-4ac6-8b5b-3ea7491ef4cd>
+  PrefabRemaps:
+    []
+  Name: Look At
+  Enabled: true
+  LookAtMode: LookAtPoint
+  AimVectors: ZAimYUp
+  WorldUpVector: SceneY
+  Target: !<reference> 00000000-0000-0065-0000-000000000064
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+- !<RenderMeshVisual/b8877f68-f44a-4749-93af-52b8b02f5c90>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -115,43 +130,7 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/64230eb9-7ab4-4def-b729-5d0e2e8b70c7>
-  PrefabRemaps:
-    - 0f8df4a8-27d9-416b-ad72-b41dad6cbd91: 0f8df4a8-27d9-416b-528d-4be25293426e
-    - 238cf608-9a7a-477f-86a6-983b099639fe: 238cf608-9a7a-477f-7959-67c4f669c601
-    - 604f9593-abf3-4278-8541-591212fc5926: 604f9593-abf3-4278-7abe-a6eded03a6d9
-    - 64230eb9-7ab4-4def-b729-5d0e2e8b70c7: 64230eb9-7ab4-4def-48d6-a2f1d1748f38
-    - 74d17bd0-0300-40fd-9332-ad161cba29e5: 74d17bd0-0300-40fd-6ccd-52e9e345d61a
-    - f183babf-ba16-40d6-ba42-af4bccd8f52d: f183babf-ba16-40d6-45bd-50b433270ad2
-  Name: s_label
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: -80.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> f183babf-ba16-40d6-ba42-af4bccd8f52d
-    - !<own> 74d17bd0-0300-40fd-9332-ad161cba29e5
-  Components:
-    - !<own> 0f8df4a8-27d9-416b-ad72-b41dad6cbd91
-- !<SceneObject/74d17bd0-0300-40fd-9332-ad161cba29e5>
-  PrefabRemaps:
-    []
-  Name: Text
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 238cf608-9a7a-477f-86a6-983b099639fe
-- !<SceneObject/f183babf-ba16-40d6-ba42-af4bccd8f52d>
+- !<SceneObject/eeacc7c0-d016-4dce-a98f-f502c69746c4>
   PrefabRemaps:
     []
   Name: icon
@@ -165,4 +144,25 @@
   Children:
     []
   Components:
-    - !<own> 604f9593-abf3-4278-8541-591212fc5926
+    - !<own> b8877f68-f44a-4749-93af-52b8b02f5c90
+- !<SceneObject/faff3e80-0355-4034-aac0-4f5ca820f6fb>
+  PrefabRemaps:
+    - 3681afec-ddab-4721-930b-cc3715b9ac4c: 3681afec-ddab-4721-6cf4-33c8ea4653b3
+    - 8eaba6ed-6213-40ec-8fdd-2879e793f5a0: 8eaba6ed-6213-40ec-7022-d786186c0a5f
+    - 9930e01c-09c6-4ac6-8b5b-3ea7491ef4cd: 9930e01c-09c6-4ac6-74a4-c158b6e10b32
+    - b8877f68-f44a-4749-93af-52b8b02f5c90: b8877f68-f44a-4749-6c50-ad474fd0a36f
+    - eeacc7c0-d016-4dce-a98f-f502c69746c4: eeacc7c0-d016-4dce-5670-0afd3968b93b
+    - faff3e80-0355-4034-aac0-4f5ca820f6fb: faff3e80-0355-4034-553f-b0a357df0904
+  Name: s_label
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> eeacc7c0-d016-4dce-a98f-f502c69746c4
+    - !<own> 3681afec-ddab-4721-930b-cc3715b9ac4c
+  Components:
+    - !<own> 9930e01c-09c6-4ac6-8b5b-3ea7491ef4cd

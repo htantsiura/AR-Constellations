@@ -4,9 +4,18 @@
     - !<own> 9086b158-cac0-4fcb-982b-f3bf5bac5fe6
 - !<PassInfo/9086b158-cac0-4fcb-982b-f3bf5bac5fe6>
   CachedProperties:
+    - Port_AO_N000:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    - Port_Albedo_N000:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
     - Port_Depth_N004:
         typeIdx: 1
         value: 1.000000
+    - Port_Emissive_N000:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
     - Port_FinalColor1_N004:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -25,9 +34,18 @@
     - Port_GSplatScale_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Input0_N002:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Metallic_N000:
+        typeIdx: 1
+        value: 0.000000
     - Port_Normal_N000:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Opacity_N000:
+        typeIdx: 1
+        value: 1.000000
     - Port_PrevWorldPosition_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -37,9 +55,12 @@
     - Port_RayOrigin_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    - Port_Value_N001:
-        typeIdx: 5
-        value: {x: 0.494118, y: 0.000000, z: 1.000000, w: 1.000000}
+    - Port_Roughness_N000:
+        typeIdx: 1
+        value: 0.000000
+    - Port_SpecularAO_N000:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
     - Port_WorldNormal_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -63,27 +84,12 @@
     []
   BlendMode: Disabled
   Properties:
-    Port_AO_N000:
-      typeIdx: 4
-      value: {x: 1.000000, y: 1.000000, z: 1.000000}
-    Port_Albedo_N000:
-      typeIdx: 4
-      value: {x: 1.000000, y: 1.000000, z: 1.000000}
-    Port_Emissive_N000:
-      typeIdx: 4
-      value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Port_Metallic_N000:
-      typeIdx: 1
-      value: 0.000000
-    Port_Opacity_N000:
-      typeIdx: 1
-      value: 1.000000
-    Port_Roughness_N000:
-      typeIdx: 1
-      value: 0.000000
-    Port_SpecularAO_N000:
-      typeIdx: 4
-      value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    Port_Input1_N002:
+      typeIdx: 5
+      value: {x: 0.484871, y: 0.489632, z: 0.489632, w: 1.000000}
+    Port_Value_N001:
+      typeIdx: 5
+      value: {x: 0.494118, y: 0.000000, z: 1.000000, w: 1.000000}
     PreviewEnabled:
       typeIdx: 0
       value: 0
