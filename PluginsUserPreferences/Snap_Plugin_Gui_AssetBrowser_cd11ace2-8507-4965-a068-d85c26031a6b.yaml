@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 817
+    size: 816
     values:
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
@@ -18,6 +18,7 @@ CollapsedEntities:
       - Materials/pbr.ss_graph
       - Materials/sun.mat
       - PBR 2.mat
+      - PBR 3.mat
       - PBR.mat
       - Pyramid.mesh
       - Scirpts/Config.ts
@@ -26,9 +27,11 @@ CollapsedEntities:
       - Scirpts/Data/ConstellationData.ts
       - Scirpts/Data/LinesData_SnT.ts
       - Scirpts/Data/StarsData.ts
-      - Scirpts/Main.ts
+      - Scirpts/Manager.ts
       - Scirpts/Utils.ts
       - Scirpts/WireTool.js
+      - Scirpts/WorldCreator.ts
+      - Scirpts/buttonSize.ts
       - Scirpts/scripts_holder.ts
       - SpectaclesInteractionKit.lspkg
       - SpectaclesInteractionKit.lspkg/Assets
@@ -639,7 +642,6 @@ CollapsedEntities:
       - SpectaclesInteractionKitExamples.lspkg/Examples/UIStarter/Textures/image_unlit.ss_graph
       - SpectaclesInteractionKitExamples.lspkg/package.native
       - SpectaclesInteractionKitExamples.lspkg/package_dependencies.json
-      - SpectaclesUIKit.lspkg
       - SpectaclesUIKit.lspkg/Audio
       - SpectaclesUIKit.lspkg/Audio/HoverAudioTrack.wav
       - SpectaclesUIKit.lspkg/Audio/SliderProgressionAudioTrack.wav
@@ -677,10 +679,7 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Prefabs/LabelledButton.prefab
       - SpectaclesUIKit.lspkg/Prefabs/LabelledToggle.prefab
       - SpectaclesUIKit.lspkg/README.md
-      - SpectaclesUIKit.lspkg/Scripts
       - SpectaclesUIKit.lspkg/Scripts/BackPlate.ts
-      - SpectaclesUIKit.lspkg/Scripts/Components
-      - SpectaclesUIKit.lspkg/Scripts/Components/Button
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/BaseButton.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/CapsuleButton.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/Checkbox.ts

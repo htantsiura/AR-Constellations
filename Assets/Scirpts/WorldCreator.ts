@@ -7,10 +7,10 @@ import { createConstellation, createStar, createLine } from "./Creators";
 import { LinesData } from "./Data/LinesData_SnT";
 
 @component
-export class MapCreator extends BaseScriptComponent {
+export class WorldCreator extends BaseScriptComponent {
 
     @input 
-    universe!: SceneObject
+    world!: SceneObject
 
     @input 
     c_LabelPrefab!: ObjectPrefab
@@ -25,12 +25,12 @@ export class MapCreator extends BaseScriptComponent {
     wireToolComponent!: ScriptComponent;
 
     onAwake() {
-        if(!this.c_LabelPrefab || !this.universe) return;
+        if(!this.c_LabelPrefab || !this.world) return;
 
         ConstellationData.forEach((item) => {
             createConstellation(
                 item, 
-                this.universe, 
+                this.world, 
                 this.c_LabelPrefab, 
                 IS_LOGARITH
             )
@@ -39,7 +39,7 @@ export class MapCreator extends BaseScriptComponent {
         StarsData.forEach((item) => {
             createStar(
                 item, 
-                this.universe, 
+                this.world, 
                 this.s_LabelPrefab, 
                 IS_LOGARITH, 
                 S_SCALE, 
@@ -48,13 +48,13 @@ export class MapCreator extends BaseScriptComponent {
             )
         })
 
-
-
-        //creating a line
         LinesData.forEach((item) => {
-            createLine(item, this.universe, this.lineMaterial, this.wireToolComponent)
-
+            createLine(
+                item, 
+                this.world, 
+                this.lineMaterial, 
+                this.wireToolComponent
+            )
         })
-        
     }
 }

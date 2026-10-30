@@ -109,3 +109,14 @@ export function mappingHipPosition(
 ) {
     hipPositionCatalog.set(item.hip, localPos);
 }
+
+export function remap(
+    value: number, 
+    inMin: number, 
+    inMax: number, 
+    outMin: number, 
+    outMax: number
+): number | 0 {
+    if (inMin === inMax) return outMin; 
+    return outMin + (value - inMin) * (outMax - outMin) / (inMax - inMin)
+}

@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/5d29c251-089e-4e18-9a84-50429216b0cf>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b41a5f8d-5fc1-4fd8-b67a-cfdd3e1e8f19
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b41a5f8d-5fc1-4fd8-b67a-cfdd3e1e8f19
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e5232131-1b2b-4e38-9488-d4dc8dad82d7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e5232131-1b2b-4e38-9488-d4dc8dad82d7>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00d11b56-ddcb-4a8f-9659-d4d74fecb26a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    button: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - button: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType button

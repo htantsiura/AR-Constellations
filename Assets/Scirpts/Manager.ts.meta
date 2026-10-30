@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/96073f76-6ebd-46fb-87b3-a1ba3ebc930b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a77a4ff1-310d-42a7-82cd-cd7b439cab0e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a77a4ff1-310d-42a7-82cd-cd7b439cab0e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 209614c7-1256-43ad-84c7-3c57ed402196
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/209614c7-1256-43ad-84c7-3c57ed402196>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 77d8ceab-0dd0-47ba-aae6-8fd4e2513c4a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cube: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cube: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject cube

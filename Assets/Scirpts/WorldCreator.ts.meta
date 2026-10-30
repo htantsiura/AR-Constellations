@@ -29,8 +29,8 @@
     c_LabelPrefab: false
     lineMaterial: false
     s_LabelPrefab: false
-    universe: false
     wireToolComponent: false
+    world: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -40,7 +40,7 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - universe: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       c_LabelPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       s_LabelPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       lineMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
@@ -49,7 +49,7 @@
     -
       {}
   InputLines:
-    - // @input SceneObject universe
+    - // @input SceneObject world
     - // @input Asset.ObjectPrefab c_LabelPrefab
     - // @input Asset.ObjectPrefab s_LabelPrefab
     - // @input Asset.Material lineMaterial
