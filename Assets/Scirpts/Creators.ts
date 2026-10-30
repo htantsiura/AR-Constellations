@@ -1,5 +1,6 @@
 import { linearDisCatalog, logarithDisCatalog, SCALE, C_SCALE, S_SCALE, hipPositionCatalog } from "./Config";
-import { getChildByName, raDecToVec3, raDecToVec3Cons } from "./Utils";
+import { getChildByName, raDecToVec3, raDecToVec3Cons, remap } from "./Utils";
+import { CapsuleButton } from "SpectaclesUIKit.lspkg/Scripts/Components/Button/CapsuleButton";
 
 export function createConstellation(
     item: any, 
@@ -24,6 +25,10 @@ export function createConstellation(
     let c_Instance = c_prefab.instantiate(parent);
     c_Instance.getChild(0).getComponent('RenderMeshVisual').mainMaterial.mainPass.switcher = 0;
     c_Instance.getChild(1).getComponent('Text').text = item.name;
+    const x = remap(item.name.length, 5, 19, 5, 14.5 )
+    const buttonComp = c_Instance.getChild(2).getComponent('Component.ScriptComponent') as CapsuleButton
+    buttonComp.size = new vec3(x, 1.7, 1) 
+
 
     c_Instance.setParent(cGroup);
     c_Instance.getTransform().setWorldScale(new vec3(C_SCALE, C_SCALE, C_SCALE))
