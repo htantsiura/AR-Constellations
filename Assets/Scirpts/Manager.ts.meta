@@ -26,7 +26,8 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    cube: false
+    consName: false
+    frame: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -36,9 +37,11 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - cube: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - frame: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      consName: ""
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input SceneObject cube
+    - // @input SceneObject frame
+    - // @input string consName

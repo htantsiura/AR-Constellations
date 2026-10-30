@@ -120,3 +120,56 @@ export function remap(
     if (inMin === inMax) return outMin; 
     return outMin + (value - inMin) * (outMax - outMin) / (inMax - inMin)
 }
+
+export function formatRA(decimalHours: number) {
+  if (decimalHours == null || isNaN(decimalHours)) return "—";
+
+  let total = (decimalHours % 24 + 24) % 24;
+
+  let hours = Math.floor(total);
+  const totalMinutes = (total - hours) * 60;
+  let minutes = Math.floor(totalMinutes);
+  let seconds = Math.round((totalMinutes - minutes) * 60);
+
+  if (seconds === 60) {
+    seconds = 0;
+    minutes += 1;
+  }
+  if (minutes === 60) {
+    minutes = 0;
+    hours = (hours + 1) % 24;
+  }
+
+  const h = String(hours).padStart(2, "0");
+  const m = String(minutes).padStart(2, "0");
+  const s = String(seconds).padStart(2, "0");
+
+  return `${h}h ${m}m ${s}s`;
+}
+
+export function formatDec(decimalDegrees: number) {
+  if (decimalDegrees == null || isNaN(decimalDegrees)) return "—";
+
+  const sign = decimalDegrees >= 0 ? "+" : "-";
+  let absVal = Math.abs(decimalDegrees);
+
+  let degrees = Math.floor(absVal);
+  const totalMinutes = (absVal - degrees) * 60;
+  let minutes = Math.floor(totalMinutes);
+  let seconds = Math.round((totalMinutes - minutes) * 60);
+
+  if (seconds === 60) {
+    seconds = 0;
+    minutes += 1;
+  }
+  if (minutes === 60) {
+    minutes = 0;
+    degrees += 1;
+  }
+
+  const d = String(degrees).padStart(2, "0");
+  const m = String(minutes).padStart(2, "0");
+  const s = String(seconds).padStart(2, "0");
+
+  return `${sign}${d}° ${m}′ ${s}″`;
+}

@@ -1,14 +1,13 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 816
+    size: 819
     values:
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.mat
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph
-      - Materials
       - Materials/PBR.mat
       - Materials/color.ss_graph
       - Materials/icon 2.ss_graph
@@ -21,6 +20,8 @@ CollapsedEntities:
       - PBR 3.mat
       - PBR.mat
       - Pyramid.mesh
+      - Scirpts/Cards
+      - Scirpts/Cards/FrameController.ts
       - Scirpts/Config.ts
       - Scirpts/Creators.ts
       - Scirpts/Data
@@ -647,7 +648,6 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Audio/SliderProgressionAudioTrack.wav
       - SpectaclesUIKit.lspkg/Audio/TriggerEndAudioTrack.wav
       - SpectaclesUIKit.lspkg/Audio/TriggerStartAudioTrack.wav
-      - SpectaclesUIKit.lspkg/Materials
       - SpectaclesUIKit.lspkg/Materials/ConfirmationSlider.mat
       - SpectaclesUIKit.lspkg/Materials/ConfirmationSlider.ss_graph
       - SpectaclesUIKit.lspkg/Materials/DefaultCapsule.mat
@@ -679,7 +679,10 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Prefabs/LabelledButton.prefab
       - SpectaclesUIKit.lspkg/Prefabs/LabelledToggle.prefab
       - SpectaclesUIKit.lspkg/README.md
+      - SpectaclesUIKit.lspkg/Scripts
       - SpectaclesUIKit.lspkg/Scripts/BackPlate.ts
+      - SpectaclesUIKit.lspkg/Scripts/Components
+      - SpectaclesUIKit.lspkg/Scripts/Components/Button
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/BaseButton.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/CapsuleButton.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/Checkbox.ts

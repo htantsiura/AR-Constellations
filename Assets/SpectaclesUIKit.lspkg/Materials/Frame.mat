@@ -380,7 +380,7 @@
       value: 1.000000
     opacityFactor:
       typeIdx: 1
-      value: 1.000000
+      value: 0.500000
     size:
       typeIdx: 3
       value: {x: 1.000000, y: 1.000000}
