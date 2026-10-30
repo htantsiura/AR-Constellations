@@ -8,6 +8,7 @@
     - !<own> 5aa0f98b-e799-448c-a2dc-cae5d04fa2a4
     - !<own> b3e5d28e-95b1-4e40-b7a4-8348f26edfea
     - !<own> 9e331e33-73cc-4309-aef3-014f23e3ea59
+    - !<own> f5e22def-d6a5-47e3-8f90-57faffd095ff
     - !<own> 7bdca9a3-0e66-4ab4-a997-056a83eb51e0
     - !<own> d93b5c1f-ca9f-4253-8894-f2552ad55bcd
     - !<own> d55892b4-4ec7-42da-88cd-bdf4235fab85
@@ -12730,7 +12731,7 @@
 - !<SceneObject/7bdca9a3-0e66-4ab4-a997-056a83eb51e0>
   PrefabRemaps:
     []
-  Name: MapCreator
+  Name: Main
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -17097,6 +17098,28 @@
   Components:
     - !<own> 8700ecd5-0621-442a-aebc-6dc9274ab4cd
     - !<own> 2e62d14b-5ec2-4269-a719-a4d02dd6b0f6
+- !<ScriptComponent/a6b6fd1b-6763-42a0-9ee4-b505e13c7316>
+  PrefabRemaps:
+    []
+  Name: scripts_holder
+  Enabled: true
+  ScriptAsset: !<reference> 608e6e34-7897-4eb1-b1ab-6dc55beb7c87
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      myScripts: !<reference.ScriptAsset[]>
+        - !<reference> 52953663-6635-4f9f-bfbc-54e12f680455
+        - !<reference> a3293e5f-74fd-48bb-8bff-bb6143e9e91e
+        - !<reference> b1982c42-be48-4631-87ed-44db39be0593
+        - !<reference> 27624da2-6694-48a8-8d85-96a3d6b4ec8f
+        - !<reference> db4a4219-5e17-4177-81dc-8d9c95ae516d
+        - !<reference> 43b1757d-6f8a-475d-a6aa-c8dcd01ada6d
+  ScriptTypes:
+    "":
+      {}
 - !<RenderMeshVisual/a6fde2fa-dbeb-42ae-a9f0-69ac99a61ab8>
   PrefabRemaps:
     []
@@ -26343,6 +26366,21 @@
     []
   Components:
     - !<own> b37fe78f-d284-4221-a5c6-129ba8bd0c06
+- !<SceneObject/f5e22def-d6a5-47e3-8f90-57faffd095ff>
+  PrefabRemaps:
+    []
+  Name: scripts_holder
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a6b6fd1b-6763-42a0-9ee4-b505e13c7316
 - !<SceneObject/f5ed9482-03b2-447a-8549-75494ce38c0b>
   PrefabRemaps:
     []

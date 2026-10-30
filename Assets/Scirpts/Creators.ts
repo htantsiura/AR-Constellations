@@ -37,7 +37,7 @@ export function createStar(
     S_SCALE: number,
     SCALE: number,
     catalog: Map<number, vec3>
-) {
+): void {
     const cGroup = getChildByName(parent, item.constellation)
     if (!cGroup) {
         print ("No constellation found");
@@ -59,33 +59,6 @@ export function createStar(
 
     //catalog.set(item.hip, s_LocalPos);
 }
-
-
-export function createLine1(parent: SceneObject, name: string, mat: Material, wiretool: any): void {
-
-    const cGroup = getChildByName(parent, name);
-    let length = cGroup!.getChildrenCount();
-    const line = new wiretool.Create();
-    line.radius = 0.1; 
-    
-    line.onPointsAdded.add(function(points: { position: vec3 }[]){ // whenever a point is added
-        for(let i = 0; i < points.length; i++){ 
-            //print('point added: ' + points[i].position.toString());
-        }
-    });
-
-    for(let i = 0; i < length; i++) {
-        const child = cGroup!.getChild(i);
-        if (child.name === "s_label") {
-            let pos = child.getTransform().getLocalPosition();
-            line.addPoints(new vec3(pos.x, pos.y, pos.z))
-        }
-    }
-   
-    line.setMaterials(mat);
-    line.getSceneObject().setParent(cGroup)
-    cGroup!.enabled = true;
-} 
 
 export function createLine(
     item: any, 
@@ -111,7 +84,6 @@ export function createLine(
         });
 
         segment.forEach((star: number) => {
-            print(star)
             const pos = hipPositionCatalog.get(star)?.sub(groupPos)
             if(pos)
                 line.addPoints(pos)
@@ -121,15 +93,5 @@ export function createLine(
         line.setMaterials(mat);
         line.getSceneObject().setParent(cGroup)
     })
-
-    /* for(let i = 0; i < length; i++) {
-        const child = cGroup!.getChild(i);
-        if (child.name === "s_label") {
-            let pos = child.getTransform().getLocalPosition();
-            line.addPoints(new vec3(pos.x, pos.y, pos.z))
-        }
-    } */
-   
-    
     cGroup!.enabled = true;
 } 

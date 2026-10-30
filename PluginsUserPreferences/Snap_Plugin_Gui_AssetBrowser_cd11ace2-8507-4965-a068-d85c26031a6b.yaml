@@ -1,9 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 818
+    size: 817
     values:
-      - ""
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
@@ -21,7 +20,6 @@ CollapsedEntities:
       - PBR 2.mat
       - PBR.mat
       - Pyramid.mesh
-      - Scirpts
       - Scirpts/Config.ts
       - Scirpts/Creators.ts
       - Scirpts/Data
@@ -31,6 +29,7 @@ CollapsedEntities:
       - Scirpts/Main.ts
       - Scirpts/Utils.ts
       - Scirpts/WireTool.js
+      - Scirpts/scripts_holder.ts
       - SpectaclesInteractionKit.lspkg
       - SpectaclesInteractionKit.lspkg/Assets
       - SpectaclesInteractionKit.lspkg/Assets/Audio
