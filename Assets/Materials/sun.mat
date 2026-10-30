@@ -59,7 +59,7 @@
   Properties:
     Port_FinalColor_N004:
       typeIdx: 5
-      value: {x: 1.000000, y: 0.768826, z: 0.370230, w: 1.000000}
+      value: {x: 0.647181, y: 0.412863, z: 0.096162, w: 1.000000}
     PreviewEnabled:
       typeIdx: 0
       value: 0

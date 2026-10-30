@@ -2,8 +2,9 @@ import { raDecToVec3, raDecToVec3Cons, getChildByName, mappingConstellationDista
 import { ConstellationData } from "./Data/ConstellationData";
 import { StarsData } from "./Data/StarsData";
 import { SCALE, IS_LOGARITH, C_SCALE, S_SCALE } from "./Config";
-import { linearDisCatalog, logarithDisCatalog } from "./Config";
+import { linearDisCatalog, logarithDisCatalog, hipPositionCatalog } from "./Config";
 import { createConstellation, createStar, createLine } from "./Creators";
+import { LinesData } from "./Data/LinesData_SnT";
 
 @component
 export class MapCreator extends BaseScriptComponent {
@@ -27,14 +28,33 @@ export class MapCreator extends BaseScriptComponent {
         if(!this.c_LabelPrefab || !this.universe) return;
 
         ConstellationData.forEach((item) => {
-            createConstellation(item, this.universe, this.c_LabelPrefab, IS_LOGARITH)
+            createConstellation(
+                item, 
+                this.universe, 
+                this.c_LabelPrefab, 
+                IS_LOGARITH
+            )
         })
 
         StarsData.forEach((item) => {
-            createStar(item, this.universe, this.s_LabelPrefab, IS_LOGARITH, S_SCALE, SCALE)
+            createStar(
+                item, 
+                this.universe, 
+                this.s_LabelPrefab, 
+                IS_LOGARITH, 
+                S_SCALE, 
+                SCALE, 
+                hipPositionCatalog
+            )
         })
 
+
+
         //creating a line
-        createLine(this.universe, 'Orion', this.lineMaterial, this.wireToolComponent)
+        LinesData.forEach((item) => {
+            createLine(item, this.universe, this.lineMaterial, this.wireToolComponent)
+
+        })
+        
     }
 }

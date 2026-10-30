@@ -9,19 +9,16 @@ export const S_SCALE: number = 2;
 
 export const linearDisCatalog = new Map<string, number>();
 export const logarithDisCatalog = new Map<string, number>();
+export const hipPositionCatalog = new Map<number, vec3>();
 
 @component
 export class Config extends BaseScriptComponent {
-
-
     onAwake() {
-
         mappingConstellationDistances(
             ConstellationData,
             StarsData,
             linearDisCatalog,
             logarithDisCatalog
         )
-
     }
 }

@@ -101,3 +101,11 @@ export function mappingConstellationDistances(
         logarithDisCatalog.set(con.name, avgLogarithDistance)
     })
 }
+
+export function mappingHipPosition(
+    item: any,
+    localPos: vec3,
+    hipPositionCatalog: Map<number, vec3>
+) {
+    hipPositionCatalog.set(item.hip, localPos);
+}

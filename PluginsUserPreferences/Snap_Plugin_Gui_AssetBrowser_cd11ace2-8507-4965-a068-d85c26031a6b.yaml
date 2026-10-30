@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 788
+    size: 818
     values:
       - ""
       - 1 Simple Line.lspkg
@@ -789,6 +789,36 @@ CollapsedEntities:
       - Textures/Normal.png
       - Textures/icon_selected.png
       - Textures/icon_targeted.png
+      - TweenManager.lspkg
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/ExampleTweenValueScript.js"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Materials"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Materials/Image Unlit.mat"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Materials/TweenBoxDiffuse.mat"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Materials/TweenBoxDiffuse_Alt.mat"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Materials/TweenSphereDiffuse.mat"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Meshes"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Meshes/TweenBox.mesh"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Meshes/TweenSphere.mesh"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Shaders"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Shaders/Image Unlit.ss_graph"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Shaders/TweenBoxDiffuse.ss_graph"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Textures"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Textures/TweenImageTextures"
+      - "TweenManager.lspkg/ExampleResources [REMOVE_ME]/Textures/TweenImageTextures/Image.png"
+      - TweenManager.lspkg/Tween
+      - "TweenManager.lspkg/Tween Examples [REMOVE_ME]__PUT_IN_ORTHO_CAM.prefab"
+      - TweenManager.lspkg/Tween/Tween.lsc
+      - TweenManager.lspkg/Tween/TweenManager.lsc
+      - TweenManager.lspkg/Tween/TweenTypes
+      - TweenManager.lspkg/Tween/TweenTypes/TweenAlpha.lsc
+      - TweenManager.lspkg/Tween/TweenTypes/TweenChain.lsc
+      - TweenManager.lspkg/Tween/TweenTypes/TweenColor.lsc
+      - TweenManager.lspkg/Tween/TweenTypes/TweenScreenTransform.lsc
+      - TweenManager.lspkg/Tween/TweenTypes/TweenTransform.lsc
+      - TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc
+      - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
+      - TweenManager.lspkg/package.native
       - c_label.prefab
       - s_label.prefab
   options: 4

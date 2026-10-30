@@ -1,4 +1,4 @@
-import { linearDisCatalog, logarithDisCatalog, SCALE, C_SCALE, S_SCALE } from "./Config";
+import { linearDisCatalog, logarithDisCatalog, SCALE, C_SCALE, S_SCALE, hipPositionCatalog } from "./Config";
 import { getChildByName, raDecToVec3, raDecToVec3Cons } from "./Utils";
 
 export function createConstellation(
@@ -35,8 +35,8 @@ export function createStar(
     s_LabelPrefab: ObjectPrefab, 
     IS_LOGARITH: boolean,
     S_SCALE: number,
-    SCALE: number
-    
+    SCALE: number,
+    catalog: Map<number, vec3>
 ) {
     const cGroup = getChildByName(parent, item.constellation)
     if (!cGroup) {
@@ -45,6 +45,7 @@ export function createStar(
     }
     const cPos = cGroup.getTransform().getWorldPosition();
     const sPos = raDecToVec3(item, item.distance_light_year, SCALE, IS_LOGARITH);
+    catalog.set(item.hip, sPos);
     const s_LocalPos = sPos.sub(cPos);
     
     let s_Instance = s_LabelPrefab.instantiate(parent);
@@ -55,10 +56,12 @@ export function createStar(
     s_Instance.setParent(cGroup);
     s_Instance.getTransform().setLocalPosition(s_LocalPos);
     s_Instance.getTransform().setWorldScale(new vec3(S_SCALE, S_SCALE, S_SCALE))
+
+    //catalog.set(item.hip, s_LocalPos);
 }
 
 
-export function createLine(parent: SceneObject, name: string, mat: Material, wiretool: any): void {
+export function createLine1(parent: SceneObject, name: string, mat: Material, wiretool: any): void {
 
     const cGroup = getChildByName(parent, name);
     let length = cGroup!.getChildrenCount();
@@ -81,5 +84,52 @@ export function createLine(parent: SceneObject, name: string, mat: Material, wir
    
     line.setMaterials(mat);
     line.getSceneObject().setParent(cGroup)
+    cGroup!.enabled = true;
+} 
+
+export function createLine(
+    item: any, 
+    parent: SceneObject, 
+    mat: Material, 
+    wiretool: any
+): void {
+
+    const cGroup = getChildByName(parent, item.common_name.native);
+    if (!cGroup) return; 
+    
+    const groupPos = cGroup.getTransform().getWorldPosition()
+
+    item.lines?.forEach((segment: number[]) => {
+        const line = new wiretool.Create();
+        line.name = "line";
+        line.radius = 0.1; 
+        
+        line.onPointsAdded.add(function(points: { position: vec3 }[]){ // whenever a point is added
+            for(let i = 0; i < points.length; i++){ 
+                //print('point added: ' + points[i].position.toString());
+            }
+        });
+
+        segment.forEach((star: number) => {
+            print(star)
+            const pos = hipPositionCatalog.get(star)?.sub(groupPos)
+            if(pos)
+                line.addPoints(pos)
+            else
+                print("Star " + star + " not found")
+        })
+        line.setMaterials(mat);
+        line.getSceneObject().setParent(cGroup)
+    })
+
+    /* for(let i = 0; i < length; i++) {
+        const child = cGroup!.getChild(i);
+        if (child.name === "s_label") {
+            let pos = child.getTransform().getLocalPosition();
+            line.addPoints(new vec3(pos.x, pos.y, pos.z))
+        }
+    } */
+   
+    
     cGroup!.enabled = true;
 } 
