@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/615cc9cf-659c-4fe1-83ff-ee0ce6f93d8a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 29f45687-a160-4772-8c5a-3f83bbd8a7e3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 29f45687-a160-4772-8c5a-3f83bbd8a7e3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 54169169-a1b5-4973-83b4-4283d430e607
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/54169169-a1b5-4973-83b4-4283d430e607>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d63f8d95-b100-4113-85a2-c8081c0c02ac
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    area: false
+    brightest: false
+    dec: false
+    qty: false
+    ra: false
+    stars: false
+    title: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - title: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      ra: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      dec: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      area: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      qty: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      brightest: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      stars: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Text title
+    - // @input Component.Text ra
+    - // @input Component.Text dec
+    - // @input Component.Text area
+    - // @input Component.Text qty
+    - // @input Component.Text brightest
+    - // @input Component.Text stars

@@ -1,4 +1,4 @@
-import { remap } from "./Utils";
+import { remap } from "./../Utils";
 import { CapsuleButton } from "SpectaclesUIKit.lspkg/Scripts/Components/Button/CapsuleButton";
 @component
 export class ButtonSize extends BaseScriptComponent {

@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 819
+    size: 829
     values:
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
@@ -10,6 +10,8 @@ CollapsedEntities:
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph
       - Materials/PBR.mat
       - Materials/color.ss_graph
+      - Materials/controller 1.mat
+      - Materials/controller.ss_graph
       - Materials/icon 2.ss_graph
       - Materials/icon_constell.mat
       - Materials/icon_star.mat
@@ -18,9 +20,15 @@ CollapsedEntities:
       - Materials/sun.mat
       - PBR 2.mat
       - PBR 3.mat
+      - PBR 4.mat
+      - PBR 5.mat
       - PBR.mat
       - Pyramid.mesh
-      - Scirpts/Cards
+      - Scirpts
+      - Scirpts/Buttons/SetActiveConstell.ts
+      - Scirpts/Buttons/buttonSize.ts
+      - Scirpts/Cards/CardContentUpdate.ts
+      - Scirpts/Cards/CloseCard.ts
       - Scirpts/Cards/FrameController.ts
       - Scirpts/Config.ts
       - Scirpts/Creators.ts
@@ -32,7 +40,6 @@ CollapsedEntities:
       - Scirpts/Utils.ts
       - Scirpts/WireTool.js
       - Scirpts/WorldCreator.ts
-      - Scirpts/buttonSize.ts
       - Scirpts/scripts_holder.ts
       - SpectaclesInteractionKit.lspkg
       - SpectaclesInteractionKit.lspkg/Assets
@@ -643,6 +650,7 @@ CollapsedEntities:
       - SpectaclesInteractionKitExamples.lspkg/Examples/UIStarter/Textures/image_unlit.ss_graph
       - SpectaclesInteractionKitExamples.lspkg/package.native
       - SpectaclesInteractionKitExamples.lspkg/package_dependencies.json
+      - SpectaclesUIKit.lspkg
       - SpectaclesUIKit.lspkg/Audio
       - SpectaclesUIKit.lspkg/Audio/HoverAudioTrack.wav
       - SpectaclesUIKit.lspkg/Audio/SliderProgressionAudioTrack.wav
@@ -783,6 +791,7 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Textures/test-image.jpg
       - SpectaclesUIKit.lspkg/package.native
       - SpectaclesUIKit.lspkg/package_dependencies.json
+      - Sphere.mesh
       - Textures
       - Textures/Base.png
       - Textures/Echopark.hdr
@@ -821,5 +830,6 @@ CollapsedEntities:
       - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
       - TweenManager.lspkg/package.native
       - c_label.prefab
+      - pbr.ss_graph
       - s_label.prefab
   options: 4

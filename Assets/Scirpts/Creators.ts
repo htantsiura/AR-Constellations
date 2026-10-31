@@ -25,10 +25,10 @@ export function createConstellation(
     let c_Instance = c_prefab.instantiate(parent);
     c_Instance.getChild(0).getComponent('RenderMeshVisual').mainMaterial.mainPass.switcher = 0;
     c_Instance.getChild(1).getComponent('Text').text = item.name;
+
     const x = remap(item.name.length, 5, 19, 5, 14.5 )
     const buttonComp = c_Instance.getChild(2).getComponent('Component.ScriptComponent') as CapsuleButton
     buttonComp.size = new vec3(x, 1.7, 1) 
-
 
     c_Instance.setParent(cGroup);
     c_Instance.getTransform().setWorldScale(new vec3(C_SCALE, C_SCALE, C_SCALE))
@@ -92,8 +92,6 @@ export function createLine(
             const pos = hipPositionCatalog.get(star)?.sub(groupPos)
             if(pos)
                 line.addPoints(pos)
-            else
-                print("Star " + star + " not found")
         })
         line.setMaterials(mat);
         line.getSceneObject().setParent(cGroup)
