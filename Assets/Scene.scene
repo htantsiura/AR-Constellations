@@ -3344,22 +3344,6 @@
     - !<own> 298f274e-575f-40f7-a4f3-e4eaeaaecd67
   Components:
     []
-- !<ScriptComponent/1bf162ed-adbb-49d6-ae6f-4575729e5c25>
-  PrefabRemaps:
-    []
-  Name: SetActiveConstell
-  Enabled: true
-  ScriptAsset: !<reference> 754e15ef-85fc-41e9-9f48-884ff2daa4a7
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
-  ScriptTypes:
-    "":
-      {}
 - !<Image/1c7fe64c-c131-4084-bf5e-dc115aeeaf25>
   PrefabRemaps:
     []
@@ -4476,7 +4460,7 @@
     - c374d477-1177-4432-96af-ee361bb34251: 968ac9d6-1a28-4823-89b4-b26f5d357a11
     - cf27fae0-06b2-4082-97c1-39d21ae64ff3: 6f32b5fd-9631-4df6-a310-bb033f7a709f
   Name: c_label
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -4487,7 +4471,6 @@
     - !<own> 768440c5-e8d7-4e99-8c8c-5574ad7dc2cc
     - !<own> 19b155c3-eb10-4763-86d5-b316a40fefe6
     - !<own> 48496571-2179-4e25-800a-cbe12220640c
-    - !<own> cf27fae0-06b2-4082-97c1-39d21ae64ff3
   Components:
     - !<own> 7076b1de-e3ed-4139-a03c-b890d0b2edf3
     - !<own> 65af1f0d-ee1d-45f1-bd81-4e9437cd7687
@@ -7880,6 +7863,22 @@
   ScriptTypes:
     "":
       {}
+- !<ScriptComponent/47df8deb-2699-4f43-b7fc-80bd366f1a97>
+  PrefabRemaps:
+    []
+  Name: SetActiveConstell
+  Enabled: true
+  ScriptAsset: !<reference> 754e15ef-85fc-41e9-9f48-884ff2daa4a7
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/482a3c3d-13ba-4387-bdf6-51b01f65e7c6>
   PrefabRemaps:
     []
@@ -7910,6 +7909,7 @@
     []
   Components:
     - !<own> c374d477-1177-4432-96af-ee361bb34251
+    - !<own> 47df8deb-2699-4f43-b7fc-80bd366f1a97
 - !<SceneObject/48b2e00d-8629-47c6-aa1e-05ef918eeac9>
   PrefabRemaps:
     []
@@ -16505,7 +16505,6 @@
   ScriptInputs:
     "":
       card: !<reference.SceneObject> 88dda23a-cf59-4b98-8aa7-6fb48b53997e
-      consName: Orion
       cardContentUpdateScript: !<MappingBased.AssignableType> f52fb186-307d-4ec3-9c82-cd3634001312
   ScriptTypes:
     "":
@@ -18135,6 +18134,7 @@
         - !<reference> 27624da2-6694-48a8-8d85-96a3d6b4ec8f
         - !<reference> db4a4219-5e17-4177-81dc-8d9c95ae516d
         - !<reference> 43b1757d-6f8a-475d-a6aa-c8dcd01ada6d
+        - !<reference> 1a8143d8-5531-42ec-8482-85ca5965051a
   ScriptTypes:
     "":
       {}
@@ -22398,7 +22398,7 @@
       _defaultToOn: false
       addCallbacks: true
       triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> 1bf162ed-adbb-49d6-ae6f-4575729e5c25
+        - scriptComponent: !<reference.ScriptComponent> 47df8deb-2699-4f43-b7fc-80bd366f1a97
           functionName: setActiveConsVariable
         - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
           functionName: activateConstellation
@@ -23888,21 +23888,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/cf27fae0-06b2-4082-97c1-39d21ae64ff3>
-  PrefabRemaps:
-    []
-  Name: setActive
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 1bf162ed-adbb-49d6-ae6f-4575729e5c25
 - !<Text/cf80e243-493d-4c47-8511-8e98e500f66a>
   PrefabRemaps:
     []

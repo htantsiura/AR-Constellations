@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 836
+    size: 837
     values:
       - ""
       - 1 Simple Line.lspkg
@@ -31,13 +31,13 @@ CollapsedEntities:
       - Meshes
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
-      - Prefabs
       - Prefabs/c_label.prefab
       - Prefabs/s_label.prefab
       - RT
-      - Scirpts
+      - Scirpts/Buttons
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/SetActiveConstell.ts
+      - Scirpts/Cards
       - Scirpts/Cards/CardContentUpdate.ts
       - Scirpts/Cards/CloseCard.ts
       - Scirpts/Cards/FrameController.ts
@@ -49,6 +49,7 @@ CollapsedEntities:
       - Scirpts/Data/StarsData.ts
       - Scirpts/Manager.ts
       - Scirpts/Utils.ts
+      - Scirpts/VisibilitiModes.ts
       - Scirpts/WireTool.js
       - Scirpts/WorldCreator.ts
       - Scirpts/scripts_holder.ts

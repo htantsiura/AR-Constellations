@@ -1,6 +1,6 @@
-import { ConstellationData } from "./Data/ConstellationData";
-import { formatDec, formatRA } from "./Utils";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
+import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial } from "./VisibilitiModes";
+
 
 @component
 export class Manager extends BaseScriptComponent {
@@ -9,27 +9,40 @@ export class Manager extends BaseScriptComponent {
     card!: SceneObject;
 
     @input
-    consName!: string;
-
-    @input
     cardContentUpdateScript!: CardContentUpdate;
 
-    public activeConstellation: SceneObject | null = null;
+    @input
+    defaultLineMat!: Material;
+
+    @input
+    activeLineMat!: Material;
+
+
+
+    public currentCons: SceneObject | null = null;
+    public prevCons: SceneObject | null = null;
     
     onAwake() {
-        this.card.enabled = false;
+        //this.card.enabled = false;
     }
 
     public openConsCard() {
-        this.cardContentUpdateScript.contentUpdate(this.activeConstellation);
+        this.cardContentUpdateScript.contentUpdate(this.currentCons);
         this.card.enabled = true;
     }
 
     public activateConstellation() {
-        this.openConsCard()
-    }
 
-    
+        if (this.prevCons) {
+            turnOffAllStarsLabels(this.prevCons)
+            setDefaultLineMaterial(this.prevCons, this.defaultLineMat)
+        }
+            
+        turnOnAllStarsLabels(this.currentCons!) 
+        setActiveLineMaterial(this.currentCons!, this.activeLineMat)
+        this.openConsCard()
+        this.prevCons = this.currentCons; 
+    }
 }
 
 

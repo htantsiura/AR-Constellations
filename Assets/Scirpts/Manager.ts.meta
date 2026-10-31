@@ -26,9 +26,10 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    activeLineMat: false
     card: false
     cardContentUpdateScript: false
-    consName: false
+    defaultLineMat: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -39,12 +40,14 @@
     []
   DefaultScriptInputs:
     - card: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      consName: ""
       cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject card
-    - // @input string consName
     - // @input AssignableType cardContentUpdateScript
+    - // @input Asset.Material defaultLineMat
+    - // @input Asset.Material activeLineMat

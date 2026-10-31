@@ -453,7 +453,7 @@ function Create(){
     // initialize
     function init(){
         // sceneobject
-        obj = global.scene.createSceneObject("Wire " + wires.length.toString()); // 'Wire 0', 'Wire 1', etc
+        obj = global.scene.createSceneObject("Wire"); //("Wire " + wires.length.toString()); // 'Wire 0', 'Wire 1', etc
         wires.push(self); // register
         trf = obj.getTransform();
         rmv = obj.createComponent("Component.RenderMeshVisual");
