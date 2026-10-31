@@ -1,4 +1,3 @@
-import { raDecToVec3, raDecToVec3Cons, getChildByName, mappingConstellationDistances } from "./Utils";
 import { ConstellationData } from "./Data/ConstellationData";
 import { StarsData } from "./Data/StarsData";
 import { SCALE, IS_LOGARITH, C_SCALE, S_SCALE } from "./Config";

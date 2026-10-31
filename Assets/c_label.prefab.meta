@@ -29,48 +29,19 @@
     []
   Components:
     - !<own> 438c7880-db52-4f6a-42e1-ea1b44dcc634
-- !<ScriptComponent/2534c8ac-32b0-4860-608b-09cd1dd816e6>
+- !<ScriptComponent/429543f2-49ef-4b84-bc79-849b7f6a80c0>
   PrefabRemaps:
     []
-  Name: CapsuleButton
+  Name: ButtonSizeSetup
   Enabled: true
-  ScriptAsset: !<reference> a60d3b86-0a33-458b-8e5a-daaeb2d7266a
+  ScriptAsset: !<reference> f375e779-ec81-4324-b060-100df5b6a0fb
   ScriptInputsDefault:
-    _renderOrder: true
-    _inactive: true
-    _playAudio: true
-    _hasShadow: true
-    _shadowPositionOffset: true
-    _toggleable: true
-    _defaultToOn: true
-    triggerDownCallbacks: true
-    onValueChangeCallbacks: true
-    onFinishedCallbacks: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      _renderOrder: 0
-      _inactive: false
-      _playAudio: false
-      _style: Ghost
-      _hasShadow: false
-      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
-      _toggleable: false
-      _defaultToOn: false
-      addCallbacks: true
-      triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> 9d7201bb-3ee0-4479-5a19-051b01299d5c
-          functionName: setActiveConsVariable
-        - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
-          functionName: activateConstellation
-      triggerDownCallbacks:
-        []
-      onValueChangeCallbacks:
-        []
-      onFinishedCallbacks:
-        []
-      _size: !<Vec3> {x: 12.000000, y: 1.700000, z: 1.000000}
+      myButton: !<MappingBased.AssignableType> 968ac9d6-1a28-4823-89b4-b26f5d357a11
   ScriptTypes:
     "":
       {}
@@ -175,6 +146,21 @@
     CapitalizationOverride: AllUpper
   DepthTest: false
   TwoSided: false
+- !<SceneObject/6f32b5fd-9631-4df6-a310-bb033f7a709f>
+  PrefabRemaps:
+    []
+  Name: setActive
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 81b0d82d-68a4-489f-816b-3ae0c01b03c6
 - !<SceneObject/72cff0bf-5c5d-44da-7eeb-65594f77d3ab>
   PrefabRemaps:
     []
@@ -189,9 +175,8 @@
   Children:
     []
   Components:
-    - !<own> 2534c8ac-32b0-4860-608b-09cd1dd816e6
-    - !<own> 9d7201bb-3ee0-4479-5a19-051b01299d5c
-- !<ScriptComponent/9d7201bb-3ee0-4479-5a19-051b01299d5c>
+    - !<own> 968ac9d6-1a28-4823-89b4-b26f5d357a11
+- !<ScriptComponent/81b0d82d-68a4-489f-816b-3ae0c01b03c6>
   PrefabRemaps:
     []
   Name: SetActiveConstell
@@ -204,6 +189,51 @@
   ScriptInputs:
     "":
       appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/968ac9d6-1a28-4823-89b4-b26f5d357a11>
+  PrefabRemaps:
+    []
+  Name: RectangleButton
+  Enabled: true
+  ScriptAsset: !<reference> 173d7099-914c-4f24-ac1c-1b67a66ae138
+  ScriptInputsDefault:
+    _renderOrder: true
+    _inactive: true
+    _playAudio: true
+    _hasShadow: true
+    _shadowPositionOffset: true
+    _toggleable: true
+    _defaultToOn: true
+    triggerDownCallbacks: true
+    onValueChangeCallbacks: true
+    onFinishedCallbacks: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _renderOrder: 0
+      _size: !<Vec3> {x: 12.000000, y: 1.700000, z: 1.000000}
+      _inactive: false
+      _playAudio: false
+      _style: Ghost
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
+      _toggleable: false
+      _defaultToOn: false
+      addCallbacks: true
+      triggerUpCallbacks:
+        - scriptComponent: !<reference.ScriptComponent> 81b0d82d-68a4-489f-816b-3ae0c01b03c6
+          functionName: setActiveConsVariable
+        - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
+          functionName: activateConstellation
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
   ScriptTypes:
     "":
       {}
@@ -229,7 +259,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: -0.100000}
+    Position: {x: 0.000000, y: 0.000000, z: 0.100000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -252,5 +282,7 @@
     - !<own> 03de872a-a2ba-4dee-7986-2c13ab17d6f4
     - !<own> e5658dc9-bdae-40d4-6181-9a15df2b336f
     - !<own> 72cff0bf-5c5d-44da-7eeb-65594f77d3ab
+    - !<own> 6f32b5fd-9631-4df6-a310-bb033f7a709f
   Components:
     - !<own> dd534a56-5682-4c84-6ca2-e34aa491de46
+    - !<own> 429543f2-49ef-4b84-bc79-849b7f6a80c0

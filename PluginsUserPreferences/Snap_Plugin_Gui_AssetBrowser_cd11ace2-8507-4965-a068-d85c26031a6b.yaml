@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 831
+    size: 830
     values:
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
@@ -26,9 +26,8 @@ CollapsedEntities:
       - PBR 5.mat
       - PBR.mat
       - Pyramid.mesh
-      - Scirpts
+      - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/SetActiveConstell.ts
-      - Scirpts/Buttons/buttonSize.ts
       - Scirpts/Cards/CardContentUpdate.ts
       - Scirpts/Cards/CloseCard.ts
       - Scirpts/Cards/FrameController.ts

@@ -3106,7 +3106,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: -0.100000}
+    Position: {x: 0.000000, y: 0.000000, z: 0.100000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -3344,6 +3344,22 @@
     - !<own> 298f274e-575f-40f7-a4f3-e4eaeaaecd67
   Components:
     []
+- !<ScriptComponent/1bf162ed-adbb-49d6-ae6f-4575729e5c25>
+  PrefabRemaps:
+    []
+  Name: SetActiveConstell
+  Enabled: true
+  ScriptAsset: !<reference> 754e15ef-85fc-41e9-9f48-884ff2daa4a7
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
+  ScriptTypes:
+    "":
+      {}
 - !<Image/1c7fe64c-c131-4084-bf5e-dc115aeeaf25>
   PrefabRemaps:
     []
@@ -4450,13 +4466,15 @@
   PrefabRemaps:
     - 10aeacce-a1ea-41ee-9e4b-d5f578bde430: 62470c3e-a788-4a6f-71cf-6a4959c52564
     - 19b155c3-eb10-4763-86d5-b316a40fefe6: e5658dc9-bdae-40d4-6181-9a15df2b336f
+    - 1bf162ed-adbb-49d6-ae6f-4575729e5c25: 81b0d82d-68a4-489f-816b-3ae0c01b03c6
     - 2766ce83-3f36-4049-8f1b-5ca90fc55d3d: f5f2fcd9-497a-4293-571b-6b66a566df45
     - 48496571-2179-4e25-800a-cbe12220640c: 72cff0bf-5c5d-44da-7eeb-65594f77d3ab
-    - 4e6522cd-9024-46bc-b103-d1568481e31e: 9d7201bb-3ee0-4479-5a19-051b01299d5c
-    - 6c207b53-267b-48b0-af89-e86dd2602622: 2534c8ac-32b0-4860-608b-09cd1dd816e6
+    - 65af1f0d-ee1d-45f1-bd81-4e9437cd7687: 429543f2-49ef-4b84-bc79-849b7f6a80c0
     - 7076b1de-e3ed-4139-a03c-b890d0b2edf3: dd534a56-5682-4c84-6ca2-e34aa491de46
     - 768440c5-e8d7-4e99-8c8c-5574ad7dc2cc: 03de872a-a2ba-4dee-7986-2c13ab17d6f4
     - 7b271afe-2091-4858-b8bf-d79b4819f698: 438c7880-db52-4f6a-42e1-ea1b44dcc634
+    - c374d477-1177-4432-96af-ee361bb34251: 968ac9d6-1a28-4823-89b4-b26f5d357a11
+    - cf27fae0-06b2-4082-97c1-39d21ae64ff3: 6f32b5fd-9631-4df6-a310-bb033f7a709f
   Name: c_label
   Enabled: false
   Layers: 1
@@ -4469,8 +4487,10 @@
     - !<own> 768440c5-e8d7-4e99-8c8c-5574ad7dc2cc
     - !<own> 19b155c3-eb10-4763-86d5-b316a40fefe6
     - !<own> 48496571-2179-4e25-800a-cbe12220640c
+    - !<own> cf27fae0-06b2-4082-97c1-39d21ae64ff3
   Components:
     - !<own> 7076b1de-e3ed-4139-a03c-b890d0b2edf3
+    - !<own> 65af1f0d-ee1d-45f1-bd81-4e9437cd7687
 - !<SceneObject/27c32e55-3cfb-455f-9c18-b06657676b18>
   PrefabRemaps:
     []
@@ -7889,8 +7909,7 @@
   Children:
     []
   Components:
-    - !<own> 6c207b53-267b-48b0-af89-e86dd2602622
-    - !<own> 4e6522cd-9024-46bc-b103-d1568481e31e
+    - !<own> c374d477-1177-4432-96af-ee361bb34251
 - !<SceneObject/48b2e00d-8629-47c6-aa1e-05ef918eeac9>
   PrefabRemaps:
     []
@@ -8507,22 +8526,6 @@
       acceptableYDirections: !<float> 0.000000
       acceptableZDirections: !<float> 1.000000
       useFilteredPinch: false
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/4e6522cd-9024-46bc-b103-d1568481e31e>
-  PrefabRemaps:
-    []
-  Name: SetActiveConstell
-  Enabled: true
-  ScriptAsset: !<reference> 754e15ef-85fc-41e9-9f48-884ff2daa4a7
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
   ScriptTypes:
     "":
       {}
@@ -11416,6 +11419,22 @@
     - !<own> 8cdd4c87-6054-4626-9717-2c37ae231599
   Components:
     []
+- !<ScriptComponent/65af1f0d-ee1d-45f1-bd81-4e9437cd7687>
+  PrefabRemaps:
+    []
+  Name: ButtonSizeSetup
+  Enabled: true
+  ScriptAsset: !<reference> f375e779-ec81-4324-b060-100df5b6a0fb
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      myButton: !<MappingBased.AssignableType> c374d477-1177-4432-96af-ee361bb34251
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/67631804-38a6-4944-a9d7-8d2430f944a3>
   PrefabRemaps:
     []
@@ -11571,51 +11590,6 @@
     - !<own> fc530e67-51dc-4b55-8306-a92acdd025f6
   Components:
     []
-- !<ScriptComponent/6c207b53-267b-48b0-af89-e86dd2602622>
-  PrefabRemaps:
-    []
-  Name: CapsuleButton
-  Enabled: true
-  ScriptAsset: !<reference> a60d3b86-0a33-458b-8e5a-daaeb2d7266a
-  ScriptInputsDefault:
-    _renderOrder: true
-    _inactive: true
-    _playAudio: true
-    _hasShadow: true
-    _shadowPositionOffset: true
-    _toggleable: true
-    _defaultToOn: true
-    triggerDownCallbacks: true
-    onValueChangeCallbacks: true
-    onFinishedCallbacks: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      _renderOrder: 0
-      _inactive: false
-      _playAudio: false
-      _style: Ghost
-      _hasShadow: false
-      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
-      _toggleable: false
-      _defaultToOn: false
-      addCallbacks: true
-      triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> 4e6522cd-9024-46bc-b103-d1568481e31e
-          functionName: setActiveConsVariable
-        - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
-          functionName: activateConstellation
-      triggerDownCallbacks:
-        []
-      onValueChangeCallbacks:
-        []
-      onFinishedCallbacks:
-        []
-      _size: !<Vec3> {x: 12.000000, y: 1.700000, z: 1.000000}
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/6c8e98c6-756a-4c6c-819d-d61aab1d6c58>
   PrefabRemaps:
     []
@@ -22392,6 +22366,51 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScriptComponent/c374d477-1177-4432-96af-ee361bb34251>
+  PrefabRemaps:
+    []
+  Name: RectangleButton
+  Enabled: true
+  ScriptAsset: !<reference> 173d7099-914c-4f24-ac1c-1b67a66ae138
+  ScriptInputsDefault:
+    _renderOrder: true
+    _inactive: true
+    _playAudio: true
+    _hasShadow: true
+    _shadowPositionOffset: true
+    _toggleable: true
+    _defaultToOn: true
+    triggerDownCallbacks: true
+    onValueChangeCallbacks: true
+    onFinishedCallbacks: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _renderOrder: 0
+      _size: !<Vec3> {x: 12.000000, y: 1.700000, z: 1.000000}
+      _inactive: false
+      _playAudio: false
+      _style: Ghost
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
+      _toggleable: false
+      _defaultToOn: false
+      addCallbacks: true
+      triggerUpCallbacks:
+        - scriptComponent: !<reference.ScriptComponent> 1bf162ed-adbb-49d6-ae6f-4575729e5c25
+          functionName: setActiveConsVariable
+        - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
+          functionName: activateConstellation
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/c379df8f-498c-4c54-a558-bb0a021b9dad>
   PrefabRemaps:
     []
@@ -23869,6 +23888,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/cf27fae0-06b2-4082-97c1-39d21ae64ff3>
+  PrefabRemaps:
+    []
+  Name: setActive
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1bf162ed-adbb-49d6-ae6f-4575729e5c25
 - !<Text/cf80e243-493d-4c47-8511-8e98e500f66a>
   PrefabRemaps:
     []
