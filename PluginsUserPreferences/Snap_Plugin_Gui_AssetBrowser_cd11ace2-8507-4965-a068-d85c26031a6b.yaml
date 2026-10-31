@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 829
+    size: 831
     values:
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
@@ -11,6 +11,8 @@ CollapsedEntities:
       - Materials/PBR.mat
       - Materials/color.ss_graph
       - Materials/controller 1.mat
+      - Materials/controller 2.mat
+      - Materials/controller 3.mat
       - Materials/controller.ss_graph
       - Materials/icon 2.ss_graph
       - Materials/icon_constell.mat
