@@ -1,13 +1,20 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 830
+    size: 836
     values:
+      - ""
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.mat
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph
+      - Materials
+      - Materials/PBR 2.mat
+      - Materials/PBR 3.mat
+      - Materials/PBR 4.mat
+      - Materials/PBR 5.mat
+      - Materials/PBR 6.mat
       - Materials/PBR.mat
       - Materials/color.ss_graph
       - Materials/controller 1.mat
@@ -18,14 +25,17 @@ CollapsedEntities:
       - Materials/icon_constell.mat
       - Materials/icon_star.mat
       - Materials/object_icon.ss_graph
+      - Materials/pbr 2.ss_graph
       - Materials/pbr.ss_graph
       - Materials/sun.mat
-      - PBR 2.mat
-      - PBR 3.mat
-      - PBR 4.mat
-      - PBR 5.mat
-      - PBR.mat
-      - Pyramid.mesh
+      - Meshes
+      - Meshes/Pyramid.mesh
+      - Meshes/Sphere.mesh
+      - Prefabs
+      - Prefabs/c_label.prefab
+      - Prefabs/s_label.prefab
+      - RT
+      - Scirpts
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/SetActiveConstell.ts
       - Scirpts/Cards/CardContentUpdate.ts
@@ -792,7 +802,6 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Textures/test-image.jpg
       - SpectaclesUIKit.lspkg/package.native
       - SpectaclesUIKit.lspkg/package_dependencies.json
-      - Sphere.mesh
       - Textures
       - Textures/Base.png
       - Textures/Echopark.hdr
@@ -830,7 +839,4 @@ CollapsedEntities:
       - TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc
       - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
       - TweenManager.lspkg/package.native
-      - c_label.prefab
-      - pbr.ss_graph
-      - s_label.prefab
   options: 4

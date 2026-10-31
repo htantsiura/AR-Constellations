@@ -17,7 +17,7 @@ export class Manager extends BaseScriptComponent {
     public activeConstellation: SceneObject | null = null;
     
     onAwake() {
-       //this.card.enabled = false;
+        this.card.enabled = false;
     }
 
     public openConsCard() {
