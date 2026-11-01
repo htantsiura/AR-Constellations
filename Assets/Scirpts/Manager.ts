@@ -1,6 +1,7 @@
+import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
 import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial } from "./VisibilitiModes";
-
+import { LSTween } from "LSTween.lspkg/LSTween";
 
 @component
 export class Manager extends BaseScriptComponent {
@@ -43,6 +44,8 @@ export class Manager extends BaseScriptComponent {
         this.openConsCard()
         this.prevCons = this.currentCons; 
     }
+
+    
 }
 
 

@@ -95,9 +95,9 @@
     CornerRadius: 0.000000
   AdvancedLayout: !<TextAdvancedLayout>
     ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-    LetterSpacing: 0.250000
+    LetterSpacing: 0.000000
     LineSpacing: 1.000000
-    CapitalizationOverride: AllUpper
+    CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
 - !<LookAtComponent/9930e01c-09c6-4ac6-8b5b-3ea7491ef4cd>

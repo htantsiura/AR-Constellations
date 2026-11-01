@@ -4450,17 +4450,16 @@
   PrefabRemaps:
     - 10aeacce-a1ea-41ee-9e4b-d5f578bde430: 62470c3e-a788-4a6f-71cf-6a4959c52564
     - 19b155c3-eb10-4763-86d5-b316a40fefe6: e5658dc9-bdae-40d4-6181-9a15df2b336f
-    - 1bf162ed-adbb-49d6-ae6f-4575729e5c25: 81b0d82d-68a4-489f-816b-3ae0c01b03c6
     - 2766ce83-3f36-4049-8f1b-5ca90fc55d3d: f5f2fcd9-497a-4293-571b-6b66a566df45
+    - 47df8deb-2699-4f43-b7fc-80bd366f1a97: 43d507f1-a758-480e-ac10-c3292bd95369
     - 48496571-2179-4e25-800a-cbe12220640c: 72cff0bf-5c5d-44da-7eeb-65594f77d3ab
     - 65af1f0d-ee1d-45f1-bd81-4e9437cd7687: 429543f2-49ef-4b84-bc79-849b7f6a80c0
     - 7076b1de-e3ed-4139-a03c-b890d0b2edf3: dd534a56-5682-4c84-6ca2-e34aa491de46
     - 768440c5-e8d7-4e99-8c8c-5574ad7dc2cc: 03de872a-a2ba-4dee-7986-2c13ab17d6f4
     - 7b271afe-2091-4858-b8bf-d79b4819f698: 438c7880-db52-4f6a-42e1-ea1b44dcc634
     - c374d477-1177-4432-96af-ee361bb34251: 968ac9d6-1a28-4823-89b4-b26f5d357a11
-    - cf27fae0-06b2-4082-97c1-39d21ae64ff3: 6f32b5fd-9631-4df6-a310-bb033f7a709f
   Name: c_label
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -16506,6 +16505,8 @@
     "":
       card: !<reference.SceneObject> 88dda23a-cf59-4b98-8aa7-6fb48b53997e
       cardContentUpdateScript: !<MappingBased.AssignableType> f52fb186-307d-4ec3-9c82-cd3634001312
+      defaultLineMat: !<reference.Material> a8c02787-289e-43cc-9677-afeaee854ac7
+      activeLineMat: !<reference.Material> c88be1ed-f197-46d6-8117-8d8190577bbe
   ScriptTypes:
     "":
       {}
@@ -23964,9 +23965,9 @@
     CornerRadius: 0.000000
   AdvancedLayout: !<TextAdvancedLayout>
     ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-    LetterSpacing: 0.250000
+    LetterSpacing: 0.000000
     LineSpacing: 1.000000
-    CapitalizationOverride: AllUpper
+    CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
 - !<ScriptComponent/cfe06183-7c4a-46c6-899d-fcbcc196af07>
@@ -28403,7 +28404,7 @@
       world: !<reference.SceneObject> 9e331e33-73cc-4309-aef3-014f23e3ea59
       c_LabelPrefab: !<reference.ObjectPrefab> 1cfb10ad-2353-4253-84c9-84fe2b3c27c0
       s_LabelPrefab: !<reference.ObjectPrefab> 9902bf3f-6652-404d-924a-dc94a01c495e
-      lineMaterial: !<reference.Material> e6373480-8190-4eb5-8d85-453be1287c6f
+      lineMaterial: !<reference.Material> a8c02787-289e-43cc-9677-afeaee854ac7
       wireToolComponent: !<reference.ScriptComponent> 7a69c49a-2011-43f4-8b02-3dbd7023d2be
   ScriptTypes:
     "":

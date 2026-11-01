@@ -20,6 +20,7 @@ data:
     - b363745b-9cf1-4a59-ab04-306cd2da99df: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/Resources/MaterialParams.png
     - c1804a35-fe39-40c5-a0b7-7aabdf79ca59: /Applications/LS Specs.app/Contents/Plugins/Es_ShaderGraph_Presets.bundle/Assets/Empty.ss_graph
     - c373a535-a2c9-4281-9afe-43d98f03d545: /Applications/LS Specs.app/Contents/JsPlugins/HelperScriptsRegistry/Assets/Packages/TweenManager.lspkg
+    - c5215c6e-2976-4e3c-9af1-59acde396e92: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/EmptyMaterial/Resources/empty.ss_graph
     - cf64acc0-9c66-493e-9eff-08620288fc42: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/PBRMaterial/Resources/pbr.ss_graph
     - d30faebd-e708-412e-9c77-82c17d5543a6: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - d8804bd3-5a82-4966-bb81-4ba67d99f6c2: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts

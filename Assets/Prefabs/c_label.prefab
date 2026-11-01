@@ -19,21 +19,6 @@
     []
   Components:
     - !<own> 438c7880-db52-4f6a-bd1e-15e4bb2339cb
-- !<SceneObject/06b29d46-9d23-41f9-9742-c79ab75f4af1>
-  PrefabRemaps:
-    []
-  Name: setActive
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> fa1965c6-f567-4b93-b593-103aa0a06b24
 - !<ScriptComponent/19295ab3-d7a6-4bc3-a18c-7856d5c8a3e6>
   PrefabRemaps:
     []
@@ -66,7 +51,7 @@
       _defaultToOn: false
       addCallbacks: true
       triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> fa1965c6-f567-4b93-b593-103aa0a06b24
+        - scriptComponent: !<reference.ScriptComponent> 887ab353-1ba1-40c5-a706-41f9f2158870
           functionName: setActiveConsVariable
         - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
           functionName: activateConstellation
@@ -211,6 +196,23 @@
     []
   Components:
     - !<own> 19295ab3-d7a6-4bc3-a18c-7856d5c8a3e6
+    - !<own> 887ab353-1ba1-40c5-a706-41f9f2158870
+- !<ScriptComponent/887ab353-1ba1-40c5-a706-41f9f2158870>
+  PrefabRemaps:
+    []
+  Name: SetActiveConstell
+  Enabled: true
+  ScriptAsset: !<reference> 754e15ef-85fc-41e9-9f48-884ff2daa4a7
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
+  ScriptTypes:
+    "":
+      {}
 - !<LookAtComponent/dd534a56-5682-4c84-935d-1cb55b6e21b9>
   PrefabRemaps:
     []
@@ -239,16 +241,15 @@
 - !<SceneObject/f5f2fcd9-497a-4293-a8e4-94995a9920ba>
   PrefabRemaps:
     - 03de872a-a2ba-4dee-8679-d3ec54e8290b: 03de872a-a2ba-4dee-7986-2c13ab17d6f4
-    - 06b29d46-9d23-41f9-9742-c79ab75f4af1: 6f32b5fd-9631-4df6-a310-bb033f7a709f
     - 19295ab3-d7a6-4bc3-a18c-7856d5c8a3e6: 968ac9d6-1a28-4823-89b4-b26f5d357a11
     - 438c7880-db52-4f6a-bd1e-15e4bb2339cb: 438c7880-db52-4f6a-42e1-ea1b44dcc634
     - 62470c3e-a788-4a6f-8e30-95b6a63ada9b: 62470c3e-a788-4a6f-71cf-6a4959c52564
     - 6287721f-3723-4961-94e8-91608cb44af4: 429543f2-49ef-4b84-bc79-849b7f6a80c0
     - 72cff0bf-5c5d-44da-8114-9aa6b0882c54: 72cff0bf-5c5d-44da-7eeb-65594f77d3ab
+    - 887ab353-1ba1-40c5-a706-41f9f2158870: 43d507f1-a758-480e-ac10-c3292bd95369
     - dd534a56-5682-4c84-935d-1cb55b6e21b9: dd534a56-5682-4c84-6ca2-e34aa491de46
     - e5658dc9-bdae-40d4-9e7e-65ea20d4cc90: e5658dc9-bdae-40d4-6181-9a15df2b336f
     - f5f2fcd9-497a-4293-a8e4-94995a9920ba: f5f2fcd9-497a-4293-571b-6b66a566df45
-    - fa1965c6-f567-4b93-b593-103aa0a06b24: 81b0d82d-68a4-489f-816b-3ae0c01b03c6
   Name: c_label
   Enabled: true
   Layers: 1
@@ -261,23 +262,6 @@
     - !<own> 03de872a-a2ba-4dee-8679-d3ec54e8290b
     - !<own> e5658dc9-bdae-40d4-9e7e-65ea20d4cc90
     - !<own> 72cff0bf-5c5d-44da-8114-9aa6b0882c54
-    - !<own> 06b29d46-9d23-41f9-9742-c79ab75f4af1
   Components:
     - !<own> dd534a56-5682-4c84-935d-1cb55b6e21b9
     - !<own> 6287721f-3723-4961-94e8-91608cb44af4
-- !<ScriptComponent/fa1965c6-f567-4b93-b593-103aa0a06b24>
-  PrefabRemaps:
-    []
-  Name: SetActiveConstell
-  Enabled: true
-  ScriptAsset: !<reference> 754e15ef-85fc-41e9-9f48-884ff2daa4a7
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
-  ScriptTypes:
-    "":
-      {}
