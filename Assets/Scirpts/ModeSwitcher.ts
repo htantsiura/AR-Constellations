@@ -20,14 +20,13 @@ export class ModeSwitcher extends BaseScriptComponent {
     private isGodMode: boolean = false;
 
     onAwake(): void {
-
+        this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.Rotation);
         this.createEvent("OnStartEvent").bind(() => {
             this.onStart();
         });
     }
 
     onStart() {
-
         if (!this.displayText) return;
 
         const options = AsrModule.AsrTranscriptionOptions.create(); 
@@ -45,6 +44,7 @@ export class ModeSwitcher extends BaseScriptComponent {
         // run voice recognizer
         this.asrModule.startTranscribing(options);
 
+        // toggle by buttons
         this.godModeToggleGroup.onToggleSelected.add((args) => {
             this.handleGodModeChange(args);
         });
@@ -73,19 +73,19 @@ export class ModeSwitcher extends BaseScriptComponent {
             if (!buttonObject) return;
             mode = buttonObject.name;
         } else if (args.text) {
-            mode = args.text
+            mode = args.text.replace(/[.,!?]/g, "").trim().toLowerCase();
             print("voice control")
         } else {
             return;
         }
-        
-        if (mode === "God Mode." || mode === "God mode." || mode === "Godmode.") {
+      
+        if (mode === "god mode" || mode === "godmode" || mode === "godmod") {
             if (!this.isGodMode) {
                 this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.World);
                 this.sun.enabled = true;
                 this.isGodMode = true;
             }
-        } else if (mode === "Sun Mode." || mode === "Sun mode." || mode === "Sanmode." || mode === "Earth Mode.") {
+        } else if (mode === "sun mode" || mode === "sunmode" || mode === "san mode" || mode === "earth mode") {
             if (this.isGodMode) {
                 this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.Rotation);
                 this.sun.enabled = false;

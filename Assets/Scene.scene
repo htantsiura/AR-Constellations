@@ -6,14 +6,13 @@
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> 00000000-0000-0065-0000-000000000064
     - !<own> 621af72c-e6bd-47b5-88b2-584cf64a23a8
+    - !<own> 88dda23a-cf59-4b98-8aa7-6fb48b53997e
+    - !<own> ee9d5c20-4c31-4922-a133-66cb756348f0
     - !<own> 9e331e33-73cc-4309-aef3-014f23e3ea59
     - !<own> 1dd551a8-5500-42be-a97e-1924bc1df10e
     - !<own> 60bf957c-adcb-4adf-bc08-0b0630bb4c2d
     - !<own> 5aa0f98b-e799-448c-a2dc-cae5d04fa2a4
     - !<own> b3e5d28e-95b1-4e40-b7a4-8348f26edfea
-    - !<own> 0fc11f11-96af-4781-82fb-45618262e0df
-    - !<own> c3112011-78a6-4c1a-a30c-dd08f04be414
-    - !<own> bd629bd5-3e84-4602-ab22-f167427242de
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -1716,21 +1715,6 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
-- !<SceneObject/0fc11f11-96af-4781-82fb-45618262e0df>
-  PrefabRemaps:
-    []
-  Name: Object 0
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    []
 - !<SceneObject/101e955f-eed0-42e9-9a77-9155aaf9e290>
   PrefabRemaps:
     []
@@ -3725,6 +3709,7 @@
   Children:
     - !<own> 7bdca9a3-0e66-4ab4-a997-056a83eb51e0
     - !<own> ce399ab3-6374-460b-8ff5-5a4100b9ecbb
+    - !<own> bd629bd5-3e84-4602-ab22-f167427242de
     - !<own> f5e22def-d6a5-47e3-8f90-57faffd095ff
   Components:
     []
@@ -11959,7 +11944,6 @@
     _onlyInteractOnBorder: true
     allowTranslation: true
     _cutOutCenter: true
-    _minimumSize: true
     _maximumSize: true
     useBillboarding: true
     xOnTranslate: true
@@ -11971,7 +11955,7 @@
     useSnapping: true
     itemSnapping: true
     worldSnapping: true
-    _following: true
+    _showFollowButton: true
     _showCloseButton: true
     _enableInteractionPlane: true
     _interactionPlaneOffset: true
@@ -11983,7 +11967,7 @@
     "":
       autoShowHide: false
       _appearance: Small
-      _innerSize: !<Vec2> {x: 14.000000, y: 23.000000}
+      _innerSize: !<Vec2> {x: 1.000000, y: 1.000000}
       _padding: !<Vec2> {x: 0.000000, y: 0.000000}
       _allowScaling: false
       allowNonUniformScaling: false
@@ -11992,7 +11976,7 @@
       _onlyInteractOnBorder: false
       allowTranslation: true
       _cutOutCenter: false
-      _minimumSize: !<Vec2> {x: 10.000000, y: 10.000000}
+      _minimumSize: !<Vec2> {x: 0.000000, y: 0.000000}
       _maximumSize: !<Vec2> {x: 150.000000, y: 150.000000}
       useBillboarding: true
       xOnTranslate: true
@@ -12004,9 +11988,9 @@
       useSnapping: false
       itemSnapping: false
       worldSnapping: false
-      _showFollowButton: true
+      _showFollowButton: false
       useFollowBehavior: true
-      _following: false
+      _following: true
       _showCloseButton: false
       _enableInteractionPlane: true
       _interactionPlaneOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -17194,10 +17178,8 @@
       cardContentUpdateScript: !<MappingBased.AssignableType> f52fb186-307d-4ec3-9c82-cd3634001312
       defaultLineMat: !<reference.Material> a8c02787-289e-43cc-9677-afeaee854ac7
       activeLineMat: !<reference.Material> c88be1ed-f197-46d6-8117-8d8190577bbe
-      deviceTracking: !<reference.DeviceTracking> e5553c8a-0b7e-4ef4-92d9-3e1318fb82c1
-      godModeToggleGroup: !<MappingBased.AssignableType_1> 517ca6eb-9eaf-45b1-9067-5960fd543d2e
       sun: !<reference.SceneObject> 51468993-4204-48e6-86ac-e3477dd004d0
-      target: !<reference.SceneObject> ee9d5c20-4c31-4922-a133-66cb756348f0
+      target: !<reference.SceneObject> b952ddbd-42f5-41a6-b09b-471975b67ae0
       world: !<reference.SceneObject> 9e331e33-73cc-4309-aef3-014f23e3ea59
   ScriptTypes:
     "":
@@ -18153,13 +18135,12 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 88dda23a-cf59-4b98-8aa7-6fb48b53997e
-    - !<own> ee9d5c20-4c31-4922-a133-66cb756348f0
     - !<own> 2766ce83-3f36-4049-8f1b-5ca90fc55d3d
     - !<own> f428c042-220b-4b36-9c81-b045e43e6286
     - !<own> f95ec742-8ab3-4159-a863-f07ad265417d
     - !<own> 1b41da5b-77fc-4aed-846b-ca989898305f
     - !<own> 51468993-4204-48e6-86ac-e3477dd004d0
+    - !<own> c3112011-78a6-4c1a-a30c-dd08f04be414
   Components:
     []
 - !<SceneObject/9e781528-2ed9-44b8-afcf-a9f4b79095b3>
@@ -19063,7 +19044,7 @@
 - !<SceneObject/a888f4a6-3344-4814-ae9c-e6e205575d11>
   PrefabRemaps:
     []
-  Name: Sun Mode.
+  Name: sun mode
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -22186,6 +22167,21 @@
     - !<own> ed7074f4-802d-4336-9588-237c5c48f33e
   Components:
     []
+- !<SceneObject/b952ddbd-42f5-41a6-b09b-471975b67ae0>
+  PrefabRemaps:
+    []
+  Name: target
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
 - !<ScriptComponent/b973a717-cd70-4f75-9ab9-1dbd43204f01>
   PrefabRemaps:
     []
@@ -23463,8 +23459,8 @@
 - !<SceneObject/c3112011-78a6-4c1a-a30c-dd08f04be414>
   PrefabRemaps:
     []
-  Name: Vioce Test
-  Enabled: true
+  Name: Voice Text
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.288826, z: -150.000000}
@@ -24708,7 +24704,7 @@
 - !<SceneObject/ccee66ad-500e-4494-8909-b083da02d990>
   PrefabRemaps:
     []
-  Name: God Mode.
+  Name: god mode
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -28305,16 +28301,16 @@
 - !<SceneObject/ee9d5c20-4c31-4922-a133-66cb756348f0>
   PrefabRemaps:
     []
-  Name: target parent
+  Name: frame for target
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: -80.000000}
+    Position: {x: 0.000000, y: 0.000000, z: -200.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> b952ddbd-42f5-41a6-b09b-471975b67ae0
   Components:
     - !<own> 67bcee2f-4412-41aa-85f4-b6de5e651a04
 - !<SceneObject/eeb9817e-c284-461e-892a-f624f693df18>
