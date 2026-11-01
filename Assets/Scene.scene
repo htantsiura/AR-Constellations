@@ -1340,7 +1340,7 @@
 - !<SceneObject/0df7e997-f39d-4017-b8df-41dd3523f1c2>
   PrefabRemaps:
     []
-  Name: cameraPos
+  Name: cameraTarget
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -10857,6 +10857,7 @@
       godModeToggleGroup: !<MappingBased.AssignableType> 517ca6eb-9eaf-45b1-9067-5960fd543d2e
       sun: !<reference.SceneObject> 51468993-4204-48e6-86ac-e3477dd004d0
       displayText: !<reference.Text> b54fefe1-1493-46ba-b7e2-36b0e6843d42
+      kit: !<reference.SceneObject> 5aa0f98b-e799-448c-a2dc-cae5d04fa2a4
   ScriptTypes:
     "":
       {}

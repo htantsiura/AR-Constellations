@@ -86,10 +86,6 @@ export class ModeSwitcher extends BaseScriptComponent {
             if (!this.isGodMode) {
                 this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.World);
                 this.sun.enabled = true;
-
-                this.kit.enabled = false;
-                this.kit.enabled = true;
-                
                 this.isGodMode = true;
             }
         } else if (mode === "sun mode" || mode === "sunmode" || mode === "san mode" || mode === "earth mode") {
@@ -98,8 +94,17 @@ export class ModeSwitcher extends BaseScriptComponent {
                 this.sun.enabled = false;
 
                 this.kit.enabled = false;
-                this.kit.enabled = true;
-
+                const delayEvent = this.createEvent("DelayedCallbackEvent");
+                delayEvent.bind(() => {
+                    if (this.kit) {
+                        this.kit.enabled = true; // Включаем SIK после того, как камера обновилась
+                        print("🔄 SIK успешно перезапущен в новых координатах");
+                    }
+                });
+                
+                // Заводим таймер на 0.1 секунды (этого с запасом хватит на 3-6 кадров)
+                delayEvent.reset(0.1);
+                
                 this.isGodMode = false;
             }
         }
