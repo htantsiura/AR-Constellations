@@ -4,6 +4,7 @@ import { SCALE, IS_LOGARITH, C_SCALE, S_SCALE } from "./Config";
 import { linearDisCatalog, logarithDisCatalog, hipPositionCatalog } from "./Config";
 import { createConstellation, createStar, createLine } from "./Creators";
 import { LinesData } from "./Data/LinesData_SnT";
+import { mappingConstellationDistances } from "./Utils";
 
 @component
 export class WorldCreator extends BaseScriptComponent {
@@ -24,7 +25,15 @@ export class WorldCreator extends BaseScriptComponent {
     wireToolComponent!: ScriptComponent;
 
     onAwake() {
+
         if(!this.c_LabelPrefab || !this.world) return;
+
+        mappingConstellationDistances(
+            ConstellationData,
+            StarsData,
+            linearDisCatalog,
+            logarithDisCatalog
+        )
 
         ConstellationData.forEach((item) => {
             createConstellation(

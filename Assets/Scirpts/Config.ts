@@ -39,16 +39,8 @@ export const S_COLORS: Record<string, vec4> = {
     "secondary-950": new vec4(0.000, 0.078, 0.102, 1.0)  // #00141A
 };
 
-
-
 @component
 export class Config extends BaseScriptComponent {
     onAwake() {
-        mappingConstellationDistances(
-            ConstellationData,
-            StarsData,
-            linearDisCatalog,
-            logarithDisCatalog
-        )
     }
 }

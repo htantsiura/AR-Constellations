@@ -30,6 +30,8 @@
     card: false
     cardContentUpdateScript: false
     defaultLineMat: false
+    deviceTracking: false
+    godModeToggleGroup: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -43,6 +45,8 @@
       cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
+      godModeToggleGroup: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -51,3 +55,5 @@
     - // @input AssignableType cardContentUpdateScript
     - // @input Asset.Material defaultLineMat
     - // @input Asset.Material activeLineMat
+    - // @input Component.DeviceTracking deviceTracking
+    - // @input AssignableType_1 godModeToggleGroup
