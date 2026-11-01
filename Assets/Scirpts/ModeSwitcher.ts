@@ -17,6 +17,9 @@ export class ModeSwitcher extends BaseScriptComponent {
     @input
     displayText!: Text;
 
+    @input
+    kit!: SceneObject;
+
     private isGodMode: boolean = false;
 
     onAwake(): void {
@@ -54,9 +57,9 @@ export class ModeSwitcher extends BaseScriptComponent {
         this.displayText.text = eventArgs.text;
 
         if (eventArgs.isFinal) {
-            LSTween.colorTextTo(this.displayText, new vec4(0, 1, 0, 1), 300).start(); [7]
+            LSTween.colorTextTo(this.displayText, new vec4(0, 1, 0, 1), 300).start();
         } else {
-            LSTween.colorTextTo(this.displayText, new vec4(1, 1, 1, 1), 100).start(); [7]
+            LSTween.colorTextTo(this.displayText, new vec4(1, 1, 1, 1), 100).start(); 
         }
         this.handleGodModeChange(eventArgs)
     }
@@ -83,12 +86,20 @@ export class ModeSwitcher extends BaseScriptComponent {
             if (!this.isGodMode) {
                 this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.World);
                 this.sun.enabled = true;
+
+                this.kit.enabled = false;
+                this.kit.enabled = true;
+                
                 this.isGodMode = true;
             }
         } else if (mode === "sun mode" || mode === "sunmode" || mode === "san mode" || mode === "earth mode") {
             if (this.isGodMode) {
                 this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.Rotation);
                 this.sun.enabled = false;
+
+                this.kit.enabled = false;
+                this.kit.enabled = true;
+
                 this.isGodMode = false;
             }
         }

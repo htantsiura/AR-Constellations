@@ -29,6 +29,7 @@
     deviceTracking: false
     displayText: false
     godModeToggleGroup: false
+    kit: false
     sun: false
   ScriptTypesHidden:
     {}
@@ -43,6 +44,7 @@
       godModeToggleGroup: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       displayText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      kit: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -51,3 +53,4 @@
     - // @input AssignableType godModeToggleGroup
     - // @input SceneObject sun
     - // @input Component.Text displayText
+    - // @input SceneObject kit

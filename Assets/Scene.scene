@@ -18140,7 +18140,6 @@
     - !<own> f95ec742-8ab3-4159-a863-f07ad265417d
     - !<own> 1b41da5b-77fc-4aed-846b-ca989898305f
     - !<own> 51468993-4204-48e6-86ac-e3477dd004d0
-    - !<own> c3112011-78a6-4c1a-a30c-dd08f04be414
   Components:
     []
 - !<SceneObject/9e781528-2ed9-44b8-afcf-a9f4b79095b3>
@@ -23460,10 +23459,10 @@
   PrefabRemaps:
     []
   Name: Voice Text
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 2.288826, z: -150.000000}
+    Position: {x: 0.000000, y: 5.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -28311,6 +28310,7 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> b952ddbd-42f5-41a6-b09b-471975b67ae0
+    - !<own> c3112011-78a6-4c1a-a30c-dd08f04be414
   Components:
     - !<own> 67bcee2f-4412-41aa-85f4-b6de5e651a04
 - !<SceneObject/eeb9817e-c284-461e-892a-f624f693df18>
