@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/0b5a62e8-9d47-4847-b759-d38cd68854b2>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5a032416-ca8f-4878-9733-bf914f181a0e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5a032416-ca8f-4878-9733-bf914f181a0e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1cb619f8-2034-45d7-92b9-a3b30e449b39
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1cb619f8-2034-45d7-92b9-a3b30e449b39>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 82a39a8d-39e5-474c-80a1-d0435df332cc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    deviceTracking: false
+    displayText: false
+    godModeToggleGroup: false
+    sun: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
+      godModeToggleGroup: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      displayText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.DeviceTracking deviceTracking
+    - // @input AssignableType godModeToggleGroup
+    - // @input SceneObject sun
+    - // @input Component.Text displayText

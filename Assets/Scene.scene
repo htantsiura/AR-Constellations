@@ -13,7 +13,7 @@
     - !<own> b3e5d28e-95b1-4e40-b7a4-8348f26edfea
     - !<own> 0fc11f11-96af-4781-82fb-45618262e0df
     - !<own> c3112011-78a6-4c1a-a30c-dd08f04be414
-    - !<own> 9a0942f8-eb8d-444b-a4d8-e322087e60b9
+    - !<own> bd629bd5-3e84-4602-ab22-f167427242de
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -4287,23 +4287,6 @@
         []
       onFinishedCallbacks:
         []
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/23a104a7-4cb6-4c33-8c69-6262e8472898>
-  PrefabRemaps:
-    []
-  Name: AsrControl
-  Enabled: true
-  ScriptAsset: !<reference> 2c8dcc51-c38b-4839-96ac-c419c946b3aa
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      displayText: !<reference.Text> b54fefe1-1493-46ba-b7e2-36b0e6843d42
-      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
   ScriptTypes:
     "":
       {}
@@ -10873,6 +10856,25 @@
     - !<own> fe684644-99fc-4895-9436-9a8a2f93a49e
     - !<own> d400fada-9c45-4be4-bc97-a6f8d38c79f5
     - !<own> 1624892f-afe7-4141-bafc-dd1244f0adf6
+- !<ScriptComponent/5cb90b3b-3492-4b8a-ae55-f487082a9e21>
+  PrefabRemaps:
+    []
+  Name: ModeSwitcher
+  Enabled: true
+  ScriptAsset: !<reference> 5a032416-ca8f-4878-9733-bf914f181a0e
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      deviceTracking: !<reference.DeviceTracking> e5553c8a-0b7e-4ef4-92d9-3e1318fb82c1
+      godModeToggleGroup: !<MappingBased.AssignableType> 517ca6eb-9eaf-45b1-9067-5960fd543d2e
+      sun: !<reference.SceneObject> 51468993-4204-48e6-86ac-e3477dd004d0
+      displayText: !<reference.Text> b54fefe1-1493-46ba-b7e2-36b0e6843d42
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/5cf4be88-2cf0-4f3d-8a25-9dfe831fa561>
   PrefabRemaps:
     []
@@ -17741,21 +17743,6 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
-- !<SceneObject/9a0942f8-eb8d-444b-a4d8-e322087e60b9>
-  PrefabRemaps:
-    []
-  Name: AsrControl
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 23a104a7-4cb6-4c33-8c69-6262e8472898
 - !<SceneObject/9a14c486-688a-4af4-a99a-084652f3efa1>
   PrefabRemaps:
     []
@@ -22553,6 +22540,21 @@
     []
   Components:
     - !<own> 057fde94-3f33-444b-853e-c8d6f53ec2f9
+- !<SceneObject/bd629bd5-3e84-4602-ab22-f167427242de>
+  PrefabRemaps:
+    []
+  Name: ModeSwitcher
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5cb90b3b-3492-4b8a-ae55-f487082a9e21
 - !<Text/bd74bca5-a9eb-47ae-a69c-a55d48e4b18a>
   PrefabRemaps:
     []

@@ -43,17 +43,14 @@ export class Manager extends BaseScriptComponent {
     onAwake() {
         this.card.enabled = false;
         this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.Rotation);
-        this.createEvent("OnStartEvent").bind(() => {
-            this.onStart();
-        });
+        
     }
 
     private onStart(): void {
 
-        this.godModeToggleGroup.onToggleSelected.add((args) => {
+        /* this.godModeToggleGroup.onToggleSelected.add((args) => {
             this.handleGodModeChange(args);
-        });
-        this.rotateWorldToTarget();
+        }); */
 
         /* this.godModeToggleGroup.onToggleSelected.add((args) => {
             handleGodModeChange(args, this.deviceTracking, this.sun);
@@ -62,7 +59,7 @@ export class Manager extends BaseScriptComponent {
         this.rotateWorldToTarget();
     }
 
-    public handleGodModeChange(args: any) {
+    /* public handleGodModeChange(args: any) {
         let mode = "";
 
         if (args.toggleable) {
@@ -83,11 +80,11 @@ export class Manager extends BaseScriptComponent {
             this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.Rotation);
             this.sun.enabled = false;
         }
-    }
+    } */
 
-    public voiceGodModeChange(args: any) {
+    /* public voiceGodModeChange(args: any) {
         this.handleGodModeChange(args)
-    }
+    } */
 
     public openConsCard() {
         this.cardContentUpdateScript.contentUpdate(this.currentCons);

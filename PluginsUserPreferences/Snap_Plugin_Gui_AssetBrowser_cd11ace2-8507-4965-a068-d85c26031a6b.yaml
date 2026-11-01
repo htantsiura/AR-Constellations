@@ -70,7 +70,6 @@ CollapsedEntities:
       - RT/Device Camera Texture.deviceCameraTexture
       - RT/Render Target.renderTarget
       - Scene.scene
-      - Scirpts/AsrControl.ts
       - Scirpts/Buttons
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/SetActiveConstell.ts
@@ -85,6 +84,7 @@ CollapsedEntities:
       - Scirpts/Data/LinesData_SnT.ts
       - Scirpts/Data/StarsData.ts
       - Scirpts/Manager.ts
+      - Scirpts/ModeSwitcher.ts
       - Scirpts/Utils.ts
       - Scirpts/VisibilitiModes.ts
       - Scirpts/Voice Control.ts
