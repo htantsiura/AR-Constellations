@@ -97,6 +97,10 @@ export class Manager extends BaseScriptComponent {
         .easing(Easing.Quadratic.InOut)
         .start()
     }
+
+    public rotateByController(rotation: quat) {
+        this.currentCons?.getTransform().setLocalRotation(rotation)
+    }
 }
 
 

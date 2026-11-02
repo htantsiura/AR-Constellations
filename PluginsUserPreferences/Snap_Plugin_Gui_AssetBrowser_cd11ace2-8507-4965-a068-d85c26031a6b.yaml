@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 897
+    size: 899
     values:
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
@@ -85,7 +85,6 @@ CollapsedEntities:
       - SCI-FI SFX Pack.lspkg/SCIFI__PLACE_IN_SCENE.prefab
       - SCI-FI SFX Pack.lspkg/package.native
       - Scene.scene
-      - Scirpts
       - Scirpts/Buttons
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/SetActiveConstell.ts
@@ -102,15 +101,18 @@ CollapsedEntities:
       - Scirpts/Manager.ts
       - Scirpts/ModeSwitcher.ts
       - Scirpts/TTS.ts
+      - Scirpts/Untitled TypeScript.ts
       - Scirpts/Utils.ts
       - Scirpts/VisibilitiModes.ts
       - Scirpts/Voice Control.ts
       - Scirpts/WireTool.js
       - Scirpts/WorldCreator.ts
       - Scirpts/scripts_holder.ts
-      - SpectaclesInteractionKit.lspkg
-      - SpectaclesInteractionKit.lspkg/Assets
-      - SpectaclesInteractionKit.lspkg/Assets/Audio
+      - Soap Bubble Material.lspkg
+      - Soap Bubble Material.lspkg/Soap Bubble.mat
+      - Soap Bubble Material.lspkg/Soap Bubble.ss_graph
+      - Soap Bubble Material.lspkg/iridescence_combined.png
+      - Soap Bubble Material.lspkg/package.native
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerStartAudioTrack.wav
@@ -266,8 +268,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit.lspkg/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/ScrollBarRectangle.png
-      - SpectaclesInteractionKit.lspkg/Components
-      - SpectaclesInteractionKit.lspkg/Components/Helpers
       - SpectaclesInteractionKit.lspkg/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit.lspkg/Components/Helpers/CapsuleMeshCustomizer.ts
       - SpectaclesInteractionKit.lspkg/Components/Helpers/InteractableAudioFeedback.ts
@@ -899,5 +899,7 @@ CollapsedEntities:
       - TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc
       - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
       - TweenManager.lspkg/package.native
+      - Uber PBR.mat
       - Untitled TypeScript.ts
+      - uber_pbr.ss_graph
   options: 4
