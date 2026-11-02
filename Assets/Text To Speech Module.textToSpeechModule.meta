@@ -1,8 +1,8 @@
-- !<AssetImportMetadata/9bcda2ed-67c8-414d-ac1a-8518c17142f2>
+- !<AssetImportMetadata/6458418f-6c76-4283-9fe9-04ae0cb8b6e0>
   ImportedAssetIds:
-    VoiceMLModule: !<reference> f276ce73-c8a9-4f25-a85e-2b219492312c
-  ImporterName: VoiceMLModuleImporter
-  PrimaryAsset: !<reference> f276ce73-c8a9-4f25-a85e-2b219492312c
+    TextToSpeechModule: !<reference> 2d08a92f-6147-42fe-809c-0c251dfd7c4e
+  ImporterName: TextToSpeechModuleImporter
+  PrimaryAsset: !<reference> 2d08a92f-6147-42fe-809c-0c251dfd7c4e
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:

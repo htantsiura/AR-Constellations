@@ -1,51 +1,20 @@
-- !<AssetImportMetadata/8b2dc05d-e825-49c5-8b25-f23e438dd1b3>
+- !<AssetImportMetadata/b3ea0f02-5754-4ce6-928f-c967b96789d5>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> 1cfb10ad-2353-4253-84c9-84fe2b3c27c0
+    ObjectPrefab: !<reference> 49293f41-33b3-42eb-95d0-8c5bda576ff1
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> 1cfb10ad-2353-4253-84c9-84fe2b3c27c0
+  PrimaryAsset: !<reference> 49293f41-33b3-42eb-95d0-8c5bda576ff1
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    ObjectPrefab: !<own> e1556719-cc68-47a8-80b6-20d207f96fb4
+    ObjectPrefab: !<own> 6c773b21-7ff8-4663-bb49-8832a15bbc21
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<SceneObject/03de872a-a2ba-4dee-7986-2c13ab17d6f4>
-  PrefabRemaps:
-    []
-  Name: icon
-  Enabled: false
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.800000, y: 0.800000, z: 0.800000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 438c7880-db52-4f6a-42e1-ea1b44dcc634
-- !<ScriptComponent/429543f2-49ef-4b84-bc79-849b7f6a80c0>
-  PrefabRemaps:
-    []
-  Name: ButtonSizeSetup
-  Enabled: true
-  ScriptAsset: !<reference> f375e779-ec81-4324-b060-100df5b6a0fb
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      myButton: !<MappingBased.AssignableType> 968ac9d6-1a28-4823-89b4-b26f5d357a11
-  ScriptTypes:
-    "":
-      {}
-- !<RenderMeshVisual/438c7880-db52-4f6a-42e1-ea1b44dcc634>
+- !<RenderMeshVisual/1a3f4b84-94d7-4174-41af-6893ce6eafd5>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -65,23 +34,22 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<ScriptComponent/43d507f1-a758-480e-ac10-c3292bd95369>
+- !<SceneObject/1d6d8bfd-97ac-42b8-6c13-61eced17ef50>
   PrefabRemaps:
     []
-  Name: SetActiveConstell
+  Name: audio
   Enabled: true
-  ScriptAsset: !<reference> 754e15ef-85fc-41e9-9f48-884ff2daa4a7
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
-  ScriptTypes:
-    "":
-      {}
-- !<Text/62470c3e-a788-4a6f-71cf-6a4959c52564>
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e6608241-30bd-48ce-7c41-2e7d518833e8
+- !<Text/3e45ed3f-b52e-45e7-414c-42232131277b>
   PrefabRemaps:
     []
   Name: Text
@@ -162,7 +130,59 @@
     CapitalizationOverride: AllUpper
   DepthTest: false
   TwoSided: false
-- !<SceneObject/72cff0bf-5c5d-44da-7eeb-65594f77d3ab>
+- !<ObjectPrefabAssetData/6c773b21-7ff8-4663-bb49-8832a15bbc21>
+  Prototype: !<ObjectOwner/93efaa75-0aca-4122-8ece-78096a0c99a2>
+    PackagePath: ""
+    objects:
+      - !<own> f7e159fd-452b-44b7-4252-ba6df1b116c4
+- !<ScriptComponent/901fb69c-9831-4c64-79c2-4e44aacf149a>
+  PrefabRemaps:
+    []
+  Name: SetActiveConstell
+  Enabled: true
+  ScriptAsset: !<reference> 754e15ef-85fc-41e9-9f48-884ff2daa4a7
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/d1e19d42-b5fa-4560-76ea-f80d1a76c96d>
+  PrefabRemaps:
+    []
+  Name: ButtonSizeSetup
+  Enabled: true
+  ScriptAsset: !<reference> f375e779-ec81-4324-b060-100df5b6a0fb
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      myButton: !<MappingBased.AssignableType> efb9af7f-d234-4bc8-4368-977d9b0f127b
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/dc121681-7f21-4b6d-511c-a648931808db>
+  PrefabRemaps:
+    []
+  Name: icon
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.800000, y: 0.800000, z: 0.800000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1a3f4b84-94d7-4174-41af-6893ce6eafd5
+- !<SceneObject/e29398df-7645-4922-46d4-8e1ebe7da9a3>
   PrefabRemaps:
     []
   Name: button
@@ -176,9 +196,26 @@
   Children:
     []
   Components:
-    - !<own> 968ac9d6-1a28-4823-89b4-b26f5d357a11
-    - !<own> 43d507f1-a758-480e-ac10-c3292bd95369
-- !<ScriptComponent/968ac9d6-1a28-4823-89b4-b26f5d357a11>
+    - !<own> efb9af7f-d234-4bc8-4368-977d9b0f127b
+    - !<own> 901fb69c-9831-4c64-79c2-4e44aacf149a
+- !<AudioComponent/e6608241-30bd-48ce-7c41-2e7d518833e8>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 029fb99f-d3c4-40fb-8e27-3b9e7cd2e03c
+  EnableAutoplayLoop: false
+  Volume: 0.500000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: true
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: true
+  EnablePositionEffect: false
+- !<ScriptComponent/efb9af7f-d234-4bc8-4368-977d9b0f127b>
   PrefabRemaps:
     []
   Name: RectangleButton
@@ -210,7 +247,7 @@
       _defaultToOn: false
       addCallbacks: true
       triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> 43d507f1-a758-480e-ac10-c3292bd95369
+        - scriptComponent: !<reference.ScriptComponent> 901fb69c-9831-4c64-79c2-4e44aacf149a
           functionName: setActiveConsVariable
         - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
           functionName: activateConstellation
@@ -223,7 +260,7 @@
   ScriptTypes:
     "":
       {}
-- !<LookAtComponent/dd534a56-5682-4c84-6ca2-e34aa491de46>
+- !<LookAtComponent/f63b2255-0d57-40a8-488f-f11e82c47896>
   PrefabRemaps:
     []
   Name: Look At
@@ -233,12 +270,26 @@
   WorldUpVector: SceneY
   Target: !<reference> 00000000-0000-0065-0000-000000000064
   OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-- !<ObjectPrefabAssetData/e1556719-cc68-47a8-80b6-20d207f96fb4>
-  Prototype: !<ObjectOwner/160ecc43-388a-492f-8ded-e8844a8d18a1>
-    PackagePath: ""
-    objects:
-      - !<own> f5f2fcd9-497a-4293-571b-6b66a566df45
-- !<SceneObject/e5658dc9-bdae-40d4-6181-9a15df2b336f>
+- !<SceneObject/f7e159fd-452b-44b7-4252-ba6df1b116c4>
+  PrefabRemaps:
+    []
+  Name: c_label
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> dc121681-7f21-4b6d-511c-a648931808db
+    - !<own> fc09a16e-18de-467c-77bf-73f8296daa7f
+    - !<own> e29398df-7645-4922-46d4-8e1ebe7da9a3
+    - !<own> 1d6d8bfd-97ac-42b8-6c13-61eced17ef50
+  Components:
+    - !<own> f63b2255-0d57-40a8-488f-f11e82c47896
+    - !<own> d1e19d42-b5fa-4560-76ea-f80d1a76c96d
+- !<SceneObject/fc09a16e-18de-467c-77bf-73f8296daa7f>
   PrefabRemaps:
     []
   Name: Text
@@ -252,22 +303,4 @@
   Children:
     []
   Components:
-    - !<own> 62470c3e-a788-4a6f-71cf-6a4959c52564
-- !<SceneObject/f5f2fcd9-497a-4293-571b-6b66a566df45>
-  PrefabRemaps:
-    []
-  Name: c_label
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 03de872a-a2ba-4dee-7986-2c13ab17d6f4
-    - !<own> e5658dc9-bdae-40d4-6181-9a15df2b336f
-    - !<own> 72cff0bf-5c5d-44da-7eeb-65594f77d3ab
-  Components:
-    - !<own> dd534a56-5682-4c84-6ca2-e34aa491de46
-    - !<own> 429543f2-49ef-4b84-bc79-849b7f6a80c0
+    - !<own> 3e45ed3f-b52e-45e7-414c-42232131277b

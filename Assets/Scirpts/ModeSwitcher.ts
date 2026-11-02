@@ -1,5 +1,6 @@
 import { LSTween } from "LSTween.lspkg/LSTween";
 import { ToggleGroup } from "SpectaclesUIKit.lspkg/Scripts/Components/Toggle/ToggleGroup";
+import { Manager } from "./Manager";
 
 @component
 export class ModeSwitcher extends BaseScriptComponent {
@@ -20,6 +21,9 @@ export class ModeSwitcher extends BaseScriptComponent {
     @input
     displayText!: Text;
 
+    @input
+    appManager!: Manager;
+
     private isGodMode: boolean = false;
     private _godModeFlag: boolean = false;
 
@@ -38,6 +42,7 @@ export class ModeSwitcher extends BaseScriptComponent {
 
         options.onTranscriptionUpdateEvent.add((eventArgs) => {
             this.onTranscriptionUpdate(eventArgs);
+            this.appManager.openConsCardByVoice(eventArgs);
         });
 
         options.onTranscriptionErrorEvent.add((eventArgs) => {

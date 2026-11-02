@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/405f6e5f-b6e0-4f17-9945-8b77e6c3bfa9>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9ec0b4cf-66da-4216-ab8f-28ead2eec10c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9ec0b4cf-66da-4216-ab8f-28ead2eec10c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a767c108-3392-4311-b869-61f71fd588f5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a767c108-3392-4311-b869-61f71fd588f5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 07f36ee6-cb14-448a-b11b-bd6ffcae0491
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    audioComponent: false
+    commandsList: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - audioComponent: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      commandsList: !<string[]>
+        - Поверните налево
+        - Сделайте шаг вперед
+        - Поднимите руку
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.AudioComponent audioComponent
+    - '// @input string[] commandsList = {"Поверните налево","Сделайте шаг вперед","Поднимите руку"}'

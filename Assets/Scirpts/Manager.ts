@@ -3,6 +3,7 @@ import { CardContentUpdate } from "./Cards/CardContentUpdate";
 import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
 import { consQuatMap } from "./Config";
+import { getChildByName } from "./Utils";
 
 @component
 export class Manager extends BaseScriptComponent {
@@ -54,11 +55,21 @@ export class Manager extends BaseScriptComponent {
             turnOffAllStarsLabels(this.prevCons)
             setDefaultLineMaterial(this.prevCons, this.defaultLineMat)
         }
+        this.currentCons!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
         this.rotateWorldToTarget(this.currentCons!)
         turnOnAllStarsLabels(this.currentCons!) 
         setActiveLineMaterial(this.currentCons!, this.activeLineMat)
         this.openConsCard()
         this.prevCons = this.currentCons; 
+    }
+
+    public openConsCardByVoice(args: any) {
+        const consName = args.text.replace(/[.,!?]/g, "").trim();
+        const consObj = getChildByName(this.world, consName);
+        if (!consObj) return;
+
+        this.currentCons = consObj;
+        this.activateConstellation()
     }
 
     public rotateWorldToTarget(currentCons: SceneObject) {
@@ -86,38 +97,6 @@ export class Manager extends BaseScriptComponent {
         .easing(Easing.Quadratic.InOut)
         .start()
     }
-
-    public rotateWorldToTarget3(currentCons: SceneObject) {
-
-        if (!currentCons) return;
-
-        const worldTransform = this.world.getTransform();
-        const worldPos = worldTransform.getWorldPosition();
-
-        // 1. Получаем истинные векторы направления от центра сферы до объектов
-        const targetPos = this.target.getTransform().getWorldPosition();
-        const targetDir = targetPos.sub(worldPos).normalize();
-
-        const consPos = currentCons.getTransform().getWorldPosition();
-        const consDir = consPos.sub(worldPos).normalize();
-
-        // 2. Вычисляем дельту поворота между двумя направлениями
-        const deltaRot = quat.rotationFromTo(consDir, targetDir);
-
-        // 3. Добавляем дельту к текущему повороту сферы (через умножение кватернионов)
-        const currentRot = worldTransform.getWorldRotation();
-        const finalRot = deltaRot.multiply(currentRot);
-
-        //worldTransform.setWorldRotation(finalRot);
-
-        LSTween.rotateToLocal(
-            worldTransform, 
-            finalRot,
-            1000
-        )
-        .easing(Easing.Quadratic.InOut)
-        .start()
-    } 
 }
 
 

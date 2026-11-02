@@ -1,9 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 879
+    size: 897
     values:
-      - ""
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool
@@ -63,13 +62,30 @@ CollapsedEntities:
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
       - PBR.mat
-      - Prefabs
       - Prefabs/c_label.prefab
       - Prefabs/s_label.prefab
       - RT
       - RT/Device Camera Texture.deviceCameraTexture
       - RT/Render Target.renderTarget
+      - SCI-FI SFX Pack.lspkg
+      - SCI-FI SFX Pack.lspkg/Audio/ambient_alien_atmosphere.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/ambient_eerie_space.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/ambient_warehouse_lab.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/ambient_woob.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/beep1.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/beep2.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/beep3.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/beeping.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/riser_engine_start.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/riser_spaceship.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/shoot_alient_signal.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/shoot_space_factory.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/typing1.mp3
+      - SCI-FI SFX Pack.lspkg/Audio/typing2.mp3
+      - SCI-FI SFX Pack.lspkg/SCIFI__PLACE_IN_SCENE.prefab
+      - SCI-FI SFX Pack.lspkg/package.native
       - Scene.scene
+      - Scirpts
       - Scirpts/Buttons
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/SetActiveConstell.ts
@@ -85,6 +101,7 @@ CollapsedEntities:
       - Scirpts/Data/StarsData.ts
       - Scirpts/Manager.ts
       - Scirpts/ModeSwitcher.ts
+      - Scirpts/TTS.ts
       - Scirpts/Utils.ts
       - Scirpts/VisibilitiModes.ts
       - Scirpts/Voice Control.ts
@@ -842,6 +859,7 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Textures/test-image.jpg
       - SpectaclesUIKit.lspkg/package.native
       - SpectaclesUIKit.lspkg/package_dependencies.json
+      - Text To Speech Module.textToSpeechModule
       - Textures
       - Textures/Base.png
       - Textures/Echopark.hdr
@@ -881,5 +899,5 @@ CollapsedEntities:
       - TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc
       - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
       - TweenManager.lspkg/package.native
-      - VoiceML Module.voiceMLModule
+      - Untitled TypeScript.ts
   options: 4

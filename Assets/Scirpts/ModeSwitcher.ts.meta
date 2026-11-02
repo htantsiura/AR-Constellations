@@ -26,6 +26,7 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    appManager: false
     camera: false
     displayText: false
     godModeToggleGroup: false
@@ -45,6 +46,7 @@
       world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       displayText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      appManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -54,3 +56,4 @@
     - // @input SceneObject world
     - // @input SceneObject sun
     - // @input Component.Text displayText
+    - // @input AssignableType_1 appManager

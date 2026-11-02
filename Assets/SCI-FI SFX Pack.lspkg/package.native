@@ -1,0 +1,37 @@
+- !<NativePackageDescriptor/cdb89a76-aa67-4972-b5a7-c307688e48f9>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 15
+    patch: 2
+    build: 25122322
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: SCI-FI SFX Pack Contains 14 different sound effects with Sci-Fi theme. Click here to learn more on how to play sound
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 76
+  ExportUid: 1cb2169e-17a2-46ef-a1c7-141f1af12819
+  ComponentUid: 6ed01cc5-271c-45bc-948f-62b16d18f731
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0
