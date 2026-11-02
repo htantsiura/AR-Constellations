@@ -1,5 +1,6 @@
 import { ButtonSizeSetup } from "./Buttons/ButtonSizeSetup";
-import { linearDisCatalog, logarithDisCatalog, SCALE, C_SCALE, S_SCALE, hipPositionCatalog } from "./Config";
+import { linearDisMap, logarithDisMap, 
+    SCALE, C_SCALE, S_SCALE, hipPositionMap } from "./Config";
 import { getChildByName, raDecToVec3, raDecToVec3Cons, remap } from "./Utils";
 
 export function createConstellation(
@@ -7,15 +8,15 @@ export function createConstellation(
     parent: SceneObject, 
     c_prefab: ObjectPrefab, 
     IS_LOGARITH: boolean
-) {
+): vec3 {
     const cGroup = global.scene.createSceneObject('SceneObject')
     cGroup.setParent(parent);
 
     let distance: number | undefined;
     if(IS_LOGARITH) {
-        distance = logarithDisCatalog.get(item.name)
+        distance = logarithDisMap.get(item.name)
     } else {
-        distance = linearDisCatalog.get(item.name)
+        distance = linearDisMap.get(item.name)
     }
 
     const cPos = raDecToVec3Cons(item, distance!, SCALE);
@@ -32,6 +33,7 @@ export function createConstellation(
 
     c_Instance.setParent(cGroup);
     c_Instance.getTransform().setWorldScale(new vec3(C_SCALE, C_SCALE, C_SCALE))
+    return cPos;
 }
 
 export function createStar(
@@ -89,7 +91,7 @@ export function createLine(
         });
 
         segment.forEach((star: number) => {
-            const pos = hipPositionCatalog.get(star)?.sub(groupPos)
+            const pos = hipPositionMap.get(star)?.sub(groupPos)
             if(pos)
                 line.addPoints(pos)
         })

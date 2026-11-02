@@ -6,10 +6,13 @@ export class ModeSwitcher extends BaseScriptComponent {
     private asrModule = require("LensStudio:AsrModule");
 
     @input
-    deviceTracking!: DeviceTracking;
+    godModeToggleGroup!: ToggleGroup;
+
+     @input
+    camera!: SceneObject;
 
     @input
-    godModeToggleGroup!: ToggleGroup;
+    world!: SceneObject;
 
     @input
     sun!: SceneObject;
@@ -17,13 +20,10 @@ export class ModeSwitcher extends BaseScriptComponent {
     @input
     displayText!: Text;
 
-    @input
-    kit!: SceneObject;
-
     private isGodMode: boolean = false;
+    private _godModeFlag: boolean = false;
 
     onAwake(): void {
-        this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.Rotation);
         this.createEvent("OnStartEvent").bind(() => {
             this.onStart();
         });
@@ -51,6 +51,19 @@ export class ModeSwitcher extends BaseScriptComponent {
         this.godModeToggleGroup.onToggleSelected.add((args) => {
             this.handleGodModeChange(args);
         });
+
+        const update = this.createEvent("UpdateEvent")
+        update.bind(() => {
+            if (!this.isGodMode) {
+                const camPos = this.camera.getTransform().getWorldPosition();
+                this.world.getTransform().setWorldPosition(camPos)
+            }
+            if (this.isGodMode && !this._godModeFlag) {
+                const camPos = this.camera.getTransform().getWorldPosition();
+                this.world.getTransform().setWorldPosition(camPos)
+                this._godModeFlag = true;
+            }
+        })
     }
 
     private onTranscriptionUpdate(eventArgs: AsrModule.TranscriptionUpdateEvent): void { 
@@ -65,7 +78,7 @@ export class ModeSwitcher extends BaseScriptComponent {
     }
 
     private onTranscriptionError(errorCode: AsrModule.AsrStatusCode): void {
-        print(`Ошибка ASR: ${errorCode}`);
+        print(`Error ASR: ${errorCode}`);
     }
 
     public handleGodModeChange(args: any) {
@@ -84,28 +97,19 @@ export class ModeSwitcher extends BaseScriptComponent {
       
         if (mode === "god mode" || mode === "godmode" || mode === "godmod") {
             if (!this.isGodMode) {
-                this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.World);
                 this.sun.enabled = true;
                 this.isGodMode = true;
+                this._godModeFlag = false;
             }
         } else if (mode === "sun mode" || mode === "sunmode" || mode === "san mode" || mode === "earth mode") {
             if (this.isGodMode) {
-                this.deviceTracking.requestDeviceTrackingMode(DeviceTrackingMode.Rotation);
                 this.sun.enabled = false;
-
-                this.kit.enabled = false;
-                const delayEvent = this.createEvent("DelayedCallbackEvent");
-                delayEvent.bind(() => {
-                    if (this.kit) {
-                        this.kit.enabled = true; // Включаем SIK после того, как камера обновилась
-                        print("🔄 SIK успешно перезапущен в новых координатах");
-                    }
-                });
-                
-                // Заводим таймер на 0.1 секунды (этого с запасом хватит на 3-6 кадров)
-                delayEvent.reset(0.1);
-                
                 this.isGodMode = false;
+                /* const delayEvent = this.createEvent("DelayedCallbackEvent");
+                delayEvent.bind(() => {
+                    print("delay");
+                });
+                delayEvent.reset(0.1);*/
             }
         }
     }

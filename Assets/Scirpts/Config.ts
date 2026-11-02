@@ -8,9 +8,10 @@ export const C_SCALE: number = 3;
 export const S_SCALE: number = 2;
 
 // maps
-export const linearDisCatalog = new Map<string, number>();
-export const logarithDisCatalog = new Map<string, number>();
-export const hipPositionCatalog = new Map<number, vec3>();
+export const linearDisMap = new Map<string, number>();
+export const logarithDisMap = new Map<string, number>();
+export const consDirectionsMap = new Map<string, quat>();
+export const hipPositionMap = new Map<number, vec3>();
 
 // colors
 export const LINE_MODE: Record<string, number> = {

@@ -1,7 +1,7 @@
 import { ConstellationData } from "./Data/ConstellationData";
 import { StarsData } from "./Data/StarsData";
 import { SCALE, IS_LOGARITH, C_SCALE, S_SCALE } from "./Config";
-import { linearDisCatalog, logarithDisCatalog, hipPositionCatalog } from "./Config";
+import { linearDisMap, logarithDisMap, hipPositionMap, consDirectionsMap } from "./Config";
 import { createConstellation, createStar, createLine } from "./Creators";
 import { LinesData } from "./Data/LinesData_SnT";
 import { mappingConstellationDistances } from "./Utils";
@@ -24,6 +24,8 @@ export class WorldCreator extends BaseScriptComponent {
     @input 
     wireToolComponent!: ScriptComponent;
 
+    private startVec3 = new vec3(0, 0, -1)
+
     onAwake() {
 
         if(!this.c_LabelPrefab || !this.world) return;
@@ -31,17 +33,19 @@ export class WorldCreator extends BaseScriptComponent {
         mappingConstellationDistances(
             ConstellationData,
             StarsData,
-            linearDisCatalog,
-            logarithDisCatalog
+            linearDisMap,
+            logarithDisMap
         )
 
         ConstellationData.forEach((item) => {
-            createConstellation(
+            const cPos = createConstellation(
                 item, 
                 this.world, 
                 this.c_LabelPrefab, 
                 IS_LOGARITH
             )
+            const consQuat = quat.rotationFromTo(cPos, this.startVec3)
+            consDirectionsMap.set(item.name, consQuat);
         })
 
         StarsData.forEach((item) => {
@@ -52,7 +56,7 @@ export class WorldCreator extends BaseScriptComponent {
                 IS_LOGARITH, 
                 S_SCALE, 
                 SCALE, 
-                hipPositionCatalog
+                hipPositionMap
             )
         })
 

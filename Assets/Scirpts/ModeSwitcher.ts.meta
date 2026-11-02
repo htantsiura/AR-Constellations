@@ -26,11 +26,11 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    deviceTracking: false
+    camera: false
     displayText: false
     godModeToggleGroup: false
-    kit: false
     sun: false
+    world: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -40,17 +40,17 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
-      godModeToggleGroup: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+    - godModeToggleGroup: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      camera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       displayText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      kit: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input Component.DeviceTracking deviceTracking
     - // @input AssignableType godModeToggleGroup
+    - // @input SceneObject camera
+    - // @input SceneObject world
     - // @input SceneObject sun
     - // @input Component.Text displayText
-    - // @input SceneObject kit

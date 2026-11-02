@@ -2,7 +2,7 @@ import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
 import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
-import { getChildByName } from "./Utils";
+import { consDirectionsMap } from "./Config";
 
 @component
 export class Manager extends BaseScriptComponent {
