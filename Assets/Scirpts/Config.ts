@@ -10,7 +10,7 @@ export const S_SCALE: number = 2;
 // maps
 export const linearDisMap = new Map<string, number>();
 export const logarithDisMap = new Map<string, number>();
-export const consDirectionsMap = new Map<string, quat>();
+export const consQuatMap = new Map<string, quat>();
 export const hipPositionMap = new Map<number, vec3>();
 
 // colors

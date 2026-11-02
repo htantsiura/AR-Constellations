@@ -2,7 +2,7 @@ import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
 import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
-import { consDirectionsMap } from "./Config";
+import { consQuatMap } from "./Config";
 
 @component
 export class Manager extends BaseScriptComponent {
@@ -62,6 +62,32 @@ export class Manager extends BaseScriptComponent {
     }
 
     public rotateWorldToTarget(currentCons: SceneObject) {
+
+        const worldTransform = this.world.getTransform();
+    
+        //getting base constellation Rot from Map
+        const consName = currentCons.name.replace(/[.,!?]/g, "").trim() //args.text.replace(/[.,!?]/g, "").trim().toLowerCase();
+        const baseConsRot = consQuatMap.get(consName);
+
+        // getting targetRot
+        const worldPos = this.world.getTransform().getWorldPosition();
+        const targetPos = this.target.getTransform().getWorldPosition();
+        const targetAngle = Math.atan2(worldPos.x - targetPos.x, worldPos.z - targetPos.z);
+        const targetRot = quat.angleAxis(targetAngle, vec3.up());
+
+        // by multiplying quaternions - getting the rotation
+        const finalRot = targetRot.multiply(baseConsRot!);
+
+        LSTween.rotateToLocal(
+            worldTransform, 
+            finalRot,
+            1000
+        )
+        .easing(Easing.Quadratic.InOut)
+        .start()
+    }
+
+    public rotateWorldToTarget3(currentCons: SceneObject) {
 
         if (!currentCons) return;
 
