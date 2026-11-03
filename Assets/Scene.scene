@@ -25388,6 +25388,7 @@
       appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
       leftHandTarget: !<reference.SceneObject> 9d8d2355-7a33-4f91-b5ce-609d79f43a1b
       rightHandTarget: !<reference.SceneObject> 113e3aee-ccf6-41c5-8308-6b3437b4ea97
+      world: !<reference.SceneObject> 9e331e33-73cc-4309-aef3-014f23e3ea59
   ScriptTypes:
     "":
       {}

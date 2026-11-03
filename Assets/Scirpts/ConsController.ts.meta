@@ -30,6 +30,7 @@
     leftHandTarget: false
     mat: false
     rightHandTarget: false
+    world: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -43,6 +44,7 @@
       appManager: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       leftHandTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       rightHandTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -51,3 +53,4 @@
     - // @input AssignableType appManager
     - // @input SceneObject leftHandTarget
     - // @input SceneObject rightHandTarget
+    - // @input SceneObject world

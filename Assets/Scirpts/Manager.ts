@@ -2,7 +2,7 @@ import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
 import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
-import { consQuatMap, CONTROL_HAND, CONTROL_IDLE, CONTROL_IDLE_POS } from "./Config";
+import { consQuatMap, CONTROL_HOVER, CONTROL_IDLE, CONTROL_LOC_POS } from "./Config";
 import { getChildByName } from "./Utils";
 
 @component
@@ -37,7 +37,7 @@ export class Manager extends BaseScriptComponent {
     public prevCons: SceneObject | null = null;
 
     public currentConsPos: vec3 | null = null;
-    private controlIdlePos: vec3 = new vec3(0, 6, 0);
+    public controlIdlePos: vec3 | null = null;
     
     onAwake() {
         this.card.enabled = false;
@@ -116,8 +116,11 @@ export class Manager extends BaseScriptComponent {
     }
 
     private setControllerToCons(cons: SceneObject) {
-        this.controller.setParent(cons)
-        this.controller.getTransform().setLocalPosition(CONTROL_IDLE_POS)
+        this.controller.setParent(cons);
+        this.controller.getTransform().setLocalPosition(CONTROL_LOC_POS)
+        /* this.controlIdlePos = cons.getTransform().getWorldPosition()
+        this.controlIdlePos.y = this.controlIdlePos.y + 6
+        this.controller.getTransform().setWorldPosition(this.controlIdlePos) */
         this.controller.enabled = true;
         this.controller.getTransform().setWorldScale(CONTROL_IDLE)
     }
