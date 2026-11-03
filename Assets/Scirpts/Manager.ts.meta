@@ -29,6 +29,7 @@
     activeLineMat: false
     card: false
     cardContentUpdateScript: false
+    controller: false
     defaultLineMat: false
     sun: false
     target: false
@@ -49,6 +50,7 @@
       sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      controller: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -60,3 +62,4 @@
     - // @input SceneObject sun
     - // @input SceneObject target
     - // @input SceneObject world
+    - // @input SceneObject controller

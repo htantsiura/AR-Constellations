@@ -1,8 +1,10 @@
 import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
+import { InteractorInputType } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
 import Tween from "LSTween.lspkg/TweenJS/Tween"
 import Easing from "LSTween.lspkg/TweenJS/Easing"
 import { LSTween } from "LSTween.lspkg/LSTween";
 import { Manager } from "./Manager";
+import { CONTROL_HAND, CONTROL_IDLE, CONTROL_IDLE_POS } from "./Config";
 
 @component
 export class ConsController extends BaseScriptComponent {
@@ -13,6 +15,14 @@ export class ConsController extends BaseScriptComponent {
     @input
     appManager!: Manager;
 
+    @input
+    leftHandTarget!: SceneObject;
+
+    @input
+    rightHandTarget!: SceneObject;
+
+    
+
     private delayEvent!: DelayedCallbackEvent;
 
     private interactable: Interactable | null = null;
@@ -21,6 +31,9 @@ export class ConsController extends BaseScriptComponent {
     private hoverScale!: vec3;
     private basePos!: vec3;
     private baseRot!: quat;
+    private activeHand: number = 0;
+    private controlHandTarget!: SceneObject | null;
+
 
     onAwake() {
         this.objectTransform = this.getSceneObject().getTransform()
@@ -39,7 +52,7 @@ export class ConsController extends BaseScriptComponent {
         this.delayEvent.bind(() => {
             const currentPos = this.objectTransform.getLocalPosition()
             const currentRot = this.objectTransform.getLocalRotation()
-            tweenObjectMove(this.objectTransform, currentPos, this.basePos, 250)
+            tweenObjectMove(this.objectTransform, currentPos, CONTROL_IDLE_POS, 250)
             tweenObjectRotate(this.objectTransform, currentRot, this.baseRot, 250)
             tweenObjectRotate(this.appManager.currentCons!.getTransform(), currentRot, this.baseRot, 250)
         })
@@ -51,26 +64,36 @@ export class ConsController extends BaseScriptComponent {
         this.interactable = this.getSceneObject().getComponent(Interactable.getTypeName())
         if (!this.interactable) return;
 
-        this.interactable.onHoverEnter.add(() => {
-            tweenObjectScale(this.objectTransform, this.baseScale, this.hoverScale, 250)
+        this.interactable.onHoverEnter.add((event) => {
+            this.setHandTarget(event);
+            tweenObjectScale(this.objectTransform, CONTROL_IDLE, CONTROL_HAND, 250)
+            const handPos = this.controlHandTarget?.getTransform().getWorldPosition();
+            if(!handPos) return;
+            this.objectTransform.setWorldPosition(handPos)
+
+
         })
 
         this.interactable.onHoverUpdate.add((event) => {
-            /* if(event.interactor && event.interactor.isTriggering) return;
-            //event.interactor.targetHitPosition — 3D coords (vec3) on the surface of 3D model
-            print("Hover UPdate " + event.interactor.targetHitPosition) */
+            this.delayEvent.reset(2);
+            
         })
 
         this.interactable.onHoverExit.add(() => {
+            this.activeHand = 0;
             
             
-            tweenObjectScale(this.objectTransform, this.hoverScale, this.baseScale, 250)
+            tweenObjectScale(this.objectTransform, CONTROL_HAND, CONTROL_IDLE, 250)
         })
 
 
-        this.interactable.onTriggerStart.add(() => {
+        this.interactable.onTriggerStart.add((event) => {
             this.delayEvent.cancel()
             tweenMatValue(this.mat, "intensity", 0.5, 1, 250)
+            
+
+
+            
         })
 
         this.interactable.onTriggerUpdate.add(() => {
@@ -94,7 +117,22 @@ export class ConsController extends BaseScriptComponent {
         this.interactable.onTriggerEndOutside.add(() => {
             tweenMatValue(this.mat, "intensity", 1, 0.5, 250)
             this.delayEvent.reset(2);
+            this.activeHand = 0;
         })
+
+        
+    }
+
+    private setHandTarget(event: any) {
+        if (event.interactor.inputType === 1) {
+            this.activeHand = 1;
+            this.controlHandTarget = this.leftHandTarget
+        } else if (event.interactor.inputType === 2) {
+            this.activeHand = 2;
+            this.controlHandTarget = this.rightHandTarget
+        } else {
+            print("in preview");
+        }
     }
 }
 
@@ -150,6 +188,8 @@ export function tweenObjectRotate(transform: Transform, a: quat, b: quat, time: 
     .easing(Easing.Quadratic.Out)
     .start()
 }
+
+
 
 
 

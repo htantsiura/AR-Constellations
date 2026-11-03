@@ -27,7 +27,9 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     appManager: false
+    leftHandTarget: false
     mat: false
+    rightHandTarget: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -39,9 +41,13 @@
   DefaultScriptInputs:
     - mat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       appManager: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      leftHandTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightHandTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Asset.Material mat
     - // @input AssignableType appManager
+    - // @input SceneObject leftHandTarget
+    - // @input SceneObject rightHandTarget

@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 899
+    size: 898
     values:
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
@@ -61,6 +61,7 @@ CollapsedEntities:
       - Meshes
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
+      - PBR 3.mat
       - PBR.mat
       - Prefabs/c_label.prefab
       - Prefabs/s_label.prefab
@@ -93,6 +94,7 @@ CollapsedEntities:
       - Scirpts/Cards/CloseCard.ts
       - Scirpts/Cards/FrameController.ts
       - Scirpts/Config.ts
+      - Scirpts/ConsController.ts
       - Scirpts/Creators.ts
       - Scirpts/Data
       - Scirpts/Data/ConstellationData.ts
@@ -101,7 +103,6 @@ CollapsedEntities:
       - Scirpts/Manager.ts
       - Scirpts/ModeSwitcher.ts
       - Scirpts/TTS.ts
-      - Scirpts/Untitled TypeScript.ts
       - Scirpts/Utils.ts
       - Scirpts/VisibilitiModes.ts
       - Scirpts/Voice Control.ts
@@ -899,7 +900,5 @@ CollapsedEntities:
       - TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc
       - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
       - TweenManager.lspkg/package.native
-      - Uber PBR.mat
       - Untitled TypeScript.ts
-      - uber_pbr.ss_graph
   options: 4
