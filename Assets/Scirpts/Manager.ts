@@ -1,9 +1,10 @@
 import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
-import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial } from "./VisibilitiModes";
+import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial, turnOnOffControllerBtn } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
-import { consQuatMap, CONTROL_HOVER, CONTROL_IDLE, CONTROL_LOC_POS } from "./Config";
+import { consQuatMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, CTRL_HOVER_SCALE , TW_TIME } from "./Config";
 import { getChildByName } from "./Utils";
+import { tweenObjectMove, tweenObjectScale } from "./Utils/MyTweenFuncs";
 
 @component
 export class Manager extends BaseScriptComponent {
@@ -32,16 +33,29 @@ export class Manager extends BaseScriptComponent {
     @input
     controller!: SceneObject;
 
+    @input
+    testController!: SceneObject;
+
+ 
 
     public currentCons: SceneObject | null = null;
     public prevCons: SceneObject | null = null;
 
     public currentConsPos: vec3 | null = null;
+
+    //Controller vars
     public controlIdlePos: vec3 | null = null;
+    public ctrlConsPos: vec3 | null = null;
+    public ctrlHandPos: vec3 | null = null;
+    public ctrlConsRot: quat | null = null;
+    public isController!: boolean;
+    private controllerTrf = this.controller.getTransform();
+
     
     onAwake() {
         this.card.enabled = false;
         this.controller.enabled = false;
+        this.isController = false;
 
         
         //this.rotateWorldToTarget();
@@ -62,14 +76,45 @@ export class Manager extends BaseScriptComponent {
         if (this.prevCons) {
             turnOffAllStarsLabels(this.prevCons)
             setDefaultLineMaterial(this.prevCons, this.defaultLineMat)
-            this.controller.enabled = false;
+            this.hideShowConsBtn(this.prevCons, false)
+            //this.controller.enabled = false;
         }
         this.currentCons!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
         this.rotateWorldToTarget(this.currentCons!)
         turnOnAllStarsLabels(this.currentCons!) 
         setActiveLineMaterial(this.currentCons!, this.activeLineMat)
+        this.hideShowConsBtn(this.currentCons, true)
         this.openConsCard()
         this.prevCons = this.currentCons; 
+    }
+
+    public showController() {
+        if(!this.currentCons || this.isController) return;
+        this.controllerTrf.setWorldPosition(this.ctrlConsPos!)
+        this.controllerTrf.setWorldRotation(this.ctrlConsRot!)
+        this.controller.enabled = true;
+        tweenObjectMove(this.controllerTrf, this.ctrlConsPos!, this.ctrlHandPos!, TW_TIME)
+        tweenObjectScale(this.controllerTrf, CTRL_START_SCALE, CTRL_IDLE_SCALE, TW_TIME)
+
+        this.isController = true;
+        this.hideShowConsBtn(this.currentCons, false)
+    }
+
+    public hideController() {
+        if(!this.currentCons || !this.isController) return;
+        this.controller.enabled = false;
+        this.isController = false;
+
+        this.hideShowConsBtn(this.currentCons, false)
+        this.hideShowConsBtn(this.prevCons, false)
+    }
+
+    private hideShowConsBtn(cons: SceneObject | null, state: boolean) {
+        if(!cons) return;
+        const btn = cons.getChild(0).getChild(4)
+        if(btn && btn.name === "btn") {
+            btn.enabled = state;
+        }
     }
 
     public openConsCardByVoice(args: any) {
@@ -107,7 +152,7 @@ export class Manager extends BaseScriptComponent {
         .easing(Easing.Quadratic.InOut)
         .start()
         .onComplete(() => {
-            this.setControllerToCons(currentCons);
+           // this.setControllerToCons(currentCons);
         })
     }
 
@@ -115,15 +160,17 @@ export class Manager extends BaseScriptComponent {
         this.currentCons?.getTransform().setLocalRotation(rotation)
     }
 
-    private setControllerToCons(cons: SceneObject) {
-        this.controller.setParent(cons);
-        this.controller.getTransform().setLocalPosition(CONTROL_LOC_POS)
-        /* this.controlIdlePos = cons.getTransform().getWorldPosition()
-        this.controlIdlePos.y = this.controlIdlePos.y + 6
-        this.controller.getTransform().setWorldPosition(this.controlIdlePos) */
+    /* private setControllerToCons(cons: SceneObject) {
+        this.controller.getTransform().setWorldScale(new vec3(0, 0, 0))
         this.controller.enabled = true;
-        this.controller.getTransform().setWorldScale(CONTROL_IDLE)
     }
+
+    public turnOnController(startPos: vec3, endPos: vec3, rot: quat) {
+        this.controllerTrf.setWorldPosition(endPos)
+        //this.controllerTrf.setWorldRotation(rot)
+        this.controller.enabled = true;
+        tweenObjectMove(this.controller.getTransform(), startPos, endPos, TW_TIME)
+    } */
 }
 
 

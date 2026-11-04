@@ -33,6 +33,7 @@
     defaultLineMat: false
     sun: false
     target: false
+    testController: false
     world: false
   ScriptTypesHidden:
     {}
@@ -51,6 +52,7 @@
       target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       controller: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      testController: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -63,3 +65,4 @@
     - // @input SceneObject target
     - // @input SceneObject world
     - // @input SceneObject controller
+    - // @input SceneObject testController

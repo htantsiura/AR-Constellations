@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 898
+    size: 907
     values:
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
@@ -11,6 +11,7 @@ CollapsedEntities:
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.mat
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph
       - Asr Module.asrModule
+      - Controller.prefab
       - LSTween.lspkg
       - LSTween.lspkg/Examples
       - LSTween.lspkg/Examples/Assets
@@ -62,7 +63,11 @@ CollapsedEntities:
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
       - PBR 3.mat
+      - PBR 4.mat
+      - PBR 5.mat
+      - PBR 6.mat
       - PBR.mat
+      - Prefabs
       - Prefabs/c_label.prefab
       - Prefabs/s_label.prefab
       - RT
@@ -94,7 +99,9 @@ CollapsedEntities:
       - Scirpts/Cards/CloseCard.ts
       - Scirpts/Cards/FrameController.ts
       - Scirpts/Config.ts
-      - Scirpts/ConsController.ts
+      - Scirpts/ConsBtn.ts
+      - Scirpts/Controller.ts
+      - Scirpts/ControllerBtn.ts
       - Scirpts/Creators.ts
       - Scirpts/Data
       - Scirpts/Data/ConstellationData.ts
@@ -103,7 +110,9 @@ CollapsedEntities:
       - Scirpts/Manager.ts
       - Scirpts/ModeSwitcher.ts
       - Scirpts/TTS.ts
+      - Scirpts/Utils
       - Scirpts/Utils.ts
+      - Scirpts/Utils/MyTweenFuncs.ts
       - Scirpts/VisibilitiModes.ts
       - Scirpts/Voice Control.ts
       - Scirpts/WireTool.js

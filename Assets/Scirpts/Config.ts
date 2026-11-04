@@ -6,9 +6,11 @@ export const SCALE: number = 1;
 export const IS_LOGARITH: boolean = true;
 export const C_SCALE: number = 3;
 export const S_SCALE: number = 2;
-export const CONTROL_IDLE: vec3 = new vec3(6, 6, 6)
-export const CONTROL_HOVER: vec3 = CONTROL_IDLE.uniformScale(1.5)
+export const CTRL_START_SCALE: vec3 = (new vec3(1.5, 1.5, 1.5)).uniformScale(C_SCALE)
+export const CTRL_IDLE_SCALE: vec3 = CTRL_START_SCALE.uniformScale(1.5)
+export const CTRL_HOVER_SCALE: vec3 = CTRL_START_SCALE.uniformScale(1.8)
 export const CONTROL_LOC_POS: vec3 = new vec3(0, 6, 0)
+export const TW_TIME: number = 250;
 
 // maps
 export const linearDisMap = new Map<string, number>();

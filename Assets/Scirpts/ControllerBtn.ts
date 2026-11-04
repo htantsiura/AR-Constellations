@@ -4,10 +4,10 @@ import Tween from "LSTween.lspkg/TweenJS/Tween"
 import Easing from "LSTween.lspkg/TweenJS/Easing"
 import { LSTween } from "LSTween.lspkg/LSTween";
 import { Manager } from "./Manager";
-import { CONTROL_HOVER, CONTROL_IDLE, CONTROL_LOC_POS } from "./Config";
+import { CTRL_START_SCALE, CTRL_IDLE_SCALE, CTRL_HOVER_SCALE} from "./Config";
 
 @component
-export class ConsController extends BaseScriptComponent {
+export class ControllerBtn extends BaseScriptComponent {
 
     @input
     mat!: Material;
@@ -24,9 +24,8 @@ export class ConsController extends BaseScriptComponent {
     @input
     world!: SceneObject;
 
-    
-
     private delayEvent!: DelayedCallbackEvent;
+    private idleUpdateEvent!: UpdateEvent;
 
     private interactable: Interactable | null = null;
     private objectTransform!: Transform;
@@ -44,19 +43,14 @@ export class ConsController extends BaseScriptComponent {
         this.baseRot = this.objectTransform.getLocalRotation()
 
         this.createEvent("OnStartEvent").bind(() => this.init() )
-
         this.createEvent("OnDisableEvent").bind(() => {
-            this.objectTransform.setLocalScale(CONTROL_IDLE)
+            this.objectTransform.setLocalScale(CTRL_START_SCALE)
         })
 
         this.delayEvent = this.createEvent("DelayedCallbackEvent")
         this.delayEvent.bind(() => {
             const currentPos = this.objectTransform.getLocalPosition()
             const currentRot = this.objectTransform.getLocalRotation()
-            this.getSceneObject().setParentPreserveWorldTransform(this.appManager.currentCons!);
-            //this.controlIdlePos = this.appManager.controlIdlePos;
-            //NOT RETURN BY MOVE, but Pop Up by scale
-            tweenObjectMove(this.objectTransform, currentPos, CONTROL_LOC_POS, 250)
             tweenObjectRotate(this.objectTransform, currentRot, this.baseRot, 250)
             tweenObjectRotate(this.appManager.currentCons!.getTransform(), currentRot, this.baseRot, 250)
         })
@@ -64,17 +58,19 @@ export class ConsController extends BaseScriptComponent {
     }
 
     private init() {
+       this.idleUpdateEvent.enabled = true;
 
         this.interactable = this.getSceneObject().getComponent(Interactable.getTypeName())
         if (!this.interactable) return;
 
         this.interactable.onHoverEnter.add((event) => {
             this.setHandTarget(event);
-            tweenObjectScale(this.objectTransform, CONTROL_IDLE, CONTROL_HOVER, 250)
-            const handPos = this.controlHandTarget?.getTransform().getWorldPosition();
-            if(!handPos) return;
-            this.getSceneObject().setParentPreserveWorldTransform(this.world);
-            this.objectTransform.setWorldPosition(handPos)
+            if(!this.activeHand) return;
+            const endPos = this.controlHandTarget?.getTransform().getWorldPosition()
+            const startPos = this.objectTransform.getWorldPosition();
+            const rot = this.objectTransform.getWorldRotation();
+            //this.appManager.turnOnController(startPos, endPos!, rot)
+            
         })
 
         this.interactable.onHoverUpdate.add((event) => {
@@ -82,39 +78,27 @@ export class ConsController extends BaseScriptComponent {
         })
 
         this.interactable.onHoverExit.add(() => {
-            this.activeHand = 0;
-            this.delayEvent.reset(2);
-            tweenObjectScale(this.objectTransform, CONTROL_HOVER, CONTROL_IDLE, 250)
+
         })
 
-
         this.interactable.onTriggerStart.add((event) => {
-            this.delayEvent.cancel()
-            tweenMatValue(this.mat, "rimIntensity", 0.5, 1, 250)
+
         })
 
         this.interactable.onTriggerUpdate.add(() => {
 
-            // default material to pale
-            // disable all constellations, except selected one
-            const currentRot = this.objectTransform.getLocalRotation()
-            this.appManager.rotateByController(currentRot)
         })
 
         this.interactable.onTriggerEnd.add(() => {
-            tweenMatValue(this.mat, "rimIntensity", 1, 0.5, 250)
-            this.delayEvent.reset(2);
+
         })
 
         this.interactable.onTriggerCanceled.add(() => {
-            tweenMatValue(this.mat, "rimIntensity", 1, 0.5, 250)
-            this.delayEvent.reset(2);
+
         })
 
         this.interactable.onTriggerEndOutside.add(() => {
-            tweenMatValue(this.mat, "rimIntensity", 1, 0.5, 250)
-            this.delayEvent.reset(2);
-            this.activeHand = 0;
+
         })
 
         
@@ -185,43 +169,3 @@ export function tweenObjectRotate(transform: Transform, a: quat, b: quat, time: 
     .easing(Easing.Quadratic.Out)
     .start()
 }
-
-
-
-
-
-/* this.interactable.onHoverEnter.add(() => {
-    print("Hover Enter")
-})
-
-this.interactable.onHoverUpdate.add((event) => {
-    if(event.interactor && event.interactor.isTriggering) return;
-    //event.interactor.targetHitPosition — 3D coords (vec3) on the surface of 3D model
-    print("Hover UPdate " + event.interactor.targetHitPosition)
-})
-
-this.interactable.onHoverExit.add(() => {
-    print("Hover Exit")
-})
-
-
-this.interactable.onTriggerStart.add(() => {
-    print("Pinch Start")
-})
-
-this.interactable.onTriggerUpdate.add(() => {
-    print("Pinch Update")
-})
-
-this.interactable.onTriggerEnd.add(() => {
-    print("Pinch End")
-})
-
-this.interactable.onTriggerCanceled.add(() => {
-    print("Pinch Canceled, hand tracking lost")
-})
-
-this.interactable.onTriggerEndOutside.add(() => {
-    print("Pinch Ended/Canceled outside")
-}) */
-

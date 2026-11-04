@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/346c4eb0-5f64-4949-a0d4-d836276bc857>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 18240723-c112-4515-b3cb-58784e3d85f0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 18240723-c112-4515-b3cb-58784e3d85f0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7b69eb64-e6b1-433a-8610-df9699a262c6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7b69eb64-e6b1-433a-8610-df9699a262c6>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dd52aff4-cbe3-44be-a6d1-60002d95ef7d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    appManager: false
+    leftHandTarget: false
+    mat: false
+    rightHandTarget: false
+    testHandTarget: false
+    world: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - mat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      appManager: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      leftHandTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightHandTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      testHandTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.Material mat
+    - // @input AssignableType appManager
+    - // @input SceneObject leftHandTarget
+    - // @input SceneObject rightHandTarget
+    - // @input SceneObject world
+    - // @input SceneObject testHandTarget

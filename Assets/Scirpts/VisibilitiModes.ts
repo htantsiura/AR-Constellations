@@ -52,6 +52,13 @@ export function setDefaultLineMaterial(object: SceneObject, mat: Material) {
     })
 }
 
+export function turnOnOffControllerBtn(object: SceneObject, value: boolean) {
+    print(" )))))))")
+    object.getChild(0).getChild(4).enabled = value;
+}
+
+
+
 export function animateMatParameter(
     matPass: any, 
     scriptName: string, 
