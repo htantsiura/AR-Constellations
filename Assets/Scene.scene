@@ -38,6 +38,7 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 0df7e997-f39d-4017-b8df-41dd3523f1c2
+    - !<own> c3112011-78a6-4c1a-a30c-dd08f04be414
   Components:
     - !<own> 00000000-0000-0065-0000-000000000065
     - !<own> e5553c8a-0b7e-4ef4-92d9-3e1318fb82c1
@@ -11206,11 +11207,11 @@
   ScriptInputs:
     "":
       godModeToggleGroup: !<MappingBased.AssignableType> 517ca6eb-9eaf-45b1-9067-5960fd543d2e
+      appManager: !<MappingBased.AssignableType_1> 9656742e-1597-4059-9a82-201da302a42f
       camera: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       world: !<reference.SceneObject> 9e331e33-73cc-4309-aef3-014f23e3ea59
       sun: !<reference.SceneObject> 51468993-4204-48e6-86ac-e3477dd004d0
       displayText: !<reference.Text> b54fefe1-1493-46ba-b7e2-36b0e6843d42
-      appManager: !<MappingBased.AssignableType_1> 9656742e-1597-4059-9a82-201da302a42f
   ScriptTypes:
     "":
       {}
@@ -14171,7 +14172,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: -10.000000, z: -110.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.500000, y: 1.500000, z: 1.500000}
+    Scale: {x: 4.500000, y: 4.500000, z: 4.500000}
     HasSegmentScaleCompensation: false
   Children:
     - !<own> a93316e0-68b1-4d29-ab5e-904571a08b3c
@@ -22240,12 +22241,15 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Text
+  Text: |-
+    Voice Navigation. Name a constellation to focus on it. 
+    Use worlds "God Mode" and "Sun Mode" 
+    to switch between tracking modes.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
+  FontSize: 64
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   LayoutRect:
     left: -7.500000
@@ -24141,9 +24145,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 5.000000, z: 0.000000}
+    Position: {x: 0.000000, y: 46.000000, z: -200.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -25300,7 +25304,7 @@
   PrefabRemaps:
     []
   Name: Render Mesh Visual
-  Enabled: true
+  Enabled: false
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -28656,6 +28660,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/ea297c28-5542-455b-b078-90f992bf2179>
+  PrefabRemaps:
+    []
+  Name: Object 0
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
 - !<SceneObject/ea2c2820-ece6-494f-92ff-1618ca7d70e0>
   PrefabRemaps:
     []
@@ -29357,7 +29376,7 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> b952ddbd-42f5-41a6-b09b-471975b67ae0
-    - !<own> c3112011-78a6-4c1a-a30c-dd08f04be414
+    - !<own> ea297c28-5542-455b-b078-90f992bf2179
   Components:
     - !<own> 67bcee2f-4412-41aa-85f4-b6de5e651a04
 - !<SceneObject/eeb9817e-c284-461e-892a-f624f693df18>

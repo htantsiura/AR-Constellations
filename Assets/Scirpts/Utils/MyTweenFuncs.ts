@@ -48,6 +48,22 @@ export function tweenObjectMove(transform: Transform, a: vec3, b: vec3, time: nu
     .start()
 }
 
+export function tweenObjectMoveAndState(transform: Transform, a: vec3, b: vec3, time: number, state: boolean) {
+    LSTween.moveFromToLocal(
+        transform, 
+        a,
+        b,
+        time
+    )
+    .repeat(0)
+    .yoyo(false)
+    .easing(Easing.Quadratic.Out)
+    .start()
+    .onComplete(() => {
+        transform.getSceneObject().enabled = state;
+    })
+}
+
 export function tweenObjectRotate(transform: Transform, a: quat, b: quat, time: number) {
     LSTween.rotateFromToLocal(
         transform, 
@@ -60,3 +76,5 @@ export function tweenObjectRotate(transform: Transform, a: quat, b: quat, time: 
     .easing(Easing.Quadratic.Out)
     .start()
 }
+
+

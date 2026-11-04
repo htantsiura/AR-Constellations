@@ -53,7 +53,7 @@ export class ConsBtn extends BaseScriptComponent {
             this.setHandTarget(event);
             this.appManager.ctrlConsPos = this.objectTransform.getWorldPosition()
             this.appManager.ctrlHandPos = this.controlHandTarget!.getTransform().getWorldPosition()
-            this.appManager.ctrlConsRot = this.getSceneObject().getParent().getParent().getTransform().getWorldRotation()
+            this.appManager.ctrlConsRot = this.world.getTransform().getWorldRotation()
             this.appManager.showController()
         })
 

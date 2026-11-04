@@ -42,18 +42,18 @@
     []
   DefaultScriptInputs:
     - godModeToggleGroup: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      appManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       camera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       displayText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      appManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input AssignableType godModeToggleGroup
+    - // @input AssignableType_1 appManager
     - // @input SceneObject camera
     - // @input SceneObject world
     - // @input SceneObject sun
     - // @input Component.Text displayText
-    - // @input AssignableType_1 appManager

@@ -2,9 +2,9 @@ import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
 import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial, turnOnOffControllerBtn } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
-import { consQuatMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, CTRL_HOVER_SCALE , TW_TIME } from "./Config";
+import { consQuatMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, C_SCALE, CTRL_HOVER_SCALE , TW_TIME } from "./Config";
 import { getChildByName } from "./Utils";
-import { tweenObjectMove, tweenObjectScale } from "./Utils/MyTweenFuncs";
+import { tweenObjectMove, tweenObjectScale, tweenObjectMoveAndState } from "./Utils/MyTweenFuncs";
 
 @component
 export class Manager extends BaseScriptComponent {
@@ -35,6 +35,7 @@ export class Manager extends BaseScriptComponent {
 
     @input
     testController!: SceneObject;
+
 
  
 
@@ -102,16 +103,29 @@ export class Manager extends BaseScriptComponent {
 
     public hideController() {
         if(!this.currentCons || !this.isController) return;
-        this.controller.enabled = false;
         this.isController = false;
-
-        this.hideShowConsBtn(this.currentCons, false)
-        this.hideShowConsBtn(this.prevCons, false)
+        //tweenObjectMoveAndState(this.controllerTrf, this.ctrlHandPos!, this.ctrlConsPos!, TW_TIME, false)
+        tweenObjectScale(this.controllerTrf, CTRL_IDLE_SCALE, CTRL_START_SCALE, TW_TIME)
+        LSTween.moveFromToLocal(
+            this.controllerTrf, 
+            this.ctrlHandPos!,
+            this.ctrlConsPos!,
+            TW_TIME
+        )
+        .repeat(0)
+        .yoyo(false)
+        .easing(Easing.Quadratic.Out)
+        .start()
+        .onComplete(() => {
+            this.controller.enabled = false;
+            this.hideShowConsBtn(this.currentCons, true)
+        })
     }
 
     private hideShowConsBtn(cons: SceneObject | null, state: boolean) {
         if(!cons) return;
         const btn = cons.getChild(0).getChild(4)
+        btn.getTransform().setLocalScale(BTN_SCALE)
         if(btn && btn.name === "btn") {
             btn.enabled = state;
         }
@@ -159,18 +173,6 @@ export class Manager extends BaseScriptComponent {
     public rotateByController(rotation: quat) {
         this.currentCons?.getTransform().setLocalRotation(rotation)
     }
-
-    /* private setControllerToCons(cons: SceneObject) {
-        this.controller.getTransform().setWorldScale(new vec3(0, 0, 0))
-        this.controller.enabled = true;
-    }
-
-    public turnOnController(startPos: vec3, endPos: vec3, rot: quat) {
-        this.controllerTrf.setWorldPosition(endPos)
-        //this.controllerTrf.setWorldRotation(rot)
-        this.controller.enabled = true;
-        tweenObjectMove(this.controller.getTransform(), startPos, endPos, TW_TIME)
-    } */
 }
 
 

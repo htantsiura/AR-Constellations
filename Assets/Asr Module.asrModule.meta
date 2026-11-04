@@ -1,8 +1,8 @@
-- !<AssetImportMetadata/b318b57a-02b7-40be-8eeb-41127de3b025>
+- !<AssetImportMetadata/1a0e713e-2146-419d-8c0b-891ff086e61c>
   ImportedAssetIds:
-    AsrModule: !<reference> b7e062f4-8642-4c95-96a8-8fe529b6b7a5
+    AsrModule: !<reference> 5d9fc268-abf4-4c7f-b125-30f19203d13c
   ImporterName: AsrModuleImporter
-  PrimaryAsset: !<reference> b7e062f4-8642-4c95-96a8-8fe529b6b7a5
+  PrimaryAsset: !<reference> 5d9fc268-abf4-4c7f-b125-30f19203d13c
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:

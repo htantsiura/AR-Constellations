@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 907
+    size: 906
     values:
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
@@ -869,7 +869,6 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Textures/test-image.jpg
       - SpectaclesUIKit.lspkg/package.native
       - SpectaclesUIKit.lspkg/package_dependencies.json
-      - Text To Speech Module.textToSpeechModule
       - Textures
       - Textures/Base.png
       - Textures/Echopark.hdr
