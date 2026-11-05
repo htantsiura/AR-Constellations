@@ -20,10 +20,9 @@ metaInfo:
     - Front
     - Back
   lensClientCompatibilities:
-    - Mobile
     - Spectacles
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: f53c0cea639fb79b9812f85ae5d0d560
   videoPreviewHash: ""
   fromTemplateName: Spectacles
   fromTemplateUrl: Lens Studio 5.15.2.25122322

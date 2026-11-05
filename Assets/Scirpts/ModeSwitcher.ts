@@ -13,11 +13,9 @@ export class ModeSwitcher extends BaseScriptComponent {
     @input world!: SceneObject;
     @input sun!: SceneObject;
     @input displayText!: Text;
-    
 
     private isGodMode: boolean = false;
     private _godModeFlag: boolean = false;
-    
     private updateEvent!: UpdateEvent;
     private delayEvent!: DelayedCallbackEvent;
     
@@ -44,11 +42,11 @@ export class ModeSwitcher extends BaseScriptComponent {
         this.delayEvent.bind(() => {
             this.displayText.enabled = false;
         })
-        
     }
 
     onStart() {
         if (!this.displayText) return;
+        this.sun.enabled = false;
 
         const options = AsrModule.AsrTranscriptionOptions.create(); 
         options.silenceUntilTerminationMs = 1000; 
@@ -119,127 +117,3 @@ export class ModeSwitcher extends BaseScriptComponent {
         }
     }
 }
-
-/* import { LSTween } from "LSTween.lspkg/LSTween";
-import { ToggleGroup } from "SpectaclesUIKit.lspkg/Scripts/Components/Toggle/ToggleGroup";
-import { Manager } from "./Manager";
-
-@component
-export class ModeSwitcher extends BaseScriptComponent {
-    private asrModule = require("LensStudio:AsrModule");
-
-    @input
-    godModeToggleGroup!: ToggleGroup;
-
-     @input
-    camera!: SceneObject;
-
-    @input
-    world!: SceneObject;
-
-    @input
-    sun!: SceneObject;
-
-    @input
-    displayText!: Text;
-
-    @input
-    appManager!: Manager;
-
-    @input
-    debugText!: Text;
-
-    private isGodMode: boolean = false;
-    private _godModeFlag: boolean = false;
-
-    onAwake(): void {
-        this.createEvent("OnStartEvent").bind(() => {
-            this.onStart();
-        });
-    }
-
-    onStart() {
-        if (!this.displayText) return;
-
-        
-
-        const options = AsrModule.AsrTranscriptionOptions.create(); 
-        options.silenceUntilTerminationMs = 1000; 
-        //
-
-        options.onTranscriptionUpdateEvent.add((eventArgs) => {
-            this.debugText.text = "onTranscriptionUpdateEvent"
-            this.onTranscriptionUpdate(eventArgs);
-            this.appManager.openConsCardByVoice(eventArgs);
-        });
-
-        options.onTranscriptionErrorEvent.add((eventArgs) => {
-            this.debugText.text = "ASR ERROR: " + eventArgs;
-            this.onTranscriptionError(eventArgs);
-        });
-
-        // run voice recognizer
-        this.asrModule.startTranscribing(options);
-
-        // toggle by buttons
-        this.godModeToggleGroup.onToggleSelected.add((args) => {
-            this.handleGodModeChange(args);
-        });
-
-        const update = this.createEvent("UpdateEvent")
-        update.bind(() => {
-            if (!this.isGodMode) {
-                const camPos = this.camera.getTransform().getWorldPosition();
-                this.world.getTransform().setWorldPosition(camPos)
-            }
-            if (this.isGodMode && !this._godModeFlag) {
-                const camPos = this.camera.getTransform().getWorldPosition();
-                this.world.getTransform().setWorldPosition(camPos)
-                this._godModeFlag = true;
-            }
-        })
-    }
-
-    private onTranscriptionUpdate(eventArgs: AsrModule.TranscriptionUpdateEvent): void { 
-        this.displayText.text = eventArgs.text;
-
-        if (eventArgs.isFinal) {
-            LSTween.colorTextTo(this.displayText, new vec4(0, 1, 0, 1), 300).start();
-        } else {
-            LSTween.colorTextTo(this.displayText, new vec4(1, 1, 1, 1), 100).start(); 
-        }
-        this.handleGodModeChange(eventArgs)
-    }
-
-    private onTranscriptionError(errorCode: AsrModule.AsrStatusCode): void {
-        print(`Error ASR: ${errorCode}`);
-    }
-
-    public handleGodModeChange(args: any) {
-        let mode = "";
-
-        if (args.toggleable) {
-            const buttonObject = args.toggleable.getSceneObject();
-            if (!buttonObject) return;
-            mode = buttonObject.name;
-        } else if (args.text) {
-            mode = args.text.replace(/[.,!?]/g, "").trim().toLowerCase();
-            print("voice control")
-        } else {
-            return;
-        }
-      
-        if (mode === "god mode" || mode === "godmode" || mode === "godmod") {
-            if (!this.isGodMode) {
-                this.sun.enabled = true;
-                this.isGodMode = true;
-                this._godModeFlag = false;
-            }
-        } else if (mode === "sun mode" || mode === "sunmode" || mode === "san mode" || mode === "earth mode") {
-            if (this.isGodMode) {
-                this.sun.enabled = false;
-                this.isGodMode = false;
-            }
-        }
-    }
-} */

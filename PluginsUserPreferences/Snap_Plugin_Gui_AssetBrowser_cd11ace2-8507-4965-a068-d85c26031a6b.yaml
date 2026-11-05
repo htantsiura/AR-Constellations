@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 908
+    size: 910
     values:
       - ""
       - 1 Simple Line.lspkg
@@ -12,7 +12,6 @@ CollapsedEntities:
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.mat
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph
       - Asr Module.asrModule
-      - Controller.prefab
       - LSTween.lspkg
       - LSTween.lspkg/Examples
       - LSTween.lspkg/Examples/Assets
@@ -38,11 +37,17 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
+      - Materials
+      - Materials/PBR 10.mat
+      - Materials/PBR 11.mat
+      - Materials/PBR 12.mat
       - Materials/PBR 2.mat
       - Materials/PBR 3.mat
       - Materials/PBR 4.mat
       - Materials/PBR 5.mat
       - Materials/PBR 6.mat
+      - Materials/PBR 7.mat
+      - Materials/PBR 9.mat
       - Materials/PBR.mat
       - Materials/color.ss_graph
       - Materials/cons_active.mat
@@ -64,11 +69,8 @@ CollapsedEntities:
       - Meshes
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
-      - PBR 3.mat
-      - PBR 4.mat
-      - PBR 5.mat
-      - PBR 6.mat
-      - PBR.mat
+      - Prefabs
+      - Prefabs/Controller.prefab
       - Prefabs/c_label.prefab
       - Prefabs/s_label.prefab
       - RT
@@ -112,6 +114,7 @@ CollapsedEntities:
       - Scirpts/Manager.ts
       - Scirpts/ModeSwitcher.ts
       - Scirpts/TTS.ts
+      - Scirpts/Untitled TypeScript.ts
       - Scirpts/Utils
       - Scirpts/Utils.ts
       - Scirpts/Utils/MyTweenFuncs.ts
@@ -910,5 +913,4 @@ CollapsedEntities:
       - TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc
       - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
       - TweenManager.lspkg/package.native
-      - Untitled TypeScript.ts
   options: 4
