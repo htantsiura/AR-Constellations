@@ -1,9 +1,9 @@
-import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
-import { InteractorInputType } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
 import { Manager } from "./Manager";
 import { CTRL_START_SCALE, CTRL_IDLE_SCALE, CTRL_HOVER_SCALE, TW_TIME  } from "./Config";
 import { tweenObjectMove, tweenObjectScale } from "./Utils/MyTweenFuncs";
 import Event from "SpectaclesInteractionKit.lspkg/Utils/Event";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import { InteractorInputType } from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor";
 
 @component
 export class Controller extends BaseScriptComponent {

@@ -37,7 +37,6 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
-      - Materials
       - Materials/PBR 10.mat
       - Materials/PBR 11.mat
       - Materials/PBR 12.mat
@@ -69,6 +68,7 @@ CollapsedEntities:
       - Meshes
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
+      - Particles Texture 2.png
       - Prefabs
       - Prefabs/Controller.prefab
       - Prefabs/c_label.prefab
