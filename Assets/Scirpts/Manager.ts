@@ -135,11 +135,9 @@ export class Manager extends BaseScriptComponent {
 
         const worldTransform = this.world.getTransform();
     
-        //getting base constellation Rot from Map
-        const consName = currentCons.name.replace(/[.,!?]/g, "").trim() //args.text.replace(/[.,!?]/g, "").trim().toLowerCase();
+        const consName = currentCons.name.replace(/[.,!?]/g, "").trim() 
         const baseConsRot = consQuatMap.get(consName);
 
-        // getting targetRot
         const worldPos = this.world.getTransform().getWorldPosition();
         const targetPos = this.target.getTransform().getWorldPosition();
         this.currentConsPos = targetPos;
@@ -156,9 +154,7 @@ export class Manager extends BaseScriptComponent {
         )
         .easing(Easing.Quadratic.InOut)
         .start()
-        .onComplete(() => {
-           // this.setControllerToCons(currentCons);
-        })
+
     }
 
     public rotateByController(rotation: quat) {
