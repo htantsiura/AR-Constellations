@@ -27,13 +27,14 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     activeLineMat: false
+    activeStarMat: false
     card: false
     cardContentUpdateScript: false
     controller: false
     defaultLineMat: false
+    defaultStarMat: false
     sun: false
     target: false
-    testController: false
     world: false
   ScriptTypesHidden:
     {}
@@ -46,23 +47,29 @@
   DefaultScriptInputs:
     - card: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
-      activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
-      sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      controller: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      controller: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      testController: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      defaultStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      activeStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject card
     - // @input AssignableType cardContentUpdateScript
-    - // @input Asset.Material defaultLineMat
-    - // @input Asset.Material activeLineMat
-    - // @input SceneObject sun
+    - '// @ui {"widget":"separator"}'
+    - // @input SceneObject controller
     - // @input SceneObject target
     - // @input SceneObject world
-    - // @input SceneObject controller
-    - // @input SceneObject testController
+    - // @input SceneObject sun
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Materials"}'
+    - // @input Asset.Material defaultLineMat
+    - // @input Asset.Material activeLineMat
+    - // @input Asset.Material defaultStarMat
+    - // @input Asset.Material activeStarMat
+    - '// @ui {"widget":"group_end"}'

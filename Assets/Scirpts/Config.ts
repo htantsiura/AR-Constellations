@@ -12,6 +12,7 @@ export const CTRL_IDLE_SCALE: vec3 = CTRL_START_SCALE.uniformScale(1.5)
 export const CTRL_HOVER_SCALE: vec3 = CTRL_START_SCALE.uniformScale(1.8)
 export const CONTROL_LOC_POS: vec3 = new vec3(0, 6, 0)
 export const TW_TIME: number = 250;
+export const ZERO_QUAT: quat = new quat(1, 0, 0, 0)
 
 // maps
 export const linearDisMap = new Map<string, number>();
@@ -25,6 +26,13 @@ export const LINE_MODE: Record<string, number> = {
     "active": 1.5,
     "pale": 0
 }
+
+export const STAR_MODE: Record<string, number> = {
+    "idle": 0.75,
+    "active": 1.5,
+    "pale": 0
+}
+
 export const C_COLORS: Record<string, vec4> = {
     "primary-50": new vec4(0.949, 0.898, 1.000, 1.0),  // #F2E5FF
     "primary-250": new vec4(0.749, 0.502, 1.000, 1.0), // #BF80FF

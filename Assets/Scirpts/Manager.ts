@@ -1,47 +1,36 @@
 import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
-import { turnOnAllStarsLabels, turnOffAllStarsLabels, setActiveLineMaterial, setDefaultLineMaterial, turnOnOffControllerBtn } from "./VisibilitiModes";
+import { changeMatSlider, consIdleToActiveVisibility, consActiveToIdleVisibility } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
-import { consQuatMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, C_SCALE, CTRL_HOVER_SCALE , TW_TIME } from "./Config";
+import { consQuatMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, ZERO_QUAT, TW_TIME, LINE_MODE } from "./Config";
 import { getChildByName } from "./Utils";
-import { tweenObjectMove, tweenObjectScale, tweenObjectMoveAndState } from "./Utils/MyTweenFuncs";
+import { tweenObjectMove, tweenObjectScale, tweenObjectRotateTo, tweenObjectMoveAndState } from "./Utils/MyTweenFuncs";
+import { tweenObjectRotate } from "./ControllerBtn";
 
 @component
 export class Manager extends BaseScriptComponent {
+   
+    @input card!: SceneObject;
+    @input cardContentUpdateScript!: CardContentUpdate;
 
-    @input
-    card!: SceneObject;
+    @ui.separator
 
-    @input
-    cardContentUpdateScript!: CardContentUpdate;
+    @input controller!: SceneObject;
+    @input target!: SceneObject;
+    @input world!: SceneObject;
+    @input sun!: SceneObject;
 
-    @input
-    defaultLineMat!: Material;
+    @ui.separator
 
-    @input
-    activeLineMat!: Material;
-
-    @input
-    sun!: SceneObject;
-
-    @input
-    target!: SceneObject;
-
-    @input
-    world!: SceneObject;
-
-    @input
-    controller!: SceneObject;
-
-    @input
-    testController!: SceneObject;
-
-
- 
+    @ui.group_start("Materials")
+    @input defaultLineMat!: Material;
+    @input activeLineMat!: Material;
+    @input defaultStarMat!: Material;
+    @input activeStarMat!: Material;
+    @ui.group_end
 
     public currentCons: SceneObject | null = null;
     public prevCons: SceneObject | null = null;
-
     public currentConsPos: vec3 | null = null;
 
     //Controller vars
@@ -57,9 +46,6 @@ export class Manager extends BaseScriptComponent {
         this.card.enabled = false;
         this.controller.enabled = false;
         this.isController = false;
-
-        
-        //this.rotateWorldToTarget();
     }
 
     private onStart(): void {
@@ -72,18 +58,16 @@ export class Manager extends BaseScriptComponent {
     }
 
     public activateConstellation() {
+        print( "zero rotation quat " + this.controller.getTransform().getWorldRotation())
         if (this.prevCons === this.currentCons) return
 
         if (this.prevCons) {
-            turnOffAllStarsLabels(this.prevCons)
-            setDefaultLineMaterial(this.prevCons, this.defaultLineMat)
+            consActiveToIdleVisibility(this.prevCons, this.defaultStarMat, this.defaultLineMat)
             this.hideShowConsBtn(this.prevCons, false)
-            //this.controller.enabled = false;
         }
         this.currentCons!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
         this.rotateWorldToTarget(this.currentCons!)
-        turnOnAllStarsLabels(this.currentCons!) 
-        setActiveLineMaterial(this.currentCons!, this.activeLineMat)
+        consIdleToActiveVisibility(this.currentCons!, this.activeStarMat, this.activeLineMat)
         this.hideShowConsBtn(this.currentCons, true)
         this.openConsCard()
         this.prevCons = this.currentCons; 
@@ -94,6 +78,9 @@ export class Manager extends BaseScriptComponent {
         this.controllerTrf.setWorldPosition(this.ctrlConsPos!)
         this.controllerTrf.setWorldRotation(this.ctrlConsRot!)
         this.controller.enabled = true;
+        
+        changeMatSlider(this.defaultLineMat, LINE_MODE.idle, LINE_MODE.pale)
+        changeMatSlider(this.defaultStarMat, 1, 0)
         tweenObjectMove(this.controllerTrf, this.ctrlConsPos!, this.ctrlHandPos!, TW_TIME)
         tweenObjectScale(this.controllerTrf, CTRL_START_SCALE, CTRL_IDLE_SCALE, TW_TIME)
 
@@ -104,8 +91,12 @@ export class Manager extends BaseScriptComponent {
     public hideController() {
         if(!this.currentCons || !this.isController) return;
         this.isController = false;
-        //tweenObjectMoveAndState(this.controllerTrf, this.ctrlHandPos!, this.ctrlConsPos!, TW_TIME, false)
+        
+        changeMatSlider(this.defaultLineMat, LINE_MODE.pale, LINE_MODE.idle)
+        changeMatSlider(this.defaultStarMat, 0, 1)
         tweenObjectScale(this.controllerTrf, CTRL_IDLE_SCALE, CTRL_START_SCALE, TW_TIME)
+        tweenObjectRotateTo(this.controllerTrf, this.ctrlConsRot!, TW_TIME)
+        tweenObjectRotateTo(this.currentCons.getTransform(), ZERO_QUAT, TW_TIME)
         LSTween.moveFromToLocal(
             this.controllerTrf, 
             this.ctrlHandPos!,

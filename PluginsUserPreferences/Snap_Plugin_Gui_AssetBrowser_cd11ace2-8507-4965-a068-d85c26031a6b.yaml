@@ -1,8 +1,9 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 906
+    size: 908
     values:
+      - ""
       - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool
@@ -37,7 +38,6 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
-      - Materials
       - Materials/PBR 2.mat
       - Materials/PBR 3.mat
       - Materials/PBR 4.mat
@@ -54,11 +54,13 @@ CollapsedEntities:
       - Materials/controller.ss_graph
       - Materials/icon 2.ss_graph
       - Materials/icon_constell.mat
-      - Materials/icon_star.mat
       - Materials/object_icon.ss_graph
       - Materials/pbr 2.ss_graph
       - Materials/pbr.ss_graph
+      - Materials/star_active.mat
+      - Materials/star_default.mat
       - Materials/sun.mat
+      - Materials/surface modified materials.lspkg
       - Meshes
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
@@ -67,7 +69,6 @@ CollapsedEntities:
       - PBR 5.mat
       - PBR 6.mat
       - PBR.mat
-      - Prefabs
       - Prefabs/c_label.prefab
       - Prefabs/s_label.prefab
       - RT
@@ -91,6 +92,7 @@ CollapsedEntities:
       - SCI-FI SFX Pack.lspkg/SCIFI__PLACE_IN_SCENE.prefab
       - SCI-FI SFX Pack.lspkg/package.native
       - Scene.scene
+      - Scirpts
       - Scirpts/Buttons
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/SetActiveConstell.ts

@@ -13,10 +13,16 @@
     - Port_C_N013:
         typeIdx: 5
         value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Center_N002:
+        typeIdx: 3
+        value: {x: 0.500000, y: 0.500000}
     - Port_CoordsIn_N002:
         typeIdx: 3
         value: {x: 0.000000, y: 0.000000}
     - Port_D_N013:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Default_N009:
         typeIdx: 5
         value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
     - Port_Depth_N004:
@@ -52,6 +58,15 @@
     - Port_Input0_N013:
         typeIdx: 5
         value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N024:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N025:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N026:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     - Port_Input1_N005:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -61,12 +76,30 @@
     - Port_Input1_N013:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N024:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N025:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N026:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input2_N013:
+        typeIdx: 5
+        value: {x: 0.500008, y: 0.500008, z: 0.500008, w: 0.500008}
     - Port_LODValue_N000:
         typeIdx: 1
         value: 0.000000
     - Port_LODValue_N007:
         typeIdx: 1
         value: 0.000000
+    - Port_LODValue_N022:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Multiplier_N003:
+        typeIdx: 1
+        value: -50.000000
     - Port_Output_N014:
         typeIdx: 5
         value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
@@ -91,6 +124,9 @@
     - Port_UVCoord_N007:
         typeIdx: 3
         value: {x: 0.000000, y: 0.000000}
+    - Port_UVCoord_N022:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
     - Port_Value0_N009:
         typeIdx: 5
         value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
@@ -100,6 +136,12 @@
     - Port_Value2_N009:
         typeIdx: 5
         value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Value_N010:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_Value_N012:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     - Port_WorldNormal_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -109,12 +151,54 @@
     - Port_WorldTangent_N004:
         typeIdx: 4
         value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - Tweak_N0:
+        typeIdx: 9
+        value:
+          id: 4ea0eb57-9a37-4a2a-baa9-a86aac41e360
+          sampler:
+            filteringMode: Trilinear
+            wrapModeU: ClampToEdge
+            wrapModeV: ClampToEdge
+            wrapModeW: Repeat
+            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+            mipmaps: false
+          type: Texture2D
+    - Tweak_N0Transform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
     - Tweak_N11:
         typeIdx: 1
         value: 1.000000
     - Tweak_N6:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Tweak_N7:
+        typeIdx: 9
+        value:
+          id: ac56d82f-2951-4980-99ae-53277af76ce0
+          sampler:
+            filteringMode: Trilinear
+            wrapModeU: Repeat
+            wrapModeV: Repeat
+            wrapModeW: Repeat
+            borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+            mipmaps: false
+          type: Texture2D
+    - Tweak_N7Transform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - color1:
+        typeIdx: 5
+        value: {x: 0.494118, y: 0.000000, z: 1.000000, w: 1.000000}
+    - switcher:
+        typeIdx: 1
+        value: 2.000000
   DepthWrite: false
   DepthTest: false
   DepthFunction: LessEqual
@@ -129,49 +213,22 @@
     []
   BlendMode: PremultipliedAlphaAuto
   Properties:
-    Port_Center_N002:
-      typeIdx: 3
-      value: {x: 0.500000, y: 0.500000}
-    Port_Default_N009:
+    Port_Default_N021:
       typeIdx: 5
       value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-    Port_Input2_N013:
-      typeIdx: 5
-      value: {x: 0.500008, y: 0.500008, z: 0.500008, w: 0.500008}
-    Port_Multiplier_N003:
-      typeIdx: 1
-      value: -50.000000
-    Port_Value_N010:
+    Port_Input0_N017:
       typeIdx: 5
       value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-    Port_Value_N012:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_Input1_N019:
+      typeIdx: 1
+      value: -1.000000
     PreviewEnabled:
       typeIdx: 0
       value: 0
-    Tweak_N0:
+    Tweak_N22:
       typeIdx: 9
       value:
-        id: 4ea0eb57-9a37-4a2a-baa9-a86aac41e360
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: ClampToEdge
-          wrapModeV: ClampToEdge
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    Tweak_N0Transform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    Tweak_N7:
-      typeIdx: 9
-      value:
-        id: ac56d82f-2951-4980-99ae-53277af76ce0
+        id: 00000000-0000-0000-0000-000000000000
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -180,16 +237,19 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-    Tweak_N7Transform:
+    Tweak_N22Transform:
       typeIdx: 7
       value:
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    color1:
+    color_active:
       typeIdx: 5
-      value: {x: 0.494118, y: 0.000000, z: 1.000000, w: 1.000000}
-    switcher:
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    color_default:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    slider:
       typeIdx: 1
-      value: 2.000000
+      value: 1.000000
   Pass: !<reference> 2bf4335c-54f7-4c06-a8e4-528f0b4ba026

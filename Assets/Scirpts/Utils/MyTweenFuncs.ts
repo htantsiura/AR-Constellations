@@ -77,4 +77,16 @@ export function tweenObjectRotate(transform: Transform, a: quat, b: quat, time: 
     .start()
 }
 
+export function tweenObjectRotateTo(transform: Transform, rotQuat: quat, time: number) {
+    LSTween.rotateToLocal(
+        transform, 
+        rotQuat,
+        time
+    )
+    .repeat(0)
+    .yoyo(false)
+    .easing(Easing.Quadratic.Out)
+    .start()
+}
+
 
