@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 910
+    size: 913
     values:
       - ""
       - 1 Simple Line.lspkg
@@ -69,6 +69,8 @@ CollapsedEntities:
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
       - Particles Texture 2.png
+      - Particles Texture 3.png
+      - Particles Texture 4.png
       - Prefabs
       - Prefabs/Controller.prefab
       - Prefabs/c_label.prefab
@@ -123,6 +125,7 @@ CollapsedEntities:
       - Scirpts/WireTool.js
       - Scirpts/WorldCreator.ts
       - Scirpts/scripts_holder.ts
+      - Simple Emitter.vfxgraph
       - Soap Bubble Material.lspkg
       - Soap Bubble Material.lspkg/Soap Bubble.mat
       - Soap Bubble Material.lspkg/Soap Bubble.ss_graph

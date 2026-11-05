@@ -9819,7 +9819,7 @@
   Children:
     - !<own> b835974e-b1d0-4f0d-a9b0-327c347b0b41
     - !<own> 11db7f52-fa18-42d0-81a3-eb1d1e04ca80
-    - !<own> 75bddbbb-6654-47bd-8dfc-71833726fd76
+    - !<own> d4b1abbe-a923-427a-ae5e-7f9578d735f9
   Components:
     []
 - !<SceneObject/514747df-8e9a-4347-a6ec-727c27013c96>
@@ -11616,19 +11616,6 @@
     []
   Components:
     - !<own> 4f3007c3-f1a1-40c7-a6a8-402eefc76c54
-- !<VFXComponent/5e441544-2cb0-4777-a41a-9d451abc01d8>
-  PrefabRemaps:
-    []
-  Name: VFX Component
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  VFXAsset: !<reference> 321b3881-fed2-4192-9ae1-8e33399e84ea
 - !<SceneObject/5e91d27d-cb6e-4657-aa2f-e6660a688c59>
   PrefabRemaps:
     []
@@ -13941,21 +13928,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/75bddbbb-6654-47bd-8dfc-71833726fd76>
-  PrefabRemaps:
-    []
-  Name: Simple Emitter
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 5e441544-2cb0-4777-a41a-9d451abc01d8
 - !<SceneObject/765483b8-01d9-47e3-8f05-82cee31ca665>
   PrefabRemaps:
     []
@@ -25399,6 +25371,19 @@
     - !<own> 08c1fe11-627f-4c6f-bcbf-baf3807a4374
   Components:
     - !<own> 26197144-822f-4fb6-ab58-5548a2e0fb7e
+- !<VFXComponent/c9074c52-efe5-4ff9-aa4d-9866596e8066>
+  PrefabRemaps:
+    []
+  Name: VFX Component
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> a172c7a0-16b7-4fe5-9ab8-c1ce9002bc09
 - !<SceneObject/c9158b67-67d2-492f-98bb-6154d980febb>
   PrefabRemaps:
     []
@@ -26742,6 +26727,21 @@
     - !<own> 73b7e3d8-b7f3-4c24-9f65-4ecfc6871b0d
   Components:
     []
+- !<SceneObject/d4b1abbe-a923-427a-ae5e-7f9578d735f9>
+  PrefabRemaps:
+    []
+  Name: Simple Emitter
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c9074c52-efe5-4ff9-aa4d-9866596e8066
 - !<SceneObject/d54a65cd-0ff0-4a0c-a6b7-e8a67e0bb30a>
   PrefabRemaps:
     []
