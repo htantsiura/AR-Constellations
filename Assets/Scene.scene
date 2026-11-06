@@ -318,7 +318,7 @@
 - !<SceneObject/01b53e56-f825-4132-87ac-358a2cb55b8a>
   PrefabRemaps:
     []
-  Name: green
+  Name: orange
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -25125,7 +25125,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 581fd10d-6cfe-401d-af5a-16716e966705
+    - !<reference> 21c7bb2c-5a1a-482c-899e-ebc9afe7f046
   Mesh: !<reference> 8922613f-2925-46f2-80d9-a0172a050931
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true

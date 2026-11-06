@@ -104,5 +104,5 @@
       value: 0
     Tweak_N1:
       typeIdx: 5
-      value: {x: 0.068345, y: 0.495644, z: 0.000000, w: 1.000000}
+      value: {x: 0.000000, y: 0.800000, z: 1.000000, w: 1.000000}
   Pass: !<reference> fd1af83e-1314-4d61-8f75-1fcaccf91503

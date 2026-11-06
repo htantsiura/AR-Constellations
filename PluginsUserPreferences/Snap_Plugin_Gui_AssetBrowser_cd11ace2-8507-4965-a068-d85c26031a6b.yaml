@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 898
+    size: 899
     values:
       - ""
       - 1 Simple Line.lspkg
@@ -55,6 +55,7 @@ CollapsedEntities:
       - Materials/controller 2.mat
       - Materials/controller 3.mat
       - Materials/controller 4.mat
+      - Materials/controller 5.mat
       - Materials/controller.ss_graph
       - Materials/icon 2.ss_graph
       - Materials/icon_constell.mat
