@@ -10,15 +10,16 @@ import { tweenObjectRotate } from "./ControllerBtn";
 @component
 export class Manager extends BaseScriptComponent {
    
-    @input card!: SceneObject;
-    @input cardContentUpdateScript!: CardContentUpdate;
-
-    @ui.separator
-
     @input controller!: SceneObject;
     @input target!: SceneObject;
     @input world!: SceneObject;
     @input sun!: SceneObject;
+
+    @ui.separator
+
+    @input card!: SceneObject;
+    @input sunCard!: SceneObject;
+    @input cardContentUpdateScript!: CardContentUpdate;
 
     @ui.separator
 
@@ -32,6 +33,9 @@ export class Manager extends BaseScriptComponent {
     public currentCons: SceneObject | null = null;
     public prevCons: SceneObject | null = null;
     public currentConsPos: vec3 | null = null;
+    //stars
+    public currentStar: SceneObject | null = null;
+    public prevStar: SceneObject | null = null;
 
     //Controller vars
     public controlIdlePos: vec3 | null = null;
@@ -44,6 +48,7 @@ export class Manager extends BaseScriptComponent {
     
     onAwake() {
         this.card.enabled = false;
+        this.sunCard.enabled = false;
         this.controller.enabled = false;
         this.isController = false;
     }
@@ -53,8 +58,14 @@ export class Manager extends BaseScriptComponent {
     }
 
     public openConsCard() {
+        this.sunCard.enabled = false;
         this.cardContentUpdateScript.contentUpdate(this.currentCons);
         this.card.enabled = true;
+    }
+
+    public openSunCard() {
+        this.sunCard.enabled = !this.sunCard.enabled ;
+        this.card.enabled = false;
     }
 
     public activateConstellation() {

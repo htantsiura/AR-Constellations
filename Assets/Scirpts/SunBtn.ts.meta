@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/173a06f6-3417-4631-a423-532be3680080>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7552804a-6a32-4690-a6c2-c6662aaa19ba
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7552804a-6a32-4690-a6c2-c6662aaa19ba
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> afce0d07-b5ec-4d86-bee5-2fbfbfc514bf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/afce0d07-b5ec-4d86-bee5-2fbfbfc514bf>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dd52aff4-cbe3-44be-a6d1-60002d95ef7d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    appManager: false
+    sunCard: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - sunCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      appManager: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject sunCard
+    - // @input AssignableType appManager

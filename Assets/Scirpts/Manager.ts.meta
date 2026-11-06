@@ -34,6 +34,7 @@
     defaultLineMat: false
     defaultStarMat: false
     sun: false
+    sunCard: false
     target: false
     world: false
   ScriptTypesHidden:
@@ -45,12 +46,13 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - card: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      controller: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - controller: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       world: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      card: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sunCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       defaultStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
@@ -59,13 +61,14 @@
     -
       {}
   InputLines:
-    - // @input SceneObject card
-    - // @input AssignableType cardContentUpdateScript
-    - '// @ui {"widget":"separator"}'
     - // @input SceneObject controller
     - // @input SceneObject target
     - // @input SceneObject world
     - // @input SceneObject sun
+    - '// @ui {"widget":"separator"}'
+    - // @input SceneObject card
+    - // @input SceneObject sunCard
+    - // @input AssignableType cardContentUpdateScript
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Materials"}'
     - // @input Asset.Material defaultLineMat

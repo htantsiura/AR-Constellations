@@ -37,6 +37,12 @@
     - Port_Input0_N050:
         typeIdx: 1
         value: 0.000000
+    - Port_Input0_N051:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N051:
+        typeIdx: 5
+        value: {x: 0.516289, y: 0.521355, z: 0.521355, w: 1.000000}
     - Port_Input1_N105:
         typeIdx: 1
         value: -2.000000
@@ -380,7 +386,7 @@
       value: 1.000000
     opacityFactor:
       typeIdx: 1
-      value: 0.500000
+      value: 0.680000
     size:
       typeIdx: 3
       value: {x: 1.000000, y: 1.000000}

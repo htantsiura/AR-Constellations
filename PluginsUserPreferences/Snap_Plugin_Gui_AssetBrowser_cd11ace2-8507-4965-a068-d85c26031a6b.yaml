@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 913
+    size: 898
     values:
       - ""
       - 1 Simple Line.lspkg
@@ -52,9 +52,9 @@ CollapsedEntities:
       - Materials/cons_active.mat
       - Materials/cons_default.mat
       - Materials/constellation.ss_graph
-      - Materials/controller 1.mat
       - Materials/controller 2.mat
       - Materials/controller 3.mat
+      - Materials/controller 4.mat
       - Materials/controller.ss_graph
       - Materials/icon 2.ss_graph
       - Materials/icon_constell.mat
@@ -63,6 +63,7 @@ CollapsedEntities:
       - Materials/pbr.ss_graph
       - Materials/star_active.mat
       - Materials/star_default.mat
+      - Materials/sun 2.mat
       - Materials/sun.mat
       - Materials/surface modified materials.lspkg
       - Meshes
@@ -79,24 +80,9 @@ CollapsedEntities:
       - RT/Device Camera Texture.deviceCameraTexture
       - RT/Render Target.renderTarget
       - SCI-FI SFX Pack.lspkg
-      - SCI-FI SFX Pack.lspkg/Audio/ambient_alien_atmosphere.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/ambient_eerie_space.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/ambient_warehouse_lab.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/ambient_woob.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/beep1.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/beep2.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/beep3.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/beeping.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/riser_engine_start.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/riser_spaceship.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/shoot_alient_signal.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/shoot_space_factory.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/typing1.mp3
-      - SCI-FI SFX Pack.lspkg/Audio/typing2.mp3
       - SCI-FI SFX Pack.lspkg/SCIFI__PLACE_IN_SCENE.prefab
       - SCI-FI SFX Pack.lspkg/package.native
       - Scene.scene
-      - Scirpts
       - Scirpts/Buttons
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/SetActiveConstell.ts
@@ -115,6 +101,7 @@ CollapsedEntities:
       - Scirpts/Data/StarsData.ts
       - Scirpts/Manager.ts
       - Scirpts/ModeSwitcher.ts
+      - Scirpts/SunBtn.ts
       - Scirpts/TTS.ts
       - Scirpts/Untitled TypeScript.ts
       - Scirpts/Utils
@@ -735,13 +722,11 @@ CollapsedEntities:
       - SpectaclesInteractionKitExamples.lspkg/Examples/UIStarter/Textures/image_unlit.ss_graph
       - SpectaclesInteractionKitExamples.lspkg/package.native
       - SpectaclesInteractionKitExamples.lspkg/package_dependencies.json
-      - SpectaclesUIKit.lspkg
       - SpectaclesUIKit.lspkg/Audio
       - SpectaclesUIKit.lspkg/Audio/HoverAudioTrack.wav
       - SpectaclesUIKit.lspkg/Audio/SliderProgressionAudioTrack.wav
       - SpectaclesUIKit.lspkg/Audio/TriggerEndAudioTrack.wav
       - SpectaclesUIKit.lspkg/Audio/TriggerStartAudioTrack.wav
-      - SpectaclesUIKit.lspkg/Materials
       - SpectaclesUIKit.lspkg/Materials/ConfirmationSlider.mat
       - SpectaclesUIKit.lspkg/Materials/ConfirmationSlider.ss_graph
       - SpectaclesUIKit.lspkg/Materials/DefaultCapsule.mat

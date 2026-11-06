@@ -1,5 +1,22 @@
 export const StarsData = [
   {
+    "id": "sun",
+    "hip": 0,
+    "hyg_id": 0,
+    "entity": "Star",
+    "name": "Sun",
+    "bayer": "",
+    "bf": "",
+    "constellation": "",
+    "constellation_abbr": "",
+    "right_ascension": 0.0,
+    "declination": 0.0,
+    "apparent_magnitude": -26.74,
+    "absolute_magnitude": 4.83,
+    "distance_light_year": 0.0,
+    "spectral_class": "G2V"
+  },
+  {
     "id": "alpheratz",
     "hip": 677,
     "hyg_id": 676,
