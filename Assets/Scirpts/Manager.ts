@@ -20,6 +20,7 @@ export class Manager extends BaseScriptComponent {
     @input card!: SceneObject;
     @input sunCard!: SceneObject;
     @input cardContentUpdateScript!: CardContentUpdate;
+    @input startInfoCard!: SceneObject;
 
     @ui.separator
 
@@ -69,6 +70,7 @@ export class Manager extends BaseScriptComponent {
     }
 
     public activateConstellation() {
+        this.startInfoCard.enabled = false;
         print( "zero rotation quat " + this.controller.getTransform().getWorldRotation())
         if (this.prevCons === this.currentCons) return
 

@@ -5,8 +5,9 @@ import { mappingConstellationDistances } from "./Utils";
 export const SCALE: number = 1;
 export const IS_LOGARITH: boolean = true;
 export const C_SCALE: number = 3;
-export const S_SCALE: number = 2;
-export const BTN_SCALE = new vec3(1.5, 1.5, 1.5)
+export const S_SCALE: number = 3;
+export const LINE_RAD: number = 0.15;
+export const BTN_SCALE: vec3 = new vec3(1.5, 1.5, 1.5)
 export const CTRL_START_SCALE: vec3 = BTN_SCALE.uniformScale(C_SCALE)
 export const CTRL_IDLE_SCALE: vec3 = CTRL_START_SCALE.uniformScale(1.5)
 export const CTRL_HOVER_SCALE: vec3 = CTRL_START_SCALE.uniformScale(1.8)
@@ -34,7 +35,7 @@ export const STAR_MODE: Record<string, number> = {
 }
 
 export const C_COLORS: Record<string, vec4> = {
-    "primary-50": new vec4(0.949, 0.898, 1.000, 1.0),  // #F2E5FF
+    "primary-50":  new vec4(0.949, 0.898, 1.000, 1.0), // #F2E5FF
     "primary-250": new vec4(0.749, 0.502, 1.000, 1.0), // #BF80FF
     "primary-400": new vec4(0.596, 0.200, 1.000, 1.0), // #9833FF
     "primary-500": new vec4(0.494, 0.000, 1.000, 1.0), // #7E00FF
@@ -45,7 +46,7 @@ export const C_COLORS: Record<string, vec4> = {
 };
 
 export const S_COLORS: Record<string, vec4> = {
-    "secondary-50": new vec4(0.898, 0.980, 1.000, 1.0),  // #E5FAFF
+    "secondary-50":  new vec4(0.898, 0.980, 1.000, 1.0), // #E5FAFF
     "secondary-250": new vec4(0.502, 0.898, 1.000, 1.0), // #80E5FF
     "secondary-400": new vec4(0.200, 0.839, 1.000, 1.0), // #33D6FF
     "secondary-500": new vec4(0.000, 0.800, 1.000, 1.0), // #00CCFF

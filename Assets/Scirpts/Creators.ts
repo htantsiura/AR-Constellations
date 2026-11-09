@@ -1,6 +1,6 @@
 import { ButtonSizeSetup } from "./Buttons/ButtonSizeSetup";
 import { linearDisMap, logarithDisMap, 
-    SCALE, C_SCALE, S_SCALE, hipPositionMap } from "./Config";
+    SCALE, C_SCALE, LINE_RAD, hipPositionMap } from "./Config";
 import { getChildByName, raDecToVec3, raDecToVec3Cons, remap } from "./Utils";
 
 export function createConstellation(
@@ -82,7 +82,7 @@ export function createLine(
     item.lines?.forEach((segment: number[]) => {
         const line = new wiretool.Create();
         line.name = "line";
-        line.radius = 0.1; 
+        line.radius = LINE_RAD; 
         
         line.onPointsAdded.add(function(points: { position: vec3 }[]){ // whenever a point is added
             for(let i = 0; i < points.length; i++){ 

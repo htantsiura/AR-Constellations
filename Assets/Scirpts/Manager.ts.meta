@@ -33,6 +33,7 @@
     controller: false
     defaultLineMat: false
     defaultStarMat: false
+    startInfoCard: false
     sun: false
     sunCard: false
     target: false
@@ -53,6 +54,7 @@
       card: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       sunCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      startInfoCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       defaultStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
@@ -69,6 +71,7 @@
     - // @input SceneObject card
     - // @input SceneObject sunCard
     - // @input AssignableType cardContentUpdateScript
+    - // @input SceneObject startInfoCard
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Materials"}'
     - // @input Asset.Material defaultLineMat

@@ -25,6 +25,7 @@ export class WorldCreator extends BaseScriptComponent {
     wireToolComponent!: ScriptComponent;
 
     private startVec3 = new vec3(0, 0, -1)
+    private i: number = 0;
 
     onAwake() {
 
@@ -49,6 +50,8 @@ export class WorldCreator extends BaseScriptComponent {
         })
 
         StarsData.forEach((item) => {
+            print(this.i);
+            this.i++;
             createStar(
                 item, 
                 this.world, 
