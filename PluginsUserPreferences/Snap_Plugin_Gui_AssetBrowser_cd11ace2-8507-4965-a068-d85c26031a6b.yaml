@@ -1,12 +1,9 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 898
+    size: 895
     values:
-      - 1 Simple Line.lspkg
       - 1 Simple Line.lspkg/1 Simple Line.prefab
-      - 1 Simple Line.lspkg/WireTool
-      - 1 Simple Line.lspkg/WireTool/1 Simple Line
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.mat
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph

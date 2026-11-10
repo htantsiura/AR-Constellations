@@ -4,9 +4,17 @@ import { mappingConstellationDistances } from "./Utils";
 
 export const SCALE: number = 1;
 export const IS_LOGARITH: boolean = true;
+
+// lighter
 export const C_SCALE: number = 3;
 export const S_SCALE: number = 3;
 export const LINE_RAD: number = 0.15;
+/* 
+// bolder
+export const C_SCALE: number = 4;
+export const S_SCALE: number = 4;
+export const LINE_RAD: number = 0.25; */
+
 export const BTN_SCALE: vec3 = new vec3(1.5, 1.5, 1.5)
 export const CTRL_START_SCALE: vec3 = BTN_SCALE.uniformScale(C_SCALE)
 export const CTRL_IDLE_SCALE: vec3 = CTRL_START_SCALE.uniformScale(1.5)

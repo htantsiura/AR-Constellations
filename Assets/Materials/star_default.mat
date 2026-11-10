@@ -211,7 +211,7 @@
   InstanceCount: 1
   Defines:
     []
-  BlendMode: PremultipliedAlphaAuto
+  BlendMode: Add
   Properties:
     Port_Default_N021:
       typeIdx: 5
