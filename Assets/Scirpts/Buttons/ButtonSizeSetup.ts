@@ -11,6 +11,6 @@ export class ButtonSizeSetup extends BaseScriptComponent {
         if (!this.myButton) return;
 
     const x = remap(name.length, 5, 19, 5, 14.5 )
-    this.myButton.size = new vec3(x, 1.7, 1) 
+    this.myButton.size = new vec3(x, 2.1, 1) 
     }
 }

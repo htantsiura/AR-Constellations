@@ -9,8 +9,8 @@ export const IS_LOGARITH: boolean = true;
 export const C_SCALE: number = 3;
 export const S_SCALE: number = 3;
 export const LINE_RAD: number = 0.15;
-/* 
-// bolder
+
+/* // bolder
 export const C_SCALE: number = 4;
 export const S_SCALE: number = 4;
 export const LINE_RAD: number = 0.25; */
