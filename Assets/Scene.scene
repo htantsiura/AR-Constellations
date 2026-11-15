@@ -7028,7 +7028,7 @@
     {}
   ScriptInputs:
     "":
-      starList: !<reference.SceneObject> 792916ef-9122-4aaf-9b37-4fb38a557a1f
+      list: !<reference.SceneObject> 4fdb0966-d1e1-49b9-acb5-1c4b565d6891
       content: !<reference.SceneObject> 2ea474c8-6924-4f92-a1c4-b0d85e939181
   ScriptTypes:
     "":
@@ -11977,6 +11977,21 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/4fdb0966-d1e1-49b9-acb5-1c4b565d6891>
+  PrefabRemaps:
+    []
+  Name: List
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 10.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
 - !<Text/500d236b-7d0e-4489-bd3b-20eec21aa808>
   PrefabRemaps:
     []
@@ -20450,6 +20465,7 @@
     - !<own> 2ea474c8-6924-4f92-a1c4-b0d85e939181
     - !<own> f5190fb0-5591-46f5-aadf-cf03f667c0c1
     - !<own> b044e64b-c414-4743-9ade-16e02d987775
+    - !<own> 4fdb0966-d1e1-49b9-acb5-1c4b565d6891
     - !<own> 792916ef-9122-4aaf-9b37-4fb38a557a1f
     - !<own> a35845ce-5d3f-45fa-a3b5-6d82948ffa47
   Components:
@@ -22539,6 +22555,8 @@
       cardContentUpdateScript: !<MappingBased.AssignableType> f52fb186-307d-4ec3-9c82-cd3634001312
       startInfoCard: !<reference.SceneObject> c2b5e0ab-e086-48f1-8c5a-f36561b4eda7
       starButton: !<reference.ObjectPrefab> 11577928-696d-4242-a0a0-77b0d3aa92d2
+      starList: !<reference.ObjectPrefab> 30735e8e-9e9a-4860-a105-4dfa66f3093d
+      list: !<reference.SceneObject> 4fdb0966-d1e1-49b9-acb5-1c4b565d6891
       gridLayoutList: !<MappingBased.AssignableType_1> c3aff793-ab03-441e-9140-da6841644f0a
       scrollWindow: !<MappingBased.AssignableType_2> ff9538af-e44d-46d8-a103-726b976a0eab
       listOfStarsBtnScript: !<MappingBased.AssignableType_3> 2d8120e2-79ea-40c8-85f9-45b3b97a64d2
@@ -24657,13 +24675,7 @@
       {}
 - !<SceneObject/a35845ce-5d3f-45fa-a3b5-6d82948ffa47>
   PrefabRemaps:
-    - 859800fb-d9e4-4d56-8605-d12fa2825ee7: 280ae984-4470-41f7-67c2-ab46718a49c1
-    - 98626a0a-a6cc-4f5b-8f58-ef75b2b9b626: 917636de-1dda-442a-576a-03d36db55c74
-    - a35845ce-5d3f-45fa-a3b5-6d82948ffa47: 13f95e8b-a1ee-42c7-7eda-5737f8266b45
-    - a71ec39d-dece-405c-9530-1ea76d1cd744: 1223b76b-cbe1-4d35-4444-44ff646f7f03
-    - bf01c3f1-d7a2-457d-b2a3-175b83cc4d6e: f168a5ed-26c9-4b50-42d6-ef65e7d6834f
-    - ce1e3614-226e-4d29-8337-a6950598f49f: 19a9469b-866b-492e-52cb-c0558a971118
-    - e49480a1-34a6-4a88-962a-9ad4404644c3: cc8fbf48-ff25-4fe3-4238-f569476f0374
+    []
   Name: Star Buttons Scroll List
   Enabled: false
   Layers: 1

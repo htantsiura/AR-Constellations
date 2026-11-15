@@ -1,10 +1,25 @@
-- !<ObjectPrefab/0d700951-f1e4-4d43-b32e-d076b1dd18f7>
+- !<ObjectPrefab/30735e8e-9e9a-4860-a105-4dfa66f3093d>
   PackagePath: ""
   objects:
-    - !<own> 13f95e8b-a1ee-42c7-8125-a8c807d994ba
+    - !<own> e0f37230-84a5-4a28-8ad8-ff41fdd66ece
   LazyLoading: false
   RetainAssets: true
-- !<SceneObject/1223b76b-cbe1-4d35-bbbb-bb009b9080fc>
+- !<SceneObject/36be23b2-435d-459a-8810-450ef94329c3>
+  PrefabRemaps:
+    []
+  Name: ScrollWindow
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4a320706-6684-46a3-aba4-125f1616fbbf
+  Components:
+    - !<own> ba9b5584-9458-4207-a4fe-f0a5bb9a29f5
+- !<SceneObject/4223df54-3864-434c-b2af-cb7e24e8a5a2>
   PrefabRemaps:
     []
   Name: Content
@@ -16,51 +31,10 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> f168a5ed-26c9-4b50-bd29-109a18297cb0
+    - !<own> 36be23b2-435d-459a-8810-450ef94329c3
   Components:
     []
-- !<SceneObject/13f95e8b-a1ee-42c7-8125-a8c807d994ba>
-  PrefabRemaps:
-    - 1223b76b-cbe1-4d35-bbbb-bb009b9080fc: 1223b76b-cbe1-4d35-4444-44ff646f7f03
-    - 13f95e8b-a1ee-42c7-8125-a8c807d994ba: 13f95e8b-a1ee-42c7-7eda-5737f8266b45
-    - 19a9469b-866b-492e-ad34-3faa7568eee7: 19a9469b-866b-492e-52cb-c0558a971118
-    - 280ae984-4470-41f7-983d-54b98e75b63e: 280ae984-4470-41f7-67c2-ab46718a49c1
-    - 917636de-1dda-442a-a895-fc2c924aa38b: 917636de-1dda-442a-576a-03d36db55c74
-    - cc8fbf48-ff25-4fe3-bdc7-0a96b890fc8b: cc8fbf48-ff25-4fe3-4238-f569476f0374
-    - f168a5ed-26c9-4b50-bd29-109a18297cb0: f168a5ed-26c9-4b50-42d6-ef65e7d6834f
-  Name: Star Buttons Scroll List
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 5.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 1223b76b-cbe1-4d35-bbbb-bb009b9080fc
-  Components:
-    - !<own> cc8fbf48-ff25-4fe3-bdc7-0a96b890fc8b
-- !<ScriptComponent/19a9469b-866b-492e-ad34-3faa7568eee7>
-  PrefabRemaps:
-    []
-  Name: GridLayout
-  Enabled: true
-  ScriptAsset: !<reference> 4af300b0-fa96-4540-b57e-eb354dff8195
-  ScriptInputsDefault:
-    cellPadding: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      rows: 8
-      columns: 1
-      cellSize: !<Vec2> {x: 16.000000, y: 5.000000}
-      cellPadding: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-      layoutBy: !<float> 1.000000
-  ScriptTypes:
-    "":
-      {}
-- !<SceneObject/280ae984-4470-41f7-983d-54b98e75b63e>
+- !<SceneObject/4a320706-6684-46a3-aba4-125f1616fbbf>
   PrefabRemaps:
     []
   Name: GridLayout
@@ -74,8 +48,28 @@
   Children:
     []
   Components:
-    - !<own> 19a9469b-866b-492e-ad34-3faa7568eee7
-- !<ScriptComponent/917636de-1dda-442a-a895-fc2c924aa38b>
+    - !<own> 89919ac8-fd2d-4886-a44e-3351f6be781c
+- !<ScriptComponent/89919ac8-fd2d-4886-a44e-3351f6be781c>
+  PrefabRemaps:
+    []
+  Name: GridLayout
+  Enabled: true
+  ScriptAsset: !<reference> 4af300b0-fa96-4540-b57e-eb354dff8195
+  ScriptInputsDefault:
+    cellPadding: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      rows: 1
+      columns: 1
+      cellSize: !<Vec2> {x: 16.000000, y: 5.000000}
+      cellPadding: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      layoutBy: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/ba9b5584-9458-4207-a4fe-f0a5bb9a29f5>
   PrefabRemaps:
     []
   Name: ScrollWindow
@@ -85,7 +79,6 @@
     _vertical: true
     _horizontal: true
     _scrollPosition: true
-    _snapRegion: true
     _edgeFade: true
   ScriptTypesDefault:
     {}
@@ -94,15 +87,36 @@
       _vertical: true
       _horizontal: false
       _windowSize: !<Vec2> {x: 20.000000, y: 25.000000}
-      _scrollDimensions: !<Vec2> {x: 32.000000, y: 40.000000}
+      _scrollDimensions: !<Vec2> {x: 32.000000, y: 30.000000}
       _scrollPosition: !<Vec2> {x: 0.000000, y: 0.000000}
       _scrollSnapping: true
-      _snapRegion: !<Vec2> {x: -1.000000, y: 20.000000}
+      _snapRegion: !<Vec2> {x: -1.000000, y: 5.000000}
       _edgeFade: false
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/cc8fbf48-ff25-4fe3-bdc7-0a96b890fc8b>
+- !<SceneObject/e0f37230-84a5-4a28-8ad8-ff41fdd66ece>
+  PrefabRemaps:
+    - 36be23b2-435d-459a-8810-450ef94329c3: 36be23b2-435d-459a-77ef-baf106bcd63c
+    - 4223df54-3864-434c-b2af-cb7e24e8a5a2: 4223df54-3864-434c-4d50-3481db175a5d
+    - 4a320706-6684-46a3-aba4-125f1616fbbf: 4a320706-6684-46a3-545b-eda0e9e90440
+    - 89919ac8-fd2d-4886-a44e-3351f6be781c: 89919ac8-fd2d-4886-5bb1-ccae094187e3
+    - ba9b5584-9458-4207-a4fe-f0a5bb9a29f5: ba9b5584-9458-4207-5b01-0f5a4465d60a
+    - e0f37230-84a5-4a28-8ad8-ff41fdd66ece: e0f37230-84a5-4a28-7527-00be02299131
+    - e5fdb12f-e511-45ba-b8df-dddfe7d97cf1: e5fdb12f-e511-45ba-4720-22201826830e
+  Name: Star Buttons Scroll List
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 5.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4223df54-3864-434c-b2af-cb7e24e8a5a2
+  Components:
+    - !<own> e5fdb12f-e511-45ba-b8df-dddfe7d97cf1
+- !<ScriptComponent/e5fdb12f-e511-45ba-b8df-dddfe7d97cf1>
   PrefabRemaps:
     []
   Name: Frame
@@ -173,18 +187,3 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/f168a5ed-26c9-4b50-bd29-109a18297cb0>
-  PrefabRemaps:
-    []
-  Name: ScrollWindow
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 280ae984-4470-41f7-983d-54b98e75b63e
-  Components:
-    - !<own> 917636de-1dda-442a-a895-fc2c924aa38b

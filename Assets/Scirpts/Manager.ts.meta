@@ -34,9 +34,11 @@
     defaultLineMat: false
     defaultStarMat: false
     gridLayoutList: false
+    list: false
     listOfStarsBtnScript: false
     scrollWindow: false
     starButton: false
+    starList: false
     startInfoCard: false
     sun: false
     sunCard: false
@@ -60,6 +62,8 @@
       cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       startInfoCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       starButton: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      starList: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      list: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       gridLayoutList: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       scrollWindow: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
       listOfStarsBtnScript: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
@@ -82,6 +86,8 @@
     - // @input SceneObject startInfoCard
     - '// @ui {"widget":"separator"}'
     - // @input Asset.ObjectPrefab starButton
+    - // @input Asset.ObjectPrefab starList
+    - // @input SceneObject list
     - // @input AssignableType_1 gridLayoutList
     - // @input AssignableType_2 scrollWindow
     - // @input AssignableType_3 listOfStarsBtnScript

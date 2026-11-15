@@ -27,7 +27,7 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     content: false
-    starList: false
+    list: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -37,11 +37,11 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - starList: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - list: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       content: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input SceneObject starList
+    - // @input SceneObject list
     - // @input SceneObject content

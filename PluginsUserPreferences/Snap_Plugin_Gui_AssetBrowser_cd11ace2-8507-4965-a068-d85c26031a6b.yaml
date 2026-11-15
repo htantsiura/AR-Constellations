@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 896
+    size: 898
     values:
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
@@ -66,6 +66,8 @@ CollapsedEntities:
       - Meshes
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
+      - PBR 2.mat
+      - PBR.mat
       - Particles Texture 2.png
       - Particles Texture 3.png
       - Particles Texture 4.png
