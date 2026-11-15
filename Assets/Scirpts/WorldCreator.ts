@@ -50,8 +50,6 @@ export class WorldCreator extends BaseScriptComponent {
         })
 
         StarsData.forEach((item) => {
-            print(this.i);
-            this.i++;
             createStar(
                 item, 
                 this.world, 
