@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 894
+    size: 896
     values:
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
@@ -70,6 +70,8 @@ CollapsedEntities:
       - Particles Texture 3.png
       - Particles Texture 4.png
       - Prefabs/Controller.prefab
+      - Prefabs/Star Button.prefab
+      - Prefabs/Star Buttons Scroll List.prefab
       - Prefabs/c_label.prefab
       - Prefabs/s_label.prefab
       - RT
@@ -79,8 +81,8 @@ CollapsedEntities:
       - SCI-FI SFX Pack.lspkg/SCIFI__PLACE_IN_SCENE.prefab
       - SCI-FI SFX Pack.lspkg/package.native
       - Scene.scene
-      - Scirpts/Buttons
       - Scirpts/Buttons/ButtonSizeSetup.ts
+      - Scirpts/Buttons/ListOfStarsButton.ts
       - Scirpts/Buttons/SetActiveConstell.ts
       - Scirpts/Cards
       - Scirpts/Cards/CardContentUpdate.ts

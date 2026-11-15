@@ -29,6 +29,13 @@ export const logarithDisMap = new Map<string, number>();
 export const consQuatMap = new Map<string, quat>();
 export const hipPositionMap = new Map<number, vec3>();
 
+export interface StarInfo {
+    name: string;
+    direction: vec3;
+    hip: number;
+}
+export const idStarMainInfoMap = new Map<string, StarInfo>();
+
 // colors
 export const LINE_MODE: Record<string, number> = {
     "idle": 0.75,

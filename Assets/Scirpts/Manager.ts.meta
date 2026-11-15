@@ -33,6 +33,10 @@
     controller: false
     defaultLineMat: false
     defaultStarMat: false
+    gridLayoutList: false
+    listOfStarsBtnScript: false
+    scrollWindow: false
+    starButton: false
     startInfoCard: false
     sun: false
     sunCard: false
@@ -55,6 +59,10 @@
       sunCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       startInfoCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      starButton: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      gridLayoutList: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      scrollWindow: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      listOfStarsBtnScript: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
       defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       defaultStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
@@ -72,6 +80,11 @@
     - // @input SceneObject sunCard
     - // @input AssignableType cardContentUpdateScript
     - // @input SceneObject startInfoCard
+    - '// @ui {"widget":"separator"}'
+    - // @input Asset.ObjectPrefab starButton
+    - // @input AssignableType_1 gridLayoutList
+    - // @input AssignableType_2 scrollWindow
+    - // @input AssignableType_3 listOfStarsBtnScript
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Materials"}'
     - // @input Asset.Material defaultLineMat

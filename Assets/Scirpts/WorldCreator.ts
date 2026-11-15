@@ -1,6 +1,6 @@
 import { ConstellationData } from "./Data/ConstellationData";
 import { StarsData } from "./Data/StarsData";
-import { SCALE, IS_LOGARITH, C_SCALE, S_SCALE } from "./Config";
+import { SCALE, IS_LOGARITH, C_SCALE, S_SCALE, idStarMainInfoMap } from "./Config";
 import { linearDisMap, logarithDisMap, hipPositionMap, consQuatMap } from "./Config";
 import { createConstellation, createStar, createLine } from "./Creators";
 import { LinesData } from "./Data/LinesData_SnT";

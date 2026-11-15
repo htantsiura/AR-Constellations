@@ -2,10 +2,14 @@ import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
 import { changeMatSlider, consIdleToActiveVisibility, consActiveToIdleVisibility } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
-import { consQuatMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, ZERO_QUAT, TW_TIME, LINE_MODE } from "./Config";
+import { consQuatMap, idStarMainInfoMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, ZERO_QUAT, TW_TIME, LINE_MODE } from "./Config";
 import { getChildByName } from "./Utils";
 import { tweenObjectMove, tweenObjectScale, tweenObjectRotateTo, tweenObjectMoveAndState } from "./Utils/MyTweenFuncs";
 import { tweenObjectRotate } from "./ControllerBtn";
+import { ConstellationData } from "./Data/ConstellationData";
+import { GridLayout } from "SpectaclesUIKit.lspkg/Scripts/Components/GridLayout/GridLayout";
+import { ScrollWindow } from "SpectaclesUIKit.lspkg/Scripts/Components/ScrollWindow/ScrollWindow";
+import { ListOfStarsButton } from "./Buttons/ListOfStarsButton";
 
 @component
 export class Manager extends BaseScriptComponent {
@@ -21,6 +25,13 @@ export class Manager extends BaseScriptComponent {
     @input sunCard!: SceneObject;
     @input cardContentUpdateScript!: CardContentUpdate;
     @input startInfoCard!: SceneObject;
+    
+    @ui.separator
+
+    @input starButton!: ObjectPrefab;
+    @input gridLayoutList!: GridLayout;
+    @input scrollWindow!: ScrollWindow;
+    @input listOfStarsBtnScript!: ListOfStarsButton;
 
     @ui.separator
 
@@ -83,6 +94,9 @@ export class Manager extends BaseScriptComponent {
         consIdleToActiveVisibility(this.currentCons!, this.activeStarMat, this.activeLineMat)
         this.hideShowConsBtn(this.currentCons, true)
         this.openConsCard()
+        this.listOfStarsBtnScript.hideListOfStars()
+        this.clearListOfStars()
+        this.createListOfStars()
         this.prevCons = this.currentCons; 
     }
 
@@ -167,11 +181,41 @@ export class Manager extends BaseScriptComponent {
         )
         .easing(Easing.Quadratic.InOut)
         .start()
-
     }
 
     public rotateByController(rotation: quat) {
         this.currentCons?.getTransform().setLocalRotation(rotation)
+    }
+
+    public clearListOfStars(): void 
+    {
+        const prevChildren = this.gridLayoutList.getSceneObject().children.length
+        for (let i = 0; i < prevChildren; i++) {
+            this.gridLayoutList.getSceneObject().getChild(0).destroy()
+        }
+    }
+
+    public createListOfStars(): void 
+    {
+        ConstellationData.forEach((item) => {
+            if(this.currentCons!.name === item.name)
+            {
+                const listLength = item.list_of_main_stars.length
+                //this.scrollWindow.setScrollDimensions(new vec2(20, 115)) //listLength * 5 + 5))
+                this.scrollWindow.scrollDimensions = new vec2(15, listLength * 5 + 5)
+                this.scrollWindow.scrollPosition = new vec2(0, listLength * 5 / 2)
+                
+                print("scroll pos " + this.scrollWindow.scrollPosition)
+                print(item.list_of_main_stars);
+                this.gridLayoutList.rows = listLength
+                for (let i = 0; i < listLength; i++) {
+                    const instance = this.starButton.instantiate(this.gridLayoutList.getSceneObject());
+                    instance.name = idStarMainInfoMap.get(item.list_of_main_stars[i])!.name
+                    instance.getChild(0).getComponent("Component.Text").text = instance.name;
+                }
+                
+            }
+        })
     }
 }
 

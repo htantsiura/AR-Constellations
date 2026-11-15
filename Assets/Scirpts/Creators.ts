@@ -1,6 +1,6 @@
 import { ButtonSizeSetup } from "./Buttons/ButtonSizeSetup";
 import { linearDisMap, logarithDisMap, 
-    SCALE, C_SCALE, LINE_RAD, hipPositionMap } from "./Config";
+    SCALE, C_SCALE, LINE_RAD, hipPositionMap, idStarMainInfoMap } from "./Config";
 import { getChildByName, raDecToVec3, raDecToVec3Cons, remap } from "./Utils";
 
 export function createConstellation(
@@ -64,6 +64,12 @@ export function createStar(
     s_Instance.getTransform().setLocalPosition(s_LocalPos);
     s_Instance.getTransform().setWorldScale(new vec3(S_SCALE, S_SCALE, S_SCALE))
 
+    //mapping idStarInfo
+    idStarMainInfoMap.set (item.id, {
+        name: item.name,
+        direction: sPos.normalize(),
+        hip: item.hip
+    })
     //catalog.set(item.hip, s_LocalPos);
 }
 
