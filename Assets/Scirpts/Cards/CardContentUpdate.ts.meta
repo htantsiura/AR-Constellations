@@ -31,7 +31,6 @@
     dec: false
     qty: false
     ra: false
-    stars: false
     title: false
   ScriptTypesHidden:
     {}
@@ -48,7 +47,6 @@
       area: !<reference.Text> 00000000-0000-0000-0000-000000000000
       qty: !<reference.Text> 00000000-0000-0000-0000-000000000000
       brightest: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      stars: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -59,4 +57,3 @@
     - // @input Component.Text area
     - // @input Component.Text qty
     - // @input Component.Text brightest
-    - // @input Component.Text stars

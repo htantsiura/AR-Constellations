@@ -5,33 +5,47 @@ import { getChildByName } from "Scirpts/Utils";
 export class ListOfStarsButton extends BaseScriptComponent {
 
     @input
+    button: SceneObject | null = null;
+
+    @input
     list: SceneObject | null = null;
 
     @input
     content: SceneObject | null = null;
 
+    @input
+    closeBtn1: SceneObject | null = null;
+
+
+
     
-    onAwake() {
-        /* this.starList!.enabled = false; */
-        this.content!.enabled = true;
+    onAwake() 
+    {
+        this.list!.enabled = false;
+        
+        this.content!.getChild(1).enabled = true;
+        this.content!.getChild(2).enabled = true;
+        this.closeBtn1!.enabled = true;
+        this.button!.enabled = true;
     }
 
-    public showListOfStars(): void {
-        /* const obj = getChildByName(this.list!, "Star Buttons Scroll List")
-            if (!obj) return;
-        obj.destroy(); */
-        print("TURN ON THE LIST")
+    public showListOfStars(): void 
+    {
         this.list!.enabled = true;
 
-        
-
-        /* this.starList!.enabled = true; */
-        //this.content!.enabled = false;
+        this.content!.getChild(1).enabled = false;
+        this.content!.getChild(2).enabled = false;
+        this.closeBtn1!.enabled = false;
+        this.button!.enabled = false;
     }
 
-    public hideListOfStars(): void {
+    public hideListOfStars(): void 
+    {
+        this.list!.enabled = false;
 
-        /* this.starList!.enabled = false; */
-        this.content!.enabled = true;
+        this.content!.getChild(1).enabled = true;
+        this.content!.getChild(2).enabled = true;
+        this.closeBtn1!.enabled = true;
+        this.button!.enabled = true;
     }
 }

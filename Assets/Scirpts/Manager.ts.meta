@@ -33,10 +33,8 @@
     controller: false
     defaultLineMat: false
     defaultStarMat: false
-    gridLayoutList: false
     list: false
     listOfStarsBtnScript: false
-    scrollWindow: false
     starButton: false
     starList: false
     startInfoCard: false
@@ -64,9 +62,7 @@
       starButton: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       starList: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       list: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      gridLayoutList: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
-      scrollWindow: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
-      listOfStarsBtnScript: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      listOfStarsBtnScript: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       defaultStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
@@ -88,9 +84,7 @@
     - // @input Asset.ObjectPrefab starButton
     - // @input Asset.ObjectPrefab starList
     - // @input SceneObject list
-    - // @input AssignableType_1 gridLayoutList
-    - // @input AssignableType_2 scrollWindow
-    - // @input AssignableType_3 listOfStarsBtnScript
+    - // @input AssignableType_1 listOfStarsBtnScript
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Materials"}'
     - // @input Asset.Material defaultLineMat

@@ -26,6 +26,8 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    button: false
+    closeBtn1: false
     content: false
     list: false
   ScriptTypesHidden:
@@ -37,11 +39,15 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - list: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - button: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      list: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       content: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      closeBtn1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input SceneObject button
     - // @input SceneObject list
     - // @input SceneObject content
+    - // @input SceneObject closeBtn1

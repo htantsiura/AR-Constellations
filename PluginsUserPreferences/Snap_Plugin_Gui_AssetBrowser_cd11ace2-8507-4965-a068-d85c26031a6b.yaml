@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 898
+    size: 896
     values:
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
@@ -67,6 +67,7 @@ CollapsedEntities:
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
       - PBR 2.mat
+      - PBR 3.mat
       - PBR.mat
       - Particles Texture 2.png
       - Particles Texture 3.png
@@ -86,7 +87,6 @@ CollapsedEntities:
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/ListOfStarsButton.ts
       - Scirpts/Buttons/SetActiveConstell.ts
-      - Scirpts/Cards
       - Scirpts/Cards/CardContentUpdate.ts
       - Scirpts/Cards/CloseCard.ts
       - Scirpts/Cards/FrameController.ts
@@ -758,9 +758,7 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Prefabs/LabelledButton.prefab
       - SpectaclesUIKit.lspkg/Prefabs/LabelledToggle.prefab
       - SpectaclesUIKit.lspkg/README.md
-      - SpectaclesUIKit.lspkg/Scripts
       - SpectaclesUIKit.lspkg/Scripts/BackPlate.ts
-      - SpectaclesUIKit.lspkg/Scripts/Components
       - SpectaclesUIKit.lspkg/Scripts/Components/Button
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/BaseButton.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/CapsuleButton.ts
@@ -769,7 +767,6 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/RectangleButton.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/RoundButton.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Element.ts
-      - SpectaclesUIKit.lspkg/Scripts/Components/Frame
       - SpectaclesUIKit.lspkg/Scripts/Components/Frame/Frame.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules
       - SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules/ButtonHandler.ts
@@ -901,4 +898,5 @@ CollapsedEntities:
       - TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc
       - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
       - TweenManager.lspkg/package.native
+      - Untitled TypeScript.ts
   options: 4

@@ -31,8 +31,8 @@ export class Manager extends BaseScriptComponent {
     @input starButton!: ObjectPrefab;
     @input starList!: ObjectPrefab;
     @input list!: SceneObject;
-    @input gridLayoutList!: GridLayout;
-    @input scrollWindow!: ScrollWindow;
+/*     @input gridLayoutList!: GridLayout;
+    @input scrollWindow!: ScrollWindow; */
     @input listOfStarsBtnScript!: ListOfStarsButton;
 
     @ui.separator
@@ -89,8 +89,8 @@ export class Manager extends BaseScriptComponent {
         if (this.prevCons) {
             consActiveToIdleVisibility(this.prevCons, this.defaultStarMat, this.defaultLineMat)
             this.hideShowConsBtn(this.prevCons, false)
-            print("___ CHECK")
             this.destroyStarButtonList()
+            this.listOfStarsBtnScript.hideListOfStars();
             
         }
         this.currentCons!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
@@ -216,46 +216,11 @@ export class Manager extends BaseScriptComponent {
 
     public destroyStarButtonList(): void 
     {
-        print("___DESTROYED ? ")
         const obj = this.list.getChild(0)
-        //print(" children length " + this.card.children.length)
-        //print(" child 0 " + this.card.getChild(1).getChild(0).name)
         if (!obj) return;
         obj.destroy(); 
-        print("___DESTROYED")
+        this.list.enabled = false;
     }
-
-/* 
-    public clearListOfStars(): void 
-    {
-        const prevChildren = this.gridLayoutList.getSceneObject().children.length
-        for (let i = 0; i < prevChildren; i++) {
-            this.gridLayoutList.getSceneObject().getChild(0).destroy()
-        }
-    }
-
-    public createListOfStars(): void 
-    {
-        ConstellationData.forEach((item) => {
-            if(this.currentCons!.name === item.name)
-            {
-                const listLength = item.list_of_main_stars.length
-                //this.scrollWindow.setScrollDimensions(new vec2(20, 115)) //listLength * 5 + 5))
-                this.scrollWindow.scrollDimensions = new vec2(15, listLength * 5 + 5)
-                this.scrollWindow.scrollPosition = new vec2(0, listLength * 5 / 2)
-                
-                print("scroll pos " + this.scrollWindow.scrollPosition)
-                print(item.list_of_main_stars);
-                this.gridLayoutList.rows = listLength
-                for (let i = 0; i < listLength; i++) {
-                    const instance = this.starButton.instantiate(this.gridLayoutList.getSceneObject());
-                    instance.name = idStarMainInfoMap.get(item.list_of_main_stars[i])!.name
-                    instance.getChild(0).getComponent("Component.Text").text = instance.name;
-                }
-                
-            }
-        })
-    } */
 }
 
 
