@@ -100,6 +100,23 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScriptComponent/4e62caae-3207-4101-9aa2-5d24463f23a1>
+  PrefabRemaps:
+    []
+  Name: SetActiveStar
+  Enabled: true
+  ScriptAsset: !<reference> 896dc79e-8e7f-427e-81ed-e041351b1ca5
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
+      button: !<reference.SceneObject> e75d6748-403b-46ad-9693-7d08410c4dd4
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/dc6c68a0-f548-4c46-a5a9-944d5e55fddb>
   PrefabRemaps:
     []
@@ -115,8 +132,6 @@
     _shadowPositionOffset: true
     _toggleable: true
     _defaultToOn: true
-    addCallbacks: true
-    triggerUpCallbacks: true
     triggerDownCallbacks: true
     onValueChangeCallbacks: true
     onFinishedCallbacks: true
@@ -133,9 +148,12 @@
       _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
       _toggleable: false
       _defaultToOn: false
-      addCallbacks: false
+      addCallbacks: true
       triggerUpCallbacks:
-        []
+        - scriptComponent: !<reference.ScriptComponent> 4e62caae-3207-4101-9aa2-5d24463f23a1
+          functionName: setActiveStarVariable
+        - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
+          functionName: activateStar
       triggerDownCallbacks:
         []
       onValueChangeCallbacks:
@@ -149,6 +167,7 @@
   PrefabRemaps:
     - 3566b21b-a057-42d0-aca0-332e5a3e114f: 3566b21b-a057-42d0-535f-ccd1a5c1eeb0
     - 40a2591e-725e-42c2-a1eb-06a1321369db: 40a2591e-725e-42c2-5e14-f95ecdec9624
+    - 4e62caae-3207-4101-9aa2-5d24463f23a1: fd48ab49-4de6-4267-a1be-eea41d60c7e1
     - dc6c68a0-f548-4c46-a5a9-944d5e55fddb: dc6c68a0-f548-4c46-5a56-6bb2a1aa0224
     - e75d6748-403b-46ad-9693-7d08410c4dd4: e75d6748-403b-46ad-696c-82f7bef3b22b
   Name: Star Button
@@ -163,3 +182,4 @@
     - !<own> 3566b21b-a057-42d0-aca0-332e5a3e114f
   Components:
     - !<own> dc6c68a0-f548-4c46-a5a9-944d5e55fddb
+    - !<own> 4e62caae-3207-4101-9aa2-5d24463f23a1

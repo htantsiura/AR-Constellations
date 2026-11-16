@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/c08e5aac-3581-4112-b2e6-a424e6775250>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 30706aab-32e9-47a0-81f3-92ad17c09cca
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 30706aab-32e9-47a0-81f3-92ad17c09cca
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c61f8270-418a-494b-8ab3-7859a23199e4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c61f8270-418a-494b-8ab3-7859a23199e4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d63f8d95-b100-4113-85a2-c8081c0c02ac
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    absMag: false
+    appMag: false
+    constName: false
+    dec: false
+    distance: false
+    ra: false
+    spectral: false
+    title: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - title: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      ra: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      dec: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      appMag: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      absMag: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      distance: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      spectral: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      constName: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Text title
+    - // @input Component.Text ra
+    - // @input Component.Text dec
+    - // @input Component.Text appMag
+    - // @input Component.Text absMag
+    - // @input Component.Text distance
+    - // @input Component.Text spectral
+    - // @input Component.Text constName

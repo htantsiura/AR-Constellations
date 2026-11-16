@@ -68,7 +68,8 @@ export function createStar(
     idStarMainInfoMap.set (item.id, {
         name: item.name,
         direction: sPos.normalize(),
-        hip: item.hip
+        hip: item.hip,
+        object: s_Instance
     })
     //catalog.set(item.hip, s_LocalPos);
 }

@@ -33,7 +33,7 @@ export class CardContentUpdate extends BaseScriptComponent {
             if(item.name === object!.name) {
                 this.title.text = item.name;
                 this.ra.text = formatRA(item.right_ascension);
-                this.dec.text = formatDec(item.right_ascension);
+                this.dec.text = formatDec(item.declination);
                 this.area.text = item.square + " sq.d.";
                 this.qty.text = item.main_stars_qty  + " stars";
                 this.brightest.text = item.brightest_star;

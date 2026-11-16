@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/7de5b76e-9fe4-427c-8bbd-82c5eba7e8fd>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 896dc79e-8e7f-427e-81ed-e041351b1ca5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 896dc79e-8e7f-427e-81ed-e041351b1ca5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> eafbcdcc-c5de-4314-b91c-fb4e5674d996
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/eafbcdcc-c5de-4314-b91c-fb4e5674d996>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 85f30c3f-cca9-40ac-8635-0bf64f847a1c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    appManager: false
+    button: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - appManager: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      button: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType appManager
+    - // @input SceneObject button

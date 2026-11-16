@@ -15,6 +15,7 @@ data:
     - 52b3eba9-367e-4a19-a0e3-44c9b441dbec: /Applications/LS Specs.app/Contents/Plugins/Es_VFXGraph_Presets.bundle/Assets/Simple Emitter.vfxgraph
     - 5c8271c4-a66f-4327-ac54-a5b3b2e3ef99: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/EmptyMaterial/Resources/empty.ss_graph
     - 615cc9cf-659c-4fe1-83ff-ee0ce6f93d8a: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
+    - 7de5b76e-9fe4-427c-8bbd-82c5eba7e8fd: /Users/hennadii/Work/AR Constellaions/AR Constellations Project/Assets/Scirpts/Buttons/SetActiveConstell.ts
     - 7f050368-3dd2-429d-8866-cd8dcbfc1a7b: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - 838eaa41-bfdf-44a4-954e-bc049e606fe4: /Applications/LS Specs.app/Contents/Plugins/Es_VFXGraph_Presets.bundle/Assets/Particles Texture.png
     - 9a8ee35a-050f-4a51-b9df-f7265ad414a4: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
@@ -26,6 +27,7 @@ data:
     - ace6c791-303d-4cf9-a7dd-65126f9f0cfa: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/Meshes/Resources/Sphere.mesh
     - b286bc5a-248f-4cfa-880d-e9ce76d58708: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - b363745b-9cf1-4a59-ab04-306cd2da99df: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/Resources/MaterialParams.png
+    - c08e5aac-3581-4112-b2e6-a424e6775250: /Users/hennadii/Work/AR Constellaions/AR Constellations Project/Assets/Scirpts/Cards/CardContentUpdate.ts
     - c1804a35-fe39-40c5-a0b7-7aabdf79ca59: /Applications/LS Specs.app/Contents/Plugins/Es_ShaderGraph_Presets.bundle/Assets/Empty.ss_graph
     - c373a535-a2c9-4281-9afe-43d98f03d545: /Applications/LS Specs.app/Contents/JsPlugins/HelperScriptsRegistry/Assets/Packages/TweenManager.lspkg
     - c5215c6e-2976-4e3c-9af1-59acde396e92: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/EmptyMaterial/Resources/empty.ss_graph

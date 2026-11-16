@@ -30,7 +30,7 @@ export class Controller extends BaseScriptComponent {
         this.delayEvent = this.createEvent("DelayedCallbackEvent")
         this.delayEvent.bind(() => {
             print("DELAY")
-            this.appManager.ctrlConsPos = this.appManager.currentCons!.getChild(0).getChild(4).getTransform().getWorldPosition()
+            this.appManager.ctrlConsPos = this.appManager.currentObj!.getChild(0).getChild(4).getTransform().getWorldPosition()
             this.appManager.ctrlHandPos = this.objectTrf.getWorldPosition()
             this.appManager.hideController()
 
@@ -70,7 +70,7 @@ export class Controller extends BaseScriptComponent {
 
         this.interactable.onTriggerUpdate.add(() => {
             const rot = this.objectTrf.getWorldRotation()
-            this.appManager.currentCons!.getTransform().setWorldRotation(rot)
+            this.appManager.currentObj!.getTransform().setWorldRotation(rot)
         })
 
         this.interactable.onTriggerEnd.add(() => {

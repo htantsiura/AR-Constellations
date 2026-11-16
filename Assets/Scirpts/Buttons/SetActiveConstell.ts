@@ -12,6 +12,6 @@ export class SetActiveConstell extends BaseScriptComponent {
     public setActiveConsVariable() {
         const parent = this.getSceneObject().getParent().getParent()
         if (parent)
-            this.appManager.currentCons = parent;
+            this.appManager.currentObj = parent;
     }
 }

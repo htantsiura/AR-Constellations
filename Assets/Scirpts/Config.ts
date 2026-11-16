@@ -33,6 +33,7 @@ export interface StarInfo {
     name: string;
     direction: vec3;
     hip: number;
+    object: SceneObject | null;
 }
 export const idStarMainInfoMap = new Map<string, StarInfo>();
 

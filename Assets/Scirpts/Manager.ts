@@ -10,6 +10,7 @@ import { ConstellationData } from "./Data/ConstellationData";
 import { GridLayout } from "SpectaclesUIKit.lspkg/Scripts/Components/GridLayout/GridLayout";
 import { ScrollWindow } from "SpectaclesUIKit.lspkg/Scripts/Components/ScrollWindow/ScrollWindow";
 import { ListOfStarsButton } from "./Buttons/ListOfStarsButton";
+import { StarCardContentUpdate } from "./Cards/StarCardContentUpdate";
 
 @component
 export class Manager extends BaseScriptComponent {
@@ -23,8 +24,10 @@ export class Manager extends BaseScriptComponent {
 
     @input card!: SceneObject;
     @input sunCard!: SceneObject;
-    @input cardContentUpdateScript!: CardContentUpdate;
+    @input starCard!: SceneObject;
     @input startInfoCard!: SceneObject;
+    @input cardContentUpdateScript!: CardContentUpdate;
+    @input starCardContentUpdateScript!: StarCardContentUpdate;
     
     @ui.separator
 
@@ -44,9 +47,9 @@ export class Manager extends BaseScriptComponent {
     @input activeStarMat!: Material;
     @ui.group_end
 
-    public currentCons: SceneObject | null = null;
-    public prevCons: SceneObject | null = null;
-    public currentConsPos: vec3 | null = null;
+    public currentObj: SceneObject | null = null;
+    public previousObj: SceneObject | null = null;
+    public currentObjPos: vec3 | null = null;
     //stars
     public currentStar: SceneObject | null = null;
     public prevStar: SceneObject | null = null;
@@ -63,6 +66,9 @@ export class Manager extends BaseScriptComponent {
     onAwake() {
         this.card.enabled = false;
         this.sunCard.enabled = false;
+        this.starCard.enabled = false;
+        this.startInfoCard.enabled = true;
+
         this.controller.enabled = false;
         this.isController = false;
     }
@@ -71,41 +77,75 @@ export class Manager extends BaseScriptComponent {
         
     }
 
-    public openConsCard() {
+    public openConsCard(): void
+    {
         this.sunCard.enabled = false;
-        this.cardContentUpdateScript.contentUpdate(this.currentCons);
+        this.starCard.enabled = false;
+        this.startInfoCard.enabled = false;
+
         this.card.enabled = true;
+        this.cardContentUpdateScript.contentUpdate(this.currentObj);
     }
 
-    public openSunCard() {
-        this.sunCard.enabled = !this.sunCard.enabled ;
+    public openSunCard(): void
+    {
         this.card.enabled = false;
+        this.starCard.enabled = false;
+        this.startInfoCard.enabled = false;
+
+        this.sunCard.enabled = !this.sunCard.enabled ;
+    }
+
+    public openStarCard(): void 
+    {
+        this.sunCard.enabled = false;
+        this.card.enabled = false;
+        this.startInfoCard.enabled = false;
+
+        this.starCard.enabled = true;
+        this.starCardContentUpdateScript.contentUpdate(this.currentObj);
     }
 
     public activateConstellation() {
-        this.startInfoCard.enabled = false;
-        if (this.prevCons === this.currentCons) return
+        
+        if (this.previousObj === this.currentObj) return
 
-        if (this.prevCons) {
-            consActiveToIdleVisibility(this.prevCons, this.defaultStarMat, this.defaultLineMat)
-            this.hideShowConsBtn(this.prevCons, false)
+        if (this.previousObj) {
+            consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
+            this.hideShowConsBtn(this.previousObj, false)
             this.destroyStarButtonList()
             this.listOfStarsBtnScript.hideListOfStars();
-            
         }
-        this.currentCons!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
-        this.rotateWorldToTarget(this.currentCons!)
-        consIdleToActiveVisibility(this.currentCons!, this.activeStarMat, this.activeLineMat)
-        this.hideShowConsBtn(this.currentCons, true)
+        this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
+        this.rotateWorldToTarget(this.currentObj!)
+        consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
+        this.hideShowConsBtn(this.currentObj, true)
         this.openConsCard()
 
         this.createStarButtonList()
         
-        this.prevCons = this.currentCons; 
+        this.previousObj = this.currentObj; 
+    }
+
+    public activateStar() {
+
+        if (this.previousObj === this.currentObj) return;
+
+        if (this.previousObj) {
+            consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
+            this.hideShowConsBtn(this.previousObj, false)
+            this.destroyStarButtonList()
+            this.listOfStarsBtnScript.hideListOfStars();
+        }
+        consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
+        this.openStarCard()
+
+
+        this.previousObj = this.currentObj; 
     }
 
     public showController() {
-        if(!this.currentCons || this.isController) return;
+        if(!this.currentObj || this.isController) return;
         this.controllerTrf.setWorldPosition(this.ctrlConsPos!)
         this.controllerTrf.setWorldRotation(this.ctrlConsRot!)
         this.controller.enabled = true;
@@ -116,18 +156,18 @@ export class Manager extends BaseScriptComponent {
         tweenObjectScale(this.controllerTrf, CTRL_START_SCALE, CTRL_IDLE_SCALE, TW_TIME)
 
         this.isController = true;
-        this.hideShowConsBtn(this.currentCons, false)
+        this.hideShowConsBtn(this.currentObj, false)
     }
 
     public hideController() {
-        if(!this.currentCons || !this.isController) return;
+        if(!this.currentObj || !this.isController) return;
         this.isController = false;
         
         changeMatSlider(this.defaultLineMat, LINE_MODE.pale, LINE_MODE.idle)
         changeMatSlider(this.defaultStarMat, 0, 1)
         tweenObjectScale(this.controllerTrf, CTRL_IDLE_SCALE, CTRL_START_SCALE, TW_TIME)
         tweenObjectRotateTo(this.controllerTrf, this.ctrlConsRot!, TW_TIME)
-        tweenObjectRotateTo(this.currentCons.getTransform(), ZERO_QUAT, TW_TIME)
+        tweenObjectRotateTo(this.currentObj.getTransform(), ZERO_QUAT, TW_TIME)
         LSTween.moveFromToLocal(
             this.controllerTrf, 
             this.ctrlHandPos!,
@@ -140,7 +180,7 @@ export class Manager extends BaseScriptComponent {
         .start()
         .onComplete(() => {
             this.controller.enabled = false;
-            this.hideShowConsBtn(this.currentCons, true)
+            this.hideShowConsBtn(this.currentObj, true)
         })
     }
 
@@ -158,20 +198,20 @@ export class Manager extends BaseScriptComponent {
         const consObj = getChildByName(this.world, consName);
         if (!consObj) return;
 
-        this.currentCons = consObj;
+        this.currentObj = consObj;
         this.activateConstellation()
     }
 
-    public rotateWorldToTarget(currentCons: SceneObject) {
+    public rotateWorldToTarget(currentObj: SceneObject) {
 
         const worldTransform = this.world.getTransform();
     
-        const consName = currentCons.name.replace(/[.,!?]/g, "").trim() 
+        const consName = currentObj.name.replace(/[.,!?]/g, "").trim() 
         const baseConsRot = consQuatMap.get(consName);
 
         const worldPos = this.world.getTransform().getWorldPosition();
         const targetPos = this.target.getTransform().getWorldPosition();
-        this.currentConsPos = targetPos;
+        this.currentObjPos = targetPos;
         const targetAngle = Math.atan2(worldPos.x - targetPos.x, worldPos.z - targetPos.z);
         const targetRot = quat.angleAxis(targetAngle, vec3.up());
 
@@ -188,7 +228,7 @@ export class Manager extends BaseScriptComponent {
     }
 
     public rotateByController(rotation: quat) {
-        this.currentCons?.getTransform().setLocalRotation(rotation)
+        this.currentObj?.getTransform().setLocalRotation(rotation)
     }
 
     public createStarButtonList(): void 
@@ -198,17 +238,18 @@ export class Manager extends BaseScriptComponent {
         const scrollWindowComp = starListInstance.getChild(0).getChild(0).getComponent("Component.ScriptComponent") as ScrollWindow;
 
         ConstellationData.forEach((item) => {
-            if(this.currentCons!.name === item.name) {
+            if(this.currentObj!.name === item.name) {
                 const listLength = item.list_of_main_stars.length
                 scrollWindowComp.scrollDimensions = new vec2(15, listLength * 5 + 5)
-                scrollWindowComp.scrollPosition = new vec2(0, listLength * 5 / -2)
+                scrollWindowComp.scrollPosition = new vec2(0, listLength * 5 / -2 )
                 const btnRootComp = btnRoot.getComponent("Component.ScriptComponent") as GridLayout
                 btnRootComp.rows = listLength;
 
                 for (let i = 0; i < listLength; i++) {
                     const instance = this.starButton.instantiate(btnRoot);
-                    instance.name = idStarMainInfoMap.get(item.list_of_main_stars[i])!.name
-                    instance.getChild(0).getComponent("Component.Text").text = instance.name;
+                    //instance.name = idStarMainInfoMap.get(item.list_of_main_stars[i])!.name
+                    instance.name = item.list_of_main_stars[i]
+                    instance.getChild(0).getComponent("Component.Text").text = idStarMainInfoMap.get(item.list_of_main_stars[i])!.name
                 }
             }
         })

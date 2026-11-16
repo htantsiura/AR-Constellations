@@ -36,6 +36,8 @@
     list: false
     listOfStarsBtnScript: false
     starButton: false
+    starCard: false
+    starCardContentUpdateScript: false
     starList: false
     startInfoCard: false
     sun: false
@@ -57,12 +59,14 @@
       sun: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       card: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       sunCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      starCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       startInfoCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      starCardContentUpdateScript: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       starButton: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       starList: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       list: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      listOfStarsBtnScript: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      listOfStarsBtnScript: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
       defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       defaultStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
@@ -78,13 +82,15 @@
     - '// @ui {"widget":"separator"}'
     - // @input SceneObject card
     - // @input SceneObject sunCard
-    - // @input AssignableType cardContentUpdateScript
+    - // @input SceneObject starCard
     - // @input SceneObject startInfoCard
+    - // @input AssignableType cardContentUpdateScript
+    - // @input AssignableType_1 starCardContentUpdateScript
     - '// @ui {"widget":"separator"}'
     - // @input Asset.ObjectPrefab starButton
     - // @input Asset.ObjectPrefab starList
     - // @input SceneObject list
-    - // @input AssignableType_1 listOfStarsBtnScript
+    - // @input AssignableType_2 listOfStarsBtnScript
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Materials"}'
     - // @input Asset.Material defaultLineMat

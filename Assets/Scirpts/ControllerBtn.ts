@@ -52,7 +52,7 @@ export class ControllerBtn extends BaseScriptComponent {
             const currentPos = this.objectTransform.getLocalPosition()
             const currentRot = this.objectTransform.getLocalRotation()
             tweenObjectRotate(this.objectTransform, currentRot, this.baseRot, 250)
-            tweenObjectRotate(this.appManager.currentCons!.getTransform(), currentRot, this.baseRot, 250)
+            tweenObjectRotate(this.appManager.currentObj!.getTransform(), currentRot, this.baseRot, 250)
         })
         //delayEvent.reset(1);
     }

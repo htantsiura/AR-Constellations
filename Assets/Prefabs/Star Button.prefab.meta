@@ -130,8 +130,6 @@
     _shadowPositionOffset: true
     _toggleable: true
     _defaultToOn: true
-    addCallbacks: true
-    triggerUpCallbacks: true
     triggerDownCallbacks: true
     onValueChangeCallbacks: true
     onFinishedCallbacks: true
@@ -148,9 +146,12 @@
       _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
       _toggleable: false
       _defaultToOn: false
-      addCallbacks: false
+      addCallbacks: true
       triggerUpCallbacks:
-        []
+        - scriptComponent: !<reference.ScriptComponent> fd48ab49-4de6-4267-a1be-eea41d60c7e1
+          functionName: setActiveStarVariable
+        - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
+          functionName: activateStar
       triggerDownCallbacks:
         []
       onValueChangeCallbacks:
@@ -175,3 +176,21 @@
     - !<own> 3566b21b-a057-42d0-535f-ccd1a5c1eeb0
   Components:
     - !<own> dc6c68a0-f548-4c46-5a56-6bb2a1aa0224
+    - !<own> fd48ab49-4de6-4267-a1be-eea41d60c7e1
+- !<ScriptComponent/fd48ab49-4de6-4267-a1be-eea41d60c7e1>
+  PrefabRemaps:
+    []
+  Name: SetActiveStar
+  Enabled: true
+  ScriptAsset: !<reference> 896dc79e-8e7f-427e-81ed-e041351b1ca5
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
+      button: !<reference.SceneObject> e75d6748-403b-46ad-696c-82f7bef3b22b
+  ScriptTypes:
+    "":
+      {}
