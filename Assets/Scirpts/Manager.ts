@@ -117,7 +117,7 @@ export class Manager extends BaseScriptComponent {
             this.listOfStarsBtnScript.hideListOfStars();
         }
         this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
-        this.rotateWorldToTarget(this.currentObj!)
+        this.rotateWorldToConsTarget(this.currentObj!)
         consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
         this.hideShowConsBtn(this.currentObj, true)
         this.openConsCard()
@@ -128,6 +128,7 @@ export class Manager extends BaseScriptComponent {
     }
 
     public activateStar() {
+        print("OBJ NAME == " + this.currentObj!.name)
 
         if (this.previousObj === this.currentObj) return;
 
@@ -137,6 +138,9 @@ export class Manager extends BaseScriptComponent {
             this.destroyStarButtonList()
             this.listOfStarsBtnScript.hideListOfStars();
         }
+        //this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
+        
+        this.rotateWorldToConsTarget(this.currentObj!)
         consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
         this.openStarCard()
 
@@ -202,12 +206,22 @@ export class Manager extends BaseScriptComponent {
         this.activateConstellation()
     }
 
-    public rotateWorldToTarget(currentObj: SceneObject) {
+    public rotateWorldToConsTarget(currentObj: SceneObject) {
 
         const worldTransform = this.world.getTransform();
-    
-        const consName = currentObj.name.replace(/[.,!?]/g, "").trim() 
-        const baseConsRot = consQuatMap.get(consName);
+        let objName = "";
+        let baseRot; 
+
+        if (currentObj.name === "s_label") {
+            objName = currentObj.getChild(1).getComponent("Component.Text").text.toLowerCase()
+            
+            baseRot = idStarMainInfoMap.get(objName)!.rotation
+
+        } else {
+            objName = currentObj.name.replace(/[.,!?]/g, "").trim() 
+            baseRot = consQuatMap.get(objName);
+        }
+        print ("OBJ NAME # = " + objName)
 
         const worldPos = this.world.getTransform().getWorldPosition();
         const targetPos = this.target.getTransform().getWorldPosition();
@@ -216,7 +230,7 @@ export class Manager extends BaseScriptComponent {
         const targetRot = quat.angleAxis(targetAngle, vec3.up());
 
         // by multiplying quaternions - getting the rotation
-        const finalRot = targetRot.multiply(baseConsRot!);
+        const finalRot = targetRot.multiply(baseRot!);
 
         LSTween.rotateToLocal(
             worldTransform, 

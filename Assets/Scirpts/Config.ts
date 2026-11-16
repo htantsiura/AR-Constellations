@@ -22,6 +22,8 @@ export const CTRL_HOVER_SCALE: vec3 = CTRL_START_SCALE.uniformScale(1.8)
 export const CONTROL_LOC_POS: vec3 = new vec3(0, 6, 0)
 export const TW_TIME: number = 250;
 export const ZERO_QUAT: quat = new quat(1, 0, 0, 0)
+export const ZERO_ROT: vec3 = new vec3(0, 0, -1)
+
 
 // maps
 export const linearDisMap = new Map<string, number>();
@@ -31,7 +33,7 @@ export const hipPositionMap = new Map<number, vec3>();
 
 export interface StarInfo {
     name: string;
-    direction: vec3;
+    rotation: quat;
     hip: number;
     object: SceneObject | null;
 }

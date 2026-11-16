@@ -37,8 +37,6 @@ export class StarCardContentUpdate extends BaseScriptComponent {
     public contentUpdate(object: SceneObject | null) {
         
         const textName = object?.getChild(1).getComponent("Component.Text").text
-        print("object name = " + textName)
-
         StarsData.forEach((item: any) => {
             if(item.name === textName) {
                 this.title.text = item.name;
