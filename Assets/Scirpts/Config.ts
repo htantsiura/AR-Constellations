@@ -28,8 +28,10 @@ export const ZERO_ROT: vec3 = new vec3(0, 0, -1)
 // maps
 export const linearDisMap = new Map<string, number>();
 export const logarithDisMap = new Map<string, number>();
-export const consQuatMap = new Map<string, quat>();
 export const hipPositionMap = new Map<number, vec3>();
+
+export interface ConsInfo { id: string; rotation: quat; object: SceneObject | null }
+export const consMap = new Map<string, ConsInfo>();
 
 export interface StarInfo {
     name: string;
@@ -37,7 +39,7 @@ export interface StarInfo {
     hip: number;
     object: SceneObject | null;
 }
-export const idStarMainInfoMap = new Map<string, StarInfo>();
+export const starsMap = new Map<string, StarInfo>();
 
 // colors
 export const LINE_MODE: Record<string, number> = {

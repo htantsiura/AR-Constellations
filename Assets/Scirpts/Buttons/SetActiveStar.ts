@@ -1,5 +1,5 @@
 import { Manager } from "Scirpts/Manager"
-import { idStarMainInfoMap } from "Scirpts/Config";
+import { starsMap } from "Scirpts/Config";
 
 @component
 export class SetActiveStar extends BaseScriptComponent {
@@ -14,7 +14,7 @@ export class SetActiveStar extends BaseScriptComponent {
     }
 
     public setActiveStarVariable() {
-        const obj = idStarMainInfoMap.get(this.button.name)!.object
+        const obj = starsMap.get(this.button.name)!.object
         //const parent = this.getSceneObject().getParent().getParent()
         if (obj)
             this.appManager.currentObj = obj;

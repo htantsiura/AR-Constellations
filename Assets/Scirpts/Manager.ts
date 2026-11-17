@@ -2,7 +2,7 @@ import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
 import { changeMatSlider, consIdleToActiveVisibility, consActiveToIdleVisibility } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
-import { consQuatMap, idStarMainInfoMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, ZERO_QUAT, TW_TIME, LINE_MODE } from "./Config";
+import { consMap, starsMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, ZERO_QUAT, TW_TIME, LINE_MODE } from "./Config";
 import { getChildByName } from "./Utils";
 import { tweenObjectMove, tweenObjectScale, tweenObjectRotateTo, tweenObjectMoveAndState } from "./Utils/MyTweenFuncs";
 import { tweenObjectRotate } from "./ControllerBtn";
@@ -109,12 +109,22 @@ export class Manager extends BaseScriptComponent {
     public activateConstellation() {
         
         if (this.previousObj === this.currentObj) return
+        print ("currentObj = " + this.currentObj!.name)
 
         if (this.previousObj) {
-            consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
-            this.hideShowConsBtn(this.previousObj, false)
-            this.destroyStarButtonList()
-            this.listOfStarsBtnScript.hideListOfStars();
+            if (this.previousObj.name == "s_label") {
+
+            } else {
+                print ("___ check 0 ")
+                consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
+                print ("___ check 1 ")
+                this.hideShowConsBtn(this.previousObj, false)
+                print ("___ check 2 ")
+                this.destroyStarButtonList()
+                print ("___ check 3 ")
+                this.listOfStarsBtnScript.hideListOfStars();
+                print ("___ check 4 ")
+            }
         }
         this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
         this.rotateWorldToConsTarget(this.currentObj!)
@@ -215,11 +225,11 @@ export class Manager extends BaseScriptComponent {
         if (currentObj.name === "s_label") {
             objName = currentObj.getChild(1).getComponent("Component.Text").text.toLowerCase()
             
-            baseRot = idStarMainInfoMap.get(objName)!.rotation
+            baseRot = starsMap.get(objName)!.rotation
 
         } else {
             objName = currentObj.name.replace(/[.,!?]/g, "").trim() 
-            baseRot = consQuatMap.get(objName);
+            baseRot = consMap.get(objName)!.rotation;
         }
         print ("OBJ NAME # = " + objName)
 
@@ -261,9 +271,9 @@ export class Manager extends BaseScriptComponent {
 
                 for (let i = 0; i < listLength; i++) {
                     const instance = this.starButton.instantiate(btnRoot);
-                    //instance.name = idStarMainInfoMap.get(item.list_of_main_stars[i])!.name
+                    //instance.name = starsMap.get(item.list_of_main_stars[i])!.name
                     instance.name = item.list_of_main_stars[i]
-                    instance.getChild(0).getComponent("Component.Text").text = idStarMainInfoMap.get(item.list_of_main_stars[i])!.name
+                    instance.getChild(0).getComponent("Component.Text").text = starsMap.get(item.list_of_main_stars[i])!.name
                 }
             }
         })

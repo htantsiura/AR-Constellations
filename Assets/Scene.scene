@@ -3511,6 +3511,7 @@
     - !<own> 0243ea23-589a-463e-984b-9e72ddf83360
   Components:
     - !<own> 43e35072-f2d6-4f40-a7a4-7a0024b88272
+    - !<own> b046a7bd-bfa0-46f8-8f56-6dd68ba8e28e
 - !<ScriptComponent/1774c7ac-f45e-4ebd-9edb-d61dcad046ba>
   PrefabRemaps:
     []
@@ -10293,8 +10294,10 @@
       _defaultToOn: false
       addCallbacks: true
       triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> e21d40d0-f596-4e40-9031-5cb2c1ffda7b
-          functionName: showListOfStars
+        - scriptComponent: !<reference.ScriptComponent> b046a7bd-bfa0-46f8-8f56-6dd68ba8e28e
+          functionName: setActiveConsVariableFromStar
+        - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
+          functionName: activateConstellation
       triggerDownCallbacks:
         []
       onValueChangeCallbacks:
@@ -28238,6 +28241,22 @@
     - !<own> 89b6aa1d-d34f-4692-bf97-c7ea0f1609ef
   Components:
     - !<own> 8abc4823-7b6c-4386-8698-9999dfc79f22
+- !<ScriptComponent/b046a7bd-bfa0-46f8-8f56-6dd68ba8e28e>
+  PrefabRemaps:
+    []
+  Name: SetActiveConstell
+  Enabled: true
+  ScriptAsset: !<reference> 754e15ef-85fc-41e9-9f48-884ff2daa4a7
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      appManager: !<MappingBased.AssignableType> 9656742e-1597-4059-9a82-201da302a42f
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/b095bfe4-9943-4442-b42e-9be9fbfeaa88>
   PrefabRemaps:
     []
