@@ -1,6 +1,7 @@
 import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
-import { changeMatSlider, consIdleToActiveVisibility, consActiveToIdleVisibility } from "./VisibilitiModes";
+import { changeMatSlider, consIdleToActiveVisibility, consActiveToIdleVisibility, 
+    starIdleToActiveVisibility, starActiveToIdleVisibility } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
 import { consMap, starsMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, ZERO_QUAT, TW_TIME, LINE_MODE } from "./Config";
 import { getChildByName } from "./Utils";
@@ -109,21 +110,15 @@ export class Manager extends BaseScriptComponent {
     public activateConstellation() {
         
         if (this.previousObj === this.currentObj) return
-        print ("currentObj = " + this.currentObj!.name)
 
         if (this.previousObj) {
             if (this.previousObj.name == "s_label") {
-
+                starActiveToIdleVisibility( this.previousObj, this.defaultStarMat)
             } else {
-                print ("___ check 0 ")
                 consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
-                print ("___ check 1 ")
                 this.hideShowConsBtn(this.previousObj, false)
-                print ("___ check 2 ")
                 this.destroyStarButtonList()
-                print ("___ check 3 ")
                 this.listOfStarsBtnScript.hideListOfStars();
-                print ("___ check 4 ")
             }
         }
         this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
@@ -138,7 +133,6 @@ export class Manager extends BaseScriptComponent {
     }
 
     public activateStar() {
-        print("OBJ NAME == " + this.currentObj!.name)
 
         if (this.previousObj === this.currentObj) return;
 
@@ -151,7 +145,8 @@ export class Manager extends BaseScriptComponent {
         //this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
         
         this.rotateWorldToConsTarget(this.currentObj!)
-        consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
+        //consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
+        starIdleToActiveVisibility(this.currentObj!, this.activeStarMat)
         this.openStarCard()
 
 
@@ -224,15 +219,11 @@ export class Manager extends BaseScriptComponent {
 
         if (currentObj.name === "s_label") {
             objName = currentObj.getChild(1).getComponent("Component.Text").text.toLowerCase()
-            
             baseRot = starsMap.get(objName)!.rotation
-
         } else {
             objName = currentObj.name.replace(/[.,!?]/g, "").trim() 
             baseRot = consMap.get(objName)!.rotation;
         }
-        print ("OBJ NAME # = " + objName)
-
         const worldPos = this.world.getTransform().getWorldPosition();
         const targetPos = this.target.getTransform().getWorldPosition();
         this.currentObjPos = targetPos;

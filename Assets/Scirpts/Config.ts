@@ -50,7 +50,7 @@ export const LINE_MODE: Record<string, number> = {
 
 export const STAR_MODE: Record<string, number> = {
     "idle": 0.75,
-    "active": 1.5,
+    "active": 2,
     "pale": 0
 }
 

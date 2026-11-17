@@ -54,10 +54,8 @@ export function createStar(
     catalog: Map<number, vec3>
 ): void {
     const cGroup = getChildByName(parent, item.constellation)
-    if (!cGroup) {
-        print ("No constellation found");
-        return;
-    }
+    if (!cGroup) return;
+    
     const cPos = cGroup.getTransform().getWorldPosition();
     const sPos = raDecToVec3(item, item.distance_light_year, SCALE, IS_LOGARITH);
     catalog.set(item.hip, sPos);

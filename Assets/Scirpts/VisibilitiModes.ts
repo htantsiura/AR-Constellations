@@ -1,6 +1,6 @@
 import { LSTween } from "LSTween.lspkg/LSTween"
 import Easing from "LSTween.lspkg/TweenJS/Easing"
-import { LINE_MODE, TW_TIME } from "./Config"
+import { LINE_MODE, STAR_MODE, TW_TIME } from "./Config"
 
 
 @component
@@ -14,7 +14,7 @@ export function consIdleToActiveVisibility(object: SceneObject, matStar: Materia
     object.children.forEach((item) => {
         if(item.name === "s_label") {
             item.getChild(1).enabled = true
-            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            //item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
         }
         if(item.name === "Wire") {
             item.getComponent("Component.RenderMeshVisual").mainMaterial = matLine;
@@ -27,7 +27,7 @@ export function consActiveToIdleVisibility(object: SceneObject, matStar: Materia
     object.children.forEach((item) => {
         if(item.name === "s_label") {
             item.getChild(1).enabled = false
-            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            //item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
         }
         if(item.name === "Wire") {
             item.getComponent("Component.RenderMeshVisual").mainMaterial = matLine;
@@ -59,63 +59,15 @@ export function animateMatParameter(
     .start()
 }
 
-/* export function turnOnAllStarsLabels(object: SceneObject, mat: Material) {
-    object.children.forEach((item) => {
-        if(item.name === "s_label") {
-            item.getChild(1).enabled = true
-            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = mat;
-        }
-    })
-} */
+export function starIdleToActiveVisibility(object: SceneObject, matStar: Material) {
 
-/* export function turnOffAllStarsLabels(object: SceneObject, mat: Material) {
-    object.children.forEach((item) => {
-        if(item.name === "s_label") {
-            item.getChild(1).enabled = false
-            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = mat;
+    object.getChild(1).enabled = true;
+    object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+    animateMatParameter(matStar.mainPass, "slider", STAR_MODE.idle, STAR_MODE.active, TW_TIME)
+}
 
-        }
-    })
-} */
+export function starActiveToIdleVisibility(object: SceneObject, matStar: Material) {
 
-/* export function setActiveStarMaterial(object: SceneObject, mat: Material) {
-    object.children.forEach((item) => {
-        if(item.name === "s_label") {
-            item.getComponent("Component.RenderMeshVisual").mainMaterial = mat;
-        }
-    })
-    animateMatParameter(mat.mainPass, "slider", LINE_MODE.idle, LINE_MODE.active, 250)
-} */
-
-/* export function setActiveLineMaterial(object: SceneObject, mat: Material) {
-    object.children.forEach((item) => {
-        if(item.name === "Wire") {
-            item.getComponent("Component.RenderMeshVisual").mainMaterial = mat;
-        }
-    })
-    animateMatParameter(mat.mainPass, "slider", LINE_MODE.idle, LINE_MODE.active, 250)
-} */
-
-/* export function setPaleLineMaterial(object: SceneObject, mat: Material) {
-    object.children.forEach((item) => {
-        if(item.name === "Wire") {
-            item.getComponent("Component.RenderMeshVisual").mainMaterial = mat;
-        }
-    })
-    animateMatParameter(mat.mainPass, "slider", LINE_MODE.idle, LINE_MODE.pale, 250)
-} */
-
-/* export function setDefaultLineMaterial(object: SceneObject, mat: Material) {
-    object.children.forEach((item) => {
-        if(item.name === "Wire") {
-            item.getComponent("Component.RenderMeshVisual").mainMaterial = mat;
-        }
-    })
-} */
-
-/* export function turnOnOffControllerBtn(object: SceneObject, value: boolean) {
-    print(" )))))))")
-    object.getChild(0).getChild(4).enabled = value;
-} */
-
-
+    object.getChild(1).enabled = false;
+    object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+}
