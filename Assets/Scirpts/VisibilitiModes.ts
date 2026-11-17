@@ -1,6 +1,7 @@
 import { LSTween } from "LSTween.lspkg/LSTween"
 import Easing from "LSTween.lspkg/TweenJS/Easing"
-import { LINE_MODE, STAR_MODE, TW_TIME } from "./Config"
+import { LINE_MODE, STAR_MODE, TW_TIME, S_SCALE } from "./Config"
+import { tweenObjectScale } from "./ControllerBtn"
 
 
 @component
@@ -14,7 +15,7 @@ export function consIdleToActiveVisibility(object: SceneObject, matStar: Materia
     object.children.forEach((item) => {
         if(item.name === "s_label") {
             item.getChild(1).enabled = true
-            //item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
         }
         if(item.name === "Wire") {
             item.getComponent("Component.RenderMeshVisual").mainMaterial = matLine;
@@ -27,7 +28,7 @@ export function consActiveToIdleVisibility(object: SceneObject, matStar: Materia
     object.children.forEach((item) => {
         if(item.name === "s_label") {
             item.getChild(1).enabled = false
-            //item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
         }
         if(item.name === "Wire") {
             item.getComponent("Component.RenderMeshVisual").mainMaterial = matLine;
@@ -64,6 +65,9 @@ export function starIdleToActiveVisibility(object: SceneObject, matStar: Materia
     object.getChild(1).enabled = true;
     object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
     animateMatParameter(matStar.mainPass, "slider", STAR_MODE.idle, STAR_MODE.active, TW_TIME)
+    const sizeA = new vec3(1, 1, 1)
+    const sizeB = new vec3(1.5, 1.5, 1.5)
+    tweenObjectScale(object.getChild(0).getTransform(), sizeA, sizeB, TW_TIME)
 }
 
 export function starActiveToIdleVisibility(object: SceneObject, matStar: Material) {
