@@ -56,6 +56,11 @@ export class CardsManager extends BaseScriptComponent {
         this.infoCard.enabled = false;
 
         this.cardContentUpdateScript.contentUpdate(obj);
+        this.list!.enabled = false;
+        this.content!.getChild(1).enabled = true;
+        this.content!.getChild(2).enabled = true;
+        this.closeConsBtn!.enabled = true;
+        this.listOfStarsBtn!.enabled = true;
     }
 
     public openStarCard(obj: SceneObject): void
@@ -114,7 +119,7 @@ export class CardsManager extends BaseScriptComponent {
         this.consCard.enabled = true;
         this.starCard.enabled = false;
         this.list!.enabled = true;
-        
+
         this.content!.getChild(1).enabled = false;
         this.content!.getChild(2).enabled = false;
         this.closeConsBtn!.enabled = false;

@@ -15,7 +15,7 @@ export function consIdleToActiveVisibility(object: SceneObject, matStar: Materia
     object.children.forEach((item) => {
         if(item.name === "s_label") {
             item.getChild(1).enabled = true
-            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            //item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
         }
         if(item.name === "Wire") {
             item.getComponent("Component.RenderMeshVisual").mainMaterial = matLine;
@@ -28,7 +28,7 @@ export function consActiveToIdleVisibility(object: SceneObject, matStar: Materia
     object.children.forEach((item) => {
         if(item.name === "s_label") {
             item.getChild(1).enabled = false
-            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            //item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
         }
         if(item.name === "Wire") {
             item.getComponent("Component.RenderMeshVisual").mainMaterial = matLine;

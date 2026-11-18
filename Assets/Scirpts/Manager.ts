@@ -87,7 +87,6 @@ export class Manager extends BaseScriptComponent {
         //if (this.previousObj === this.currentObj) return
         if (this.previousObj === this.currentObj) 
         {
-            print ("toggle it")
             this.cardsManagerScript.toggleConsCard()
             return;
         }
@@ -96,11 +95,15 @@ export class Manager extends BaseScriptComponent {
         if (this.previousObj) {
             if (this.previousObj.name == "s_label") {
                 starActiveToIdleVisibility( this.previousObj, this.defaultStarMat)
+                consActiveToIdleVisibility(this.previousObj.getParent(), this.defaultStarMat, this.defaultLineMat)
+                this.destroyStarButtonList()
+
             } else {
                 consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
                 this.hideShowConsBtn(this.previousObj, false)
                 this.destroyStarButtonList()
                 this.listOfStarsBtnScript.hideListOfStars();
+                //starActiveToIdleVisibility(this.previousObj, this.defaultStarMat)
             }
         }
         this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
@@ -119,10 +122,16 @@ export class Manager extends BaseScriptComponent {
         if (this.previousObj === this.currentObj) return;
 
         if (this.previousObj) {
-            consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
-            this.hideShowConsBtn(this.previousObj, false)
-            //this.destroyStarButtonList()
-            this.listOfStarsBtnScript.hideListOfStars();
+            if (this.previousObj.name == "s_label") {
+                starActiveToIdleVisibility( this.previousObj, this.defaultStarMat)
+            } else {
+                consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
+                this.hideShowConsBtn(this.previousObj, false)
+                //this.destroyStarButtonList()
+                this.listOfStarsBtnScript.hideListOfStars();
+                //starActiveToIdleVisibility(this.previousObj, this.defaultStarMat)
+            }
+
         }
         //this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
         this.rotateWorldToConsTarget(this.currentObj!)
@@ -230,6 +239,8 @@ export class Manager extends BaseScriptComponent {
 
     public createStarButtonList(): void 
     {
+        /* if (this.list.getChild(0))
+            this.list.getChild(0).destroy() */
         const starListInstance = this.starList.instantiate(this.list);
         const btnRoot = starListInstance.getChild(0).getChild(0).getChild(0)
         const scrollWindowComp = starListInstance.getChild(0).getChild(0).getComponent("Component.ScriptComponent") as ScrollWindow;
