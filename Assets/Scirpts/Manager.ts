@@ -12,6 +12,7 @@ import { GridLayout } from "SpectaclesUIKit.lspkg/Scripts/Components/GridLayout/
 import { ScrollWindow } from "SpectaclesUIKit.lspkg/Scripts/Components/ScrollWindow/ScrollWindow";
 import { ListOfStarsButton } from "./Buttons/ListOfStarsButton";
 import { StarCardContentUpdate } from "./Cards/StarCardContentUpdate";
+import { CardsManager } from "./Cards/CardsManager";
 
 @component
 export class Manager extends BaseScriptComponent {
@@ -29,14 +30,13 @@ export class Manager extends BaseScriptComponent {
     @input startInfoCard!: SceneObject;
     @input cardContentUpdateScript!: CardContentUpdate;
     @input starCardContentUpdateScript!: StarCardContentUpdate;
+    @input cardsManagerScript!: CardsManager;
     
     @ui.separator
 
     @input starButton!: ObjectPrefab;
     @input starList!: ObjectPrefab;
     @input list!: SceneObject;
-/*     @input gridLayoutList!: GridLayout;
-    @input scrollWindow!: ScrollWindow; */
     @input listOfStarsBtnScript!: ListOfStarsButton;
 
     @ui.separator
@@ -65,27 +65,12 @@ export class Manager extends BaseScriptComponent {
 
     
     onAwake() {
-        this.card.enabled = false;
-        this.sunCard.enabled = false;
-        this.starCard.enabled = false;
-        this.startInfoCard.enabled = true;
-
         this.controller.enabled = false;
         this.isController = false;
     }
 
     private onStart(): void {
         
-    }
-
-    public openConsCard(): void
-    {
-        this.sunCard.enabled = false;
-        this.starCard.enabled = false;
-        this.startInfoCard.enabled = false;
-
-        this.card.enabled = true;
-        this.cardContentUpdateScript.contentUpdate(this.currentObj);
     }
 
     public openSunCard(): void
@@ -97,19 +82,16 @@ export class Manager extends BaseScriptComponent {
         this.sunCard.enabled = !this.sunCard.enabled ;
     }
 
-    public openStarCard(): void 
-    {
-        this.sunCard.enabled = false;
-        this.card.enabled = false;
-        this.startInfoCard.enabled = false;
-
-        this.starCard.enabled = true;
-        this.starCardContentUpdateScript.contentUpdate(this.currentObj);
-    }
-
     public activateConstellation() {
         
-        if (this.previousObj === this.currentObj) return
+        //if (this.previousObj === this.currentObj) return
+        if (this.previousObj === this.currentObj) 
+        {
+            print ("toggle it")
+            this.cardsManagerScript.toggleConsCard()
+            return;
+        }
+            
 
         if (this.previousObj) {
             if (this.previousObj.name == "s_label") {
@@ -125,7 +107,7 @@ export class Manager extends BaseScriptComponent {
         this.rotateWorldToConsTarget(this.currentObj!)
         consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
         this.hideShowConsBtn(this.currentObj, true)
-        this.openConsCard()
+        this.cardsManagerScript.openConsCard(this.currentObj!)
 
         this.createStarButtonList()
         
@@ -139,17 +121,13 @@ export class Manager extends BaseScriptComponent {
         if (this.previousObj) {
             consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
             this.hideShowConsBtn(this.previousObj, false)
-            this.destroyStarButtonList()
+            //this.destroyStarButtonList()
             this.listOfStarsBtnScript.hideListOfStars();
         }
         //this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
-        
         this.rotateWorldToConsTarget(this.currentObj!)
-        //consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
         starIdleToActiveVisibility(this.currentObj!, this.activeStarMat)
-        this.openStarCard()
-
-
+        this.cardsManagerScript.openStarCard(this.currentObj!)
         this.previousObj = this.currentObj; 
     }
 
@@ -193,12 +171,16 @@ export class Manager extends BaseScriptComponent {
         })
     }
 
-    private hideShowConsBtn(cons: SceneObject | null, state: boolean) {
-        if(!cons) return;
-        const btn = cons.getChild(0).getChild(4)
-        btn.getTransform().setLocalScale(BTN_SCALE)
-        if(btn && btn.name === "btn") {
-            btn.enabled = state;
+    private hideShowConsBtn(obj: SceneObject | null, state: boolean) {
+        if(!obj) return;
+        if (obj.name === "s_label") {
+
+        } else {
+            const btn = obj.getChild(0).getChild(4)
+            btn.getTransform().setLocalScale(BTN_SCALE)
+            if(btn && btn.name === "btn") {
+                btn.enabled = state;
+            }
         }
     }
 

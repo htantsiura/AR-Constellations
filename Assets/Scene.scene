@@ -7,10 +7,7 @@
     - !<own> 00000000-0000-0065-0000-000000000064
     - !<own> 621af72c-e6bd-47b5-88b2-584cf64a23a8
     - !<own> 78a35da6-10f6-4775-a274-ee4a6e36ff57
-    - !<own> 88dda23a-cf59-4b98-8aa7-6fb48b53997e
-    - !<own> 33eaea3a-1c21-4c44-bd48-02dc5ad76d77
-    - !<own> c2b5e0ab-e086-48f1-8c5a-f36561b4eda7
-    - !<own> 73cabc13-eb6a-429b-8ad4-d71ca49a0827
+    - !<own> cb85bdb4-9352-4ae0-8376-bae849eda107
     - !<own> ee9d5c20-4c31-4922-a133-66cb756348f0
     - !<own> c6f3fe62-c3e1-4ed6-86fb-b93a5b2b2650
     - !<own> 9e331e33-73cc-4309-aef3-014f23e3ea59
@@ -1049,6 +1046,50 @@
     []
   Components:
     - !<own> 6c6bd1f2-e7b5-4e66-89b4-93cb66338684
+- !<ScriptComponent/0720d7c1-c125-4a3c-8548-482923c7064c>
+  PrefabRemaps:
+    []
+  Name: RectangleButton
+  Enabled: true
+  ScriptAsset: !<reference> 173d7099-914c-4f24-ac1c-1b67a66ae138
+  ScriptInputsDefault:
+    _renderOrder: true
+    _inactive: true
+    _playAudio: true
+    _style: true
+    _hasShadow: true
+    _shadowPositionOffset: true
+    _toggleable: true
+    _defaultToOn: true
+    triggerDownCallbacks: true
+    onValueChangeCallbacks: true
+    onFinishedCallbacks: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _renderOrder: 0
+      _size: !<Vec3> {x: 7.600000, y: 3.000000, z: 3.000000}
+      _inactive: false
+      _playAudio: false
+      _style: PrimaryNeutral
+      _hasShadow: false
+      _shadowPositionOffset: !<Vec3> {x: 0.050000, y: -0.050000, z: -0.010000}
+      _toggleable: false
+      _defaultToOn: false
+      addCallbacks: true
+      triggerUpCallbacks:
+        - scriptComponent: !<reference.ScriptComponent> df521174-d208-4412-b80b-0d95ff4fe337
+          functionName: backListOfStars
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/0726a802-4c00-4072-a9d5-fbbef7ab5fb7>
   PrefabRemaps:
     []
@@ -6899,22 +6940,6 @@
     - !<own> eff93692-399e-4b37-bc19-42c825cb0e91
   Components:
     - !<own> 84b7cde8-e76b-4bea-87ca-f3cf49a876c4
-- !<ScriptComponent/2bd31377-2f22-4833-a067-4591e1c5d951>
-  PrefabRemaps:
-    []
-  Name: CloseCard
-  Enabled: true
-  ScriptAsset: !<reference> 6bc04a9a-60e6-4257-bd10-e7e952be708b
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      card: !<reference.SceneObject> 73cabc13-eb6a-429b-8ad4-d71ca49a0827
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/2bea4673-7f91-4fc5-beb1-e82a05150ca9>
   PrefabRemaps:
     []
@@ -8197,7 +8222,7 @@
   PrefabRemaps:
     []
   Name: Star Card
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -110.000000}
@@ -8206,6 +8231,7 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> bb3f2066-d4e2-427d-953a-05476786a0ea
+    - !<own> 955061ab-d42b-4aad-ad1a-85ec2ad4ec08
     - !<own> 3a548c3a-a3e7-477c-9055-d84f762e713a
     - !<own> 166b7538-7087-4083-a2f4-574f704c2222
     - !<own> 88e77048-5c83-49ef-986f-61b5c4470a09
@@ -8397,6 +8423,21 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/363b7815-e763-4106-9c2c-d73926aad77e>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.100000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 3aaf7407-d3d0-4dbd-830e-bb21aa6d0c1b
 - !<Text/363ed7d9-1088-4250-b9f7-a9faa4de9460>
   PrefabRemaps:
     []
@@ -8936,7 +8977,6 @@
     - !<own> 95c68b3b-b14f-4255-be77-49c43b1d891a
   Components:
     - !<own> 7f6bc083-fbaf-4010-bb9c-ff24729f1936
-    - !<own> 2bd31377-2f22-4833-a067-4591e1c5d951
 - !<SceneObject/3a4261f4-2931-43c1-9fdf-cceacb788e80>
   PrefabRemaps:
     []
@@ -8959,7 +8999,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -9.000000, z: 0.299995}
+    Position: {x: 4.200000, y: -9.000000, z: 0.299995}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -8967,7 +9007,6 @@
     - !<own> 258c25a8-f963-4fbc-9e95-1c3b4c4acd6e
   Components:
     - !<own> 6536bfbd-59fa-441e-8c66-9743a74fd570
-    - !<own> 6f404b0d-034c-4ffa-9617-925f280a98ed
 - !<ScriptComponent/3a55329b-4971-43f1-9f52-59ad93f64b9e>
   PrefabRemaps:
     []
@@ -9013,6 +9052,87 @@
   ScriptTypes:
     "":
       {}
+- !<Text/3aaf7407-d3d0-4dbd-830e-bb21aa6d0c1b>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: List of stars
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 28
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -5.000000
+    bottom: -2.250000
+    right: 5.000000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Wrap
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 0.000000, y: 0.800000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  BlendMode: PremultipliedAlpha
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.100000
+    LineSpacing: 1.000000
+    CapitalizationOverride: AllUpper
+  DepthTest: false
+  TwoSided: false
 - !<ScriptComponent/3b5d3bc5-7c3a-4692-96e8-41278f58e60d>
   PrefabRemaps:
     []
@@ -16030,7 +16150,7 @@
   ScriptInputs:
     "":
       _renderOrder: 0
-      _size: !<Vec3> {x: 7.000000, y: 3.000000, z: 3.000000}
+      _size: !<Vec3> {x: 7.600000, y: 3.000000, z: 3.000000}
       _inactive: false
       _playAudio: false
       _style: PrimaryNeutral
@@ -16040,8 +16160,8 @@
       _defaultToOn: false
       addCallbacks: true
       triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> 6f404b0d-034c-4ffa-9617-925f280a98ed
-          functionName: closeCard
+        - scriptComponent: !<reference.ScriptComponent> df521174-d208-4412-b80b-0d95ff4fe337
+          functionName: closeStarCard
       triggerDownCallbacks:
         []
       onValueChangeCallbacks:
@@ -17317,22 +17437,6 @@
     - !<own> 27c32e55-3cfb-455f-9c18-b06657676b18
   Components:
     []
-- !<ScriptComponent/6f404b0d-034c-4ffa-9617-925f280a98ed>
-  PrefabRemaps:
-    []
-  Name: CloseCard
-  Enabled: true
-  ScriptAsset: !<reference> 6bc04a9a-60e6-4257-bd10-e7e952be708b
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      card: !<reference.SceneObject> 33eaea3a-1c21-4c44-bd48-02dc5ad76d77
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/6fcc2790-f141-4511-a326-71fdd988e404>
   PrefabRemaps:
     []
@@ -18102,8 +18206,8 @@
       _defaultToOn: false
       addCallbacks: true
       triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> ffa7dd8d-90d4-4abc-87d0-7a9f3b9561d5
-          functionName: closeCard
+        - scriptComponent: !<reference.ScriptComponent> df521174-d208-4412-b80b-0d95ff4fe337
+          functionName: closeInfoCard
       triggerDownCallbacks:
         []
       onValueChangeCallbacks:
@@ -18533,7 +18637,6 @@
     - !<own> 88d7defd-e8b9-427c-b963-c03fe975337c
   Components:
     - !<own> 73efafc0-32ef-43f5-900d-573cc4ec3114
-    - !<own> ffa7dd8d-90d4-4abc-87d0-7a9f3b9561d5
 - !<SceneObject/76500ad1-edab-4b2a-8bf1-1180a7a70b11>
   PrefabRemaps:
     []
@@ -19722,8 +19825,8 @@
       _defaultToOn: false
       addCallbacks: true
       triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> 2bd31377-2f22-4833-a067-4591e1c5d951
-          functionName: closeCard
+        - scriptComponent: !<reference.ScriptComponent> df521174-d208-4412-b80b-0d95ff4fe337
+          functionName: closeSunCard
       triggerDownCallbacks:
         []
       onValueChangeCallbacks:
@@ -19960,8 +20063,8 @@
       _defaultToOn: false
       addCallbacks: true
       triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> 98d46ab5-5943-405a-b5cc-16d940512f69
-          functionName: closeCard
+        - scriptComponent: !<reference.ScriptComponent> df521174-d208-4412-b80b-0d95ff4fe337
+          functionName: closeConsCard
       triggerDownCallbacks:
         []
       onValueChangeCallbacks:
@@ -21442,7 +21545,7 @@
 - !<SceneObject/88dda23a-cf59-4b98-8aa7-6fb48b53997e>
   PrefabRemaps:
     []
-  Name: Card
+  Name: Cons Card
   Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -23515,6 +23618,21 @@
     []
   Components:
     - !<own> e90f0c22-dad1-4497-9491-3fc14432069e
+- !<SceneObject/955061ab-d42b-4aad-ad1a-85ec2ad4ec08>
+  PrefabRemaps:
+    []
+  Name: List Stars
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -4.200000, y: -9.000000, z: 0.299995}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 363b7815-e763-4106-9c2c-d73926aad77e
+  Components:
+    - !<own> 0720d7c1-c125-4a3c-8548-482923c7064c
 - !<ScriptComponent/9593b66a-5cee-46e6-903c-97d18fdd9da0>
   PrefabRemaps:
     []
@@ -23655,10 +23773,11 @@
       startInfoCard: !<reference.SceneObject> c2b5e0ab-e086-48f1-8c5a-f36561b4eda7
       cardContentUpdateScript: !<MappingBased.AssignableType> f52fb186-307d-4ec3-9c82-cd3634001312
       starCardContentUpdateScript: !<MappingBased.AssignableType_1> 0e9943d1-4a15-4b09-8ec3-d57e63fd4e59
+      cardsManagerScript: !<MappingBased.AssignableType_2> df521174-d208-4412-b80b-0d95ff4fe337
       starButton: !<reference.ObjectPrefab> 11577928-696d-4242-a0a0-77b0d3aa92d2
       starList: !<reference.ObjectPrefab> 002d367c-ee13-48dd-b607-c0100944a27e
       list: !<reference.SceneObject> 4fdb0966-d1e1-49b9-acb5-1c4b565d6891
-      listOfStarsBtnScript: !<MappingBased.AssignableType_2> 80659594-4fcb-4a7a-8bd7-7708c2fcd26e
+      listOfStarsBtnScript: !<MappingBased.AssignableType_3> 80659594-4fcb-4a7a-8bd7-7708c2fcd26e
       defaultLineMat: !<reference.Material> a8c02787-289e-43cc-9677-afeaee854ac7
       activeLineMat: !<reference.Material> c88be1ed-f197-46d6-8117-8d8190577bbe
       defaultStarMat: !<reference.Material> 395bac29-3971-4561-a27a-e8d1f48cd8ea
@@ -24231,22 +24350,6 @@
     []
   Components:
     - !<own> 37c7e5d0-f9ca-47f1-9d20-30e84f83e929
-- !<ScriptComponent/98d46ab5-5943-405a-b5cc-16d940512f69>
-  PrefabRemaps:
-    []
-  Name: CloseCard
-  Enabled: true
-  ScriptAsset: !<reference> 6bc04a9a-60e6-4257-bd10-e7e952be708b
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      card: !<reference.SceneObject> 88dda23a-cf59-4b98-8aa7-6fb48b53997e
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/9905c277-7006-411f-90ae-919d3d8f27e0>
   PrefabRemaps:
     []
@@ -32125,7 +32228,7 @@
 - !<SceneObject/c2b5e0ab-e086-48f1-8c5a-f36561b4eda7>
   PrefabRemaps:
     []
-  Name: start info card
+  Name: Info Card
   Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -33950,6 +34053,24 @@
     - !<own> e67355a4-c26a-4bfc-b712-56f879b0f199
   Components:
     []
+- !<SceneObject/cb85bdb4-9352-4ae0-8376-bae849eda107>
+  PrefabRemaps:
+    []
+  Name: Cards
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 88dda23a-cf59-4b98-8aa7-6fb48b53997e
+    - !<own> 33eaea3a-1c21-4c44-bd48-02dc5ad76d77
+    - !<own> 73cabc13-eb6a-429b-8ad4-d71ca49a0827
+    - !<own> c2b5e0ab-e086-48f1-8c5a-f36561b4eda7
+  Components:
+    - !<own> df521174-d208-4412-b80b-0d95ff4fe337
 - !<AudioComponent/cbb78faf-f288-46d0-b629-a3eaa25770a9>
   PrefabRemaps:
     []
@@ -37095,6 +37216,35 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScriptComponent/df521174-d208-4412-b80b-0d95ff4fe337>
+  PrefabRemaps:
+    []
+  Name: CardsManager
+  Enabled: true
+  ScriptAsset: !<reference> 89526b0c-9fa9-41ec-91d8-dc42eab6a24d
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      consCard: !<reference.SceneObject> 88dda23a-cf59-4b98-8aa7-6fb48b53997e
+      content: !<reference.SceneObject> 2ea474c8-6924-4f92-a1c4-b0d85e939181
+      list: !<reference.SceneObject> 4fdb0966-d1e1-49b9-acb5-1c4b565d6891
+      listOfStarsBtn: !<reference.SceneObject> b044e64b-c414-4743-9ade-16e02d987775
+      closeConsBtn: !<reference.SceneObject> f5190fb0-5591-46f5-aadf-cf03f667c0c1
+      starCard: !<reference.SceneObject> 33eaea3a-1c21-4c44-bd48-02dc5ad76d77
+      closeStarBtn: !<reference.SceneObject> 3a548c3a-a3e7-477c-9055-d84f762e713a
+      backToListBtn: !<reference.SceneObject> 955061ab-d42b-4aad-ad1a-85ec2ad4ec08
+      sunCard: !<reference.SceneObject> 73cabc13-eb6a-429b-8ad4-d71ca49a0827
+      closeSunBtn: !<reference.SceneObject> 39c8da02-de4d-4cf6-a2e3-f1290d39e556
+      infoCard: !<reference.SceneObject> c2b5e0ab-e086-48f1-8c5a-f36561b4eda7
+      closeInfoBtn: !<reference.SceneObject> 75fa994b-692c-444b-b841-84d51dd29aba
+      cardContentUpdateScript: !<MappingBased.AssignableType> f52fb186-307d-4ec3-9c82-cd3634001312
+      starCardContentUpdateScript: !<MappingBased.AssignableType_1> 0e9943d1-4a15-4b09-8ec3-d57e63fd4e59
+  ScriptTypes:
+    "":
+      {}
 - !<AudioComponent/df9c5fb4-2ea3-4b87-a7ed-9de58a7da99e>
   PrefabRemaps:
     []
@@ -40301,7 +40451,6 @@
     - !<own> 28b55d3c-4fc8-4451-974c-d58d591ba513
   Components:
     - !<own> 805cb98c-bb36-4b7a-af51-7c9112f95dd5
-    - !<own> 98d46ab5-5943-405a-b5cc-16d940512f69
 - !<ScriptComponent/f52fb186-307d-4ec3-9c82-cd3634001312>
   PrefabRemaps:
     []
@@ -41612,22 +41761,6 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
-- !<ScriptComponent/ffa7dd8d-90d4-4abc-87d0-7a9f3b9561d5>
-  PrefabRemaps:
-    []
-  Name: CloseCard
-  Enabled: true
-  ScriptAsset: !<reference> 6bc04a9a-60e6-4257-bd10-e7e952be708b
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      card: !<reference.SceneObject> c2b5e0ab-e086-48f1-8c5a-f36561b4eda7
-  ScriptTypes:
-    "":
-      {}
 - !<Text/ffadfe9a-706f-446f-b104-2745600ba52d>
   PrefabRemaps:
     []

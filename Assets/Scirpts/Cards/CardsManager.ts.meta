@@ -1,0 +1,87 @@
+- !<AssetImportMetadata/8744fddb-b7bd-4c6c-840b-25a59059111c>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 89526b0c-9fa9-41ec-91d8-dc42eab6a24d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 89526b0c-9fa9-41ec-91d8-dc42eab6a24d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e2903864-23a1-4043-b4ea-afe0a46fd741
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e2903864-23a1-4043-b4ea-afe0a46fd741>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 13d2d7d2-26f6-485c-9116-c7c9805d7b1e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backToListBtn: false
+    cardContentUpdateScript: false
+    closeConsBtn: false
+    closeInfoBtn: false
+    closeStarBtn: false
+    closeSunBtn: false
+    consCard: false
+    content: false
+    infoCard: false
+    list: false
+    listOfStarsBtn: false
+    starCard: false
+    starCardContentUpdateScript: false
+    sunCard: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - consCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      content: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      list: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      listOfStarsBtn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      closeConsBtn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      starCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      closeStarBtn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      backToListBtn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sunCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      closeSunBtn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      infoCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      closeInfoBtn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      starCardContentUpdateScript: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject consCard
+    - // @input SceneObject content
+    - // @input SceneObject list
+    - // @input SceneObject listOfStarsBtn
+    - // @input SceneObject closeConsBtn
+    - '// @ui {"widget":"separator"}'
+    - // @input SceneObject starCard
+    - // @input SceneObject closeStarBtn
+    - // @input SceneObject backToListBtn
+    - '// @ui {"widget":"separator"}'
+    - // @input SceneObject sunCard
+    - // @input SceneObject closeSunBtn
+    - '// @ui {"widget":"separator"}'
+    - // @input SceneObject infoCard
+    - // @input SceneObject closeInfoBtn
+    - '// @ui {"widget":"separator"}'
+    - // @input AssignableType cardContentUpdateScript
+    - // @input AssignableType_1 starCardContentUpdateScript

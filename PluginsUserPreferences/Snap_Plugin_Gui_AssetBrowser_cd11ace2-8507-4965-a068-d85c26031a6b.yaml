@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 898
+    size: 899
     values:
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
@@ -89,6 +89,7 @@ CollapsedEntities:
       - Scirpts/Buttons/SetActiveConstell.ts
       - Scirpts/Buttons/SetActiveStar.ts
       - Scirpts/Cards/CardContentUpdate.ts
+      - Scirpts/Cards/CardsManager.ts
       - Scirpts/Cards/CloseCard.ts
       - Scirpts/Cards/FrameController.ts
       - Scirpts/Cards/StarCardContentUpdate.ts

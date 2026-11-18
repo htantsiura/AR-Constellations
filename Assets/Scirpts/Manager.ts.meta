@@ -30,6 +30,7 @@
     activeStarMat: false
     card: false
     cardContentUpdateScript: false
+    cardsManagerScript: false
     controller: false
     defaultLineMat: false
     defaultStarMat: false
@@ -63,10 +64,11 @@
       startInfoCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       starCardContentUpdateScript: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      cardsManagerScript: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
       starButton: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       starList: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       list: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      listOfStarsBtnScript: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      listOfStarsBtnScript: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
       defaultLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       defaultStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
@@ -86,11 +88,12 @@
     - // @input SceneObject startInfoCard
     - // @input AssignableType cardContentUpdateScript
     - // @input AssignableType_1 starCardContentUpdateScript
+    - // @input AssignableType_2 cardsManagerScript
     - '// @ui {"widget":"separator"}'
     - // @input Asset.ObjectPrefab starButton
     - // @input Asset.ObjectPrefab starList
     - // @input SceneObject list
-    - // @input AssignableType_2 listOfStarsBtnScript
+    - // @input AssignableType_3 listOfStarsBtnScript
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Materials"}'
     - // @input Asset.Material defaultLineMat
