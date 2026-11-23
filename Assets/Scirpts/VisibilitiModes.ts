@@ -89,7 +89,7 @@ export function starActiveToSelectedVisibility(object: SceneObject, matStar: Mat
     object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
     animateMatParameter(matStar.mainPass, "slider", STAR_MODE.idle, STAR_MODE.active, TW_TIME)
     const sizeA = new vec3(1, 1, 1)
-    const sizeB = new vec3(11.5, 11.5, 11.5)
+    const sizeB = new vec3(1.5, 1.5, 1.5)
     tweenObjectScale(object.getChild(0).getTransform(), sizeA, sizeB, TW_TIME)
 }
 
