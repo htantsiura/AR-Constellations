@@ -6,8 +6,7 @@ import { changeMatSlider, consIdleToActiveVisibility, consActiveToIdleVisibility
 import { LSTween } from "LSTween.lspkg/LSTween";
 import { consMap, starsMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, ZERO_QUAT, TW_TIME, LINE_MODE } from "./Config";
 import { getChildByName } from "./Utils";
-import { tweenObjectMove, tweenObjectScale, tweenObjectRotateTo, tweenObjectMoveAndState } from "./Utils/MyTweenFuncs";
-import { tweenObjectRotate } from "./ControllerBtn";
+import { tweenObjectMove, tweenObjectScale, tweenObjectRotateTo } from "./Utils/MyTweenFuncs";
 import { ConstellationData } from "./Data/ConstellationData";
 import { GridLayout } from "SpectaclesUIKit.lspkg/Scripts/Components/GridLayout/GridLayout";
 import { ScrollWindow } from "SpectaclesUIKit.lspkg/Scripts/Components/ScrollWindow/ScrollWindow";
@@ -69,30 +68,26 @@ export class Manager extends BaseScriptComponent {
 
     private delayEvent!: DelayedCallbackEvent;
     
-
     
     onAwake() {
         this.controller.enabled = false;
         this.isController = false;
 
-        this.delayEvent = this.createEvent("DelayedCallbackEvent")
+        this.delayEvent = this.createEvent("DelayedCallbackEvent");
+        this.delayEvent.enabled = false;
         this.delayEvent.bind(() => {
             this.turnOnButtonNames();
-        })
+        });
+
+        this.listOfStarsBtnScript.onShow = () => {
+            this.delayEvent.enabled = true;
+            this.delayEvent.reset(0.05);
+        };
     }
 
     private onStart(): void {
         this.card.enabled = true;
     }
-
-    /* public openSunCard(): void
-    {
-        this.card.enabled = false;
-        this.starCard.enabled = false;
-        this.startInfoCard.enabled = false;
-
-        this.sunCard.enabled = !this.sunCard.enabled ;
-    } */
 
     public activateConstellation() {
         
@@ -265,14 +260,7 @@ export class Manager extends BaseScriptComponent {
         this.scrollWindow.scrollPosition = new vec2(0, listLength * 5 / -2 )
         this.gridLayout.rows = listLength;
         this.gridLayout.layout()
-
-        /* for (let i = 0; i < total; i++) {
-            gridObj.getChild(i).getChild(0).enabled = true;
-        } */
-
-        this.delayEvent.reset(1);
     }
-
 
     public turnOnButtonNames() {
 

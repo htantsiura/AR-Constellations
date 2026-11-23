@@ -12459,7 +12459,7 @@
       _defaultToOn: false
       addCallbacks: true
       triggerUpCallbacks:
-        - scriptComponent: !<reference.ScriptComponent> 9656742e-1597-4059-9a82-201da302a42f
+        - scriptComponent: !<reference.ScriptComponent> df521174-d208-4412-b80b-0d95ff4fe337
           functionName: openSunCard
       triggerDownCallbacks:
         []

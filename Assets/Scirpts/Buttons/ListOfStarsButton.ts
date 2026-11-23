@@ -15,6 +15,8 @@ export class ListOfStarsButton extends BaseScriptComponent {
 
     @input
     closeBtn1: SceneObject | null = null;
+
+    public onShow: (() => void) | null = null;
   
     onAwake() 
     {
@@ -29,6 +31,7 @@ export class ListOfStarsButton extends BaseScriptComponent {
     public showListOfStars(): void 
     {
         this.list!.enabled = true;
+        if (this.onShow) this.onShow();
 
         this.content!.getChild(1).enabled = false;
         this.content!.getChild(2).enabled = false;
