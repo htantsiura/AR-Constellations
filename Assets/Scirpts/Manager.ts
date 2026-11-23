@@ -67,10 +67,18 @@ export class Manager extends BaseScriptComponent {
     public isController!: boolean;
     private controllerTrf = this.controller.getTransform();
 
+    private delayEvent!: DelayedCallbackEvent;
+    
+
     
     onAwake() {
         this.controller.enabled = false;
         this.isController = false;
+
+        this.delayEvent = this.createEvent("DelayedCallbackEvent")
+        this.delayEvent.bind(() => {
+            this.turnOnButtonNames();
+        })
     }
 
     private onStart(): void {
@@ -235,25 +243,45 @@ export class Manager extends BaseScriptComponent {
     public updateStarButtonList() {
 
         this.list.enabled = false;
-        const le = this.gridLayout.getSceneObject().children.length
-        for(let i = 0; i < le; i++)
-            this.gridLayout.getSceneObject().getChild(i).enabled = false;
+        const gridObj = this.gridLayout.getSceneObject();
+        const total = gridObj.getChildrenCount();
 
-        ConstellationData.forEach((item) => {
-            if(this.currentObj!.name === item.name) {
-                const listLength = item.list_of_main_stars.length
-                for(let i = 0; i < listLength; i++)
-                {
-                    const button = this.gridLayout.getSceneObject().getChild(i)
-                    button.enabled = true;
-                    button.getChild(0).getComponent("Component.Text").text = starsMap.get(item.list_of_main_stars[i])!.name
-                }
-                this.scrollWindow.scrollDimensions = new vec2(15, listLength * 5);
-                this.scrollWindow.scrollPosition = new vec2(0, listLength * 5 / -2 )
-                this.gridLayout.rows = listLength;
-                this.gridLayout.layout()
-            }
-        })
+        for (let i = 0; i < total; i++) {
+            gridObj.getChild(i).enabled = false;
+            gridObj.getChild(i).getChild(0).enabled = false;
+        }
+
+        const item = ConstellationData.find(c => c.name === this.currentObj!.name);
+        if (!item) return;
+
+        const listLength = item.list_of_main_stars.length
+        for(let i = 0; i < listLength; i++)
+        {
+            const button = this.gridLayout.getSceneObject().getChild(i)
+            button.enabled = true;
+            button.getChild(0).getComponent("Component.Text").text = starsMap.get(item.list_of_main_stars[i])!.name
+        }
+        this.scrollWindow.scrollDimensions = new vec2(15, listLength * 5);
+        this.scrollWindow.scrollPosition = new vec2(0, listLength * 5 / -2 )
+        this.gridLayout.rows = listLength;
+        this.gridLayout.layout()
+
+        /* for (let i = 0; i < total; i++) {
+            gridObj.getChild(i).getChild(0).enabled = true;
+        } */
+
+        this.delayEvent.reset(1);
+    }
+
+
+    public turnOnButtonNames() {
+
+        const gridObj = this.gridLayout.getSceneObject();
+        const total = gridObj.getChildrenCount();
+
+        for (let i = 0; i < total; i++) {
+            gridObj.getChild(i).getChild(0).enabled = true;
+        }
     }
 
 }
