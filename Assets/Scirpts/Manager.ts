@@ -71,18 +71,17 @@ export class Manager extends BaseScriptComponent {
         this.isController = false;
     }
 
-    private onStart(): void {
-        
+    private onStart(): void {       
     }
 
-    public openSunCard(): void
+    /* public openSunCard(): void
     {
         this.card.enabled = false;
         this.starCard.enabled = false;
         this.startInfoCard.enabled = false;
 
         this.sunCard.enabled = !this.sunCard.enabled ;
-    }
+    } */
 
     public activateConstellation() {
         
@@ -111,9 +110,7 @@ export class Manager extends BaseScriptComponent {
         consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
         this.hideShowConsBtn(this.currentObj, true)
         this.cardsManagerScript.openConsCard(this.currentObj!)
-
         this.createStarButtonList()
-        
         this.previousObj = this.currentObj; 
     }
 

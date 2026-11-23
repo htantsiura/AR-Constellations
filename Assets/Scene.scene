@@ -6084,6 +6084,26 @@
     []
   Components:
     - !<own> 10ee1572-44d5-4f93-a486-d3e95c25b175
+- !<RenderMeshVisual/267e8f7b-22a6-4c6a-aa32-3394c9e87982>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: false
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 95be2e09-5b0d-4220-9be1-b6a189157587
+  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/26907625-be26-4916-ba83-0cb240ac450b>
   PrefabRemaps:
     []
@@ -12565,6 +12585,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/50597c29-574e-4bd6-accf-22fbc7c047e5>
+  PrefabRemaps:
+    []
+  Name: Object 1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> ca7bd496-04d9-4727-9f92-ea7686ef130b
+  Components:
+    []
 - !<SceneObject/5073a1e9-5105-46dd-8050-79de03e5fb39>
   PrefabRemaps:
     []
@@ -17722,6 +17757,7 @@
     useSnapping: true
     itemSnapping: true
     worldSnapping: true
+    _following: true
     _showCloseButton: true
     _enableInteractionPlane: true
     _interactionPlaneOffset: true
@@ -17756,7 +17792,7 @@
       worldSnapping: false
       _showFollowButton: true
       useFollowBehavior: true
-      _following: true
+      _following: false
       _showCloseButton: false
       _enableInteractionPlane: true
       _interactionPlaneOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -19891,6 +19927,7 @@
     useSnapping: true
     itemSnapping: true
     worldSnapping: true
+    _following: true
     _showCloseButton: true
     _enableInteractionPlane: true
     _interactionPlaneOffset: true
@@ -19925,7 +19962,7 @@
       worldSnapping: false
       _showFollowButton: true
       useFollowBehavior: true
-      _following: true
+      _following: false
       _showCloseButton: false
       _enableInteractionPlane: true
       _interactionPlaneOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -28075,6 +28112,16 @@
   ScriptTypes:
     "":
       {}
+- !<LookAtComponent/ae985769-dd61-4514-b525-8e1e04f2b152>
+  PrefabRemaps:
+    []
+  Name: Look At
+  Enabled: true
+  LookAtMode: LookAtPoint
+  AimVectors: ZAimYUp
+  WorldUpVector: SceneY
+  Target: !<reference> 00000000-0000-0065-0000-000000000064
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
 - !<ScriptComponent/ae98f6ef-4b25-40c1-b86c-3f270ff060a0>
   PrefabRemaps:
     []
@@ -33931,6 +33978,22 @@
     []
   Components:
     - !<own> c3b2bb46-cd11-46eb-b60f-46ea8a517e5a
+- !<SceneObject/ca7bd496-04d9-4727-9f92-ea7686ef130b>
+  PrefabRemaps:
+    []
+  Name: Card Target
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -15.000000, y: -8.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 267e8f7b-22a6-4c6a-aa32-3394c9e87982
+    - !<own> ae985769-dd61-4514-b525-8e1e04f2b152
 - !<SceneObject/ca8640ae-942f-4681-8601-8b584e467b6b>
   PrefabRemaps:
     []
@@ -37244,6 +37307,7 @@
       closeInfoBtn: !<reference.SceneObject> 75fa994b-692c-444b-b841-84d51dd29aba
       cardContentUpdateScript: !<MappingBased.AssignableType> f52fb186-307d-4ec3-9c82-cd3634001312
       starCardContentUpdateScript: !<MappingBased.AssignableType_1> 0e9943d1-4a15-4b09-8ec3-d57e63fd4e59
+      target: !<reference.SceneObject> ca7bd496-04d9-4727-9f92-ea7686ef130b
   ScriptTypes:
     "":
       {}
@@ -39233,6 +39297,7 @@
   Children:
     - !<own> b952ddbd-42f5-41a6-b09b-471975b67ae0
     - !<own> ea297c28-5542-455b-b078-90f992bf2179
+    - !<own> 50597c29-574e-4bd6-accf-22fbc7c047e5
   Components:
     - !<own> 67bcee2f-4412-41aa-85f4-b6de5e651a04
 - !<SceneObject/eeac54d9-e359-4a37-8230-05371b3ab198>

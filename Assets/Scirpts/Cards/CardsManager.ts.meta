@@ -40,6 +40,7 @@
     starCard: false
     starCardContentUpdateScript: false
     sunCard: false
+    target: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -63,6 +64,7 @@
       closeInfoBtn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       cardContentUpdateScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       starCardContentUpdateScript: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -85,3 +87,4 @@
     - '// @ui {"widget":"separator"}'
     - // @input AssignableType cardContentUpdateScript
     - // @input AssignableType_1 starCardContentUpdateScript
+    - // @input SceneObject target

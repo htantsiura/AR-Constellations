@@ -30,9 +30,7 @@ export class CardsManager extends BaseScriptComponent {
 
     @input cardContentUpdateScript!: CardContentUpdate;
     @input starCardContentUpdateScript!: StarCardContentUpdate;
-
-    
-    
+    @input target!: SceneObject;
 
     onAwake() 
     {
@@ -61,6 +59,13 @@ export class CardsManager extends BaseScriptComponent {
         this.content!.getChild(2).enabled = true;
         this.closeConsBtn!.enabled = true;
         this.listOfStarsBtn!.enabled = true;
+
+        const pos = this.target.getTransform().getWorldPosition();
+        const rot = this.target.getTransform().getWorldRotation();
+        //this.consCard.getTransform().setWorldPosition(new vec3(pos.x, pos.y -15, pos.z));
+        this.consCard.getTransform().setWorldPosition(pos);
+        this.consCard.getTransform().setWorldRotation(rot);
+
     }
 
     public openStarCard(obj: SceneObject): void
@@ -71,6 +76,10 @@ export class CardsManager extends BaseScriptComponent {
         this.infoCard.enabled = false;
 
         this.starCardContentUpdateScript.contentUpdate(obj);
+        const pos = this.target.getTransform().getWorldPosition();
+        const rot = this.target.getTransform().getWorldRotation();
+        this.starCard.getTransform().setWorldPosition(pos);
+        this.starCard.getTransform().setWorldRotation(rot);
     }
 
     public openSunCard(): void
