@@ -14,8 +14,9 @@ export class SetActiveStar extends BaseScriptComponent {
     }
 
     public setActiveStarVariable() {
-        const obj = starsMap.get(this.button.name)!.object
-        //const parent = this.getSceneObject().getParent().getParent()
+        const name = this.button.getChild(0).getComponent("Component.Text").text
+        print ("name " + name)
+        const obj = starsMap.get(name.toLowerCase())!.object
         if (obj)
             this.appManager.currentObj = obj;
     }

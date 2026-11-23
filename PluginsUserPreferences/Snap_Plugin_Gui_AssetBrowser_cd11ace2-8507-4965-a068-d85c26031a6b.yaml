@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 901
+    size: 897
     values:
       - 1 Simple Line.lspkg/1 Simple Line.prefab
       - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
@@ -753,7 +753,6 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Meshes/DefaultSphere.mesh
       - SpectaclesUIKit.lspkg/Meshes/StretchableCircle.mesh
       - SpectaclesUIKit.lspkg/Meshes/Unit Plane.mesh
-      - SpectaclesUIKit.lspkg/Prefabs
       - SpectaclesUIKit.lspkg/Prefabs/DropShadow.prefab
       - SpectaclesUIKit.lspkg/Prefabs/ExampleInterface.prefab
       - SpectaclesUIKit.lspkg/Prefabs/FrameButton.prefab
@@ -762,7 +761,6 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Prefabs/LabelledToggle.prefab
       - SpectaclesUIKit.lspkg/README.md
       - SpectaclesUIKit.lspkg/Scripts/BackPlate.ts
-      - SpectaclesUIKit.lspkg/Scripts/Components/Button
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/BaseButton.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/CapsuleButton.ts
       - SpectaclesUIKit.lspkg/Scripts/Components/Button/Checkbox.ts
@@ -840,9 +838,7 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Scripts/Utility/SceneUtilities.ts
       - SpectaclesUIKit.lspkg/Scripts/Utility/UIKitAudioPlayer.ts
       - SpectaclesUIKit.lspkg/Scripts/Utility/UIKitUtilities.ts
-      - SpectaclesUIKit.lspkg/Scripts/Visuals
       - SpectaclesUIKit.lspkg/Scripts/Visuals/DropShadowVisual.ts
-      - SpectaclesUIKit.lspkg/Scripts/Visuals/RoundedRectangle
       - SpectaclesUIKit.lspkg/Scripts/Visuals/RoundedRectangle/RoundedRectangle.ts
       - SpectaclesUIKit.lspkg/Scripts/Visuals/RoundedRectangle/RoundedRectangleVisual.ts
       - SpectaclesUIKit.lspkg/Scripts/Visuals/Visual.ts

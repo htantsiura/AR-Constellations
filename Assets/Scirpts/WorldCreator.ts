@@ -26,6 +26,7 @@ export class WorldCreator extends BaseScriptComponent {
 
     private startVec3 = new vec3(0, 0, -1)
     private i: number = 0;
+    private max: number = 0;
 
     onAwake() {
 
@@ -45,7 +46,11 @@ export class WorldCreator extends BaseScriptComponent {
                 this.c_LabelPrefab, 
                 IS_LOGARITH
             )
+            /* if (this.max < item.list_of_main_stars.length)
+                this.max = item.list_of_main_stars.length */
         })
+
+        print ("max " + this.max)
 
         StarsData.forEach((item) => {
             createStar(

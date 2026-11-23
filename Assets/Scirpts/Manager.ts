@@ -39,6 +39,8 @@ export class Manager extends BaseScriptComponent {
     @input starList!: ObjectPrefab;
     @input list!: SceneObject;
     @input listOfStarsBtnScript!: ListOfStarsButton;
+    @input scrollWindow!: ScrollWindow;
+    @input gridLayout!: GridLayout;
 
     @ui.separator
 
@@ -71,7 +73,8 @@ export class Manager extends BaseScriptComponent {
         this.isController = false;
     }
 
-    private onStart(): void {       
+    private onStart(): void {
+        this.card.enabled = true;
     }
 
     /* public openSunCard(): void
@@ -85,7 +88,6 @@ export class Manager extends BaseScriptComponent {
 
     public activateConstellation() {
         
-        //if (this.previousObj === this.currentObj) return
         if (this.previousObj === this.currentObj) 
         {
             this.cardsManagerScript.toggleConsCard()
@@ -95,12 +97,10 @@ export class Manager extends BaseScriptComponent {
             if (this.previousObj.name == "s_label") {
                 starActiveToIdleVisibility( this.previousObj, this.defaultStarMat)
                 consActiveToIdleVisibility(this.previousObj.getParent(), this.defaultStarMat, this.defaultLineMat)
-                this.destroyStarButtonList()
 
             } else {
                 consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
                 this.hideShowConsBtn(this.previousObj, false)
-                this.destroyStarButtonList()
                 this.listOfStarsBtnScript.hideListOfStars();
                 //starActiveToIdleVisibility(this.previousObj, this.defaultStarMat)
             }
@@ -110,7 +110,7 @@ export class Manager extends BaseScriptComponent {
         consIdleToActiveVisibility(this.currentObj!, this.activeStarMat, this.activeLineMat)
         this.hideShowConsBtn(this.currentObj, true)
         this.cardsManagerScript.openConsCard(this.currentObj!)
-        this.createStarButtonList()
+        this.updateStarButtonList()
         this.previousObj = this.currentObj; 
     }
 
@@ -124,15 +124,11 @@ export class Manager extends BaseScriptComponent {
             } else {
                 consActiveToIdleVisibility(this.previousObj, this.activeStarMat, this.activeLineMat)
                 this.hideShowConsBtn(this.previousObj, false)
-                //this.destroyStarButtonList()
                 this.listOfStarsBtnScript.hideListOfStars();
                 //starActiveToIdleVisibility(this.previousObj, this.defaultStarMat)
             }
-
         }
-        //this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
         this.rotateWorldToConsTarget(this.currentObj!)
-        //starIdleToActiveVisibility(this.currentObj!, this.activeStarMat)
         starActiveToSelectedVisibility(this.currentObj!, this.selectedStarMat)
         this.cardsManagerScript.openStarCard(this.currentObj!)
         this.previousObj = this.currentObj; 
@@ -235,39 +231,30 @@ export class Manager extends BaseScriptComponent {
         this.currentObj?.getTransform().setLocalRotation(rotation)
     }
 
-    public createStarButtonList(): void 
-    {
-        /* if (this.list.getChild(0))
-            this.list.getChild(0).destroy() */
-        const starListInstance = this.starList.instantiate(this.list);
-        const btnRoot = starListInstance.getChild(0).getChild(0).getChild(0)
-        const scrollWindowComp = starListInstance.getChild(0).getChild(0).getComponent("Component.ScriptComponent") as ScrollWindow;
+    public updateStarButtonList() {
+
+        this.list.enabled = false;
+        const le = this.gridLayout.getSceneObject().children.length
+        for(let i = 0; i < le; i++)
+            this.gridLayout.getSceneObject().getChild(i).enabled = false;
 
         ConstellationData.forEach((item) => {
             if(this.currentObj!.name === item.name) {
                 const listLength = item.list_of_main_stars.length
-                scrollWindowComp.scrollDimensions = new vec2(15, listLength * 5 + 5)
-                scrollWindowComp.scrollPosition = new vec2(0, listLength * 5 / -2 )
-                const btnRootComp = btnRoot.getComponent("Component.ScriptComponent") as GridLayout
-                btnRootComp.rows = listLength;
-
-                for (let i = 0; i < listLength; i++) {
-                    const instance = this.starButton.instantiate(btnRoot);
-                    //instance.name = starsMap.get(item.list_of_main_stars[i])!.name
-                    instance.name = item.list_of_main_stars[i]
-                    instance.getChild(0).getComponent("Component.Text").text = starsMap.get(item.list_of_main_stars[i])!.name
+                for(let i = 0; i < listLength; i++)
+                {
+                    const button = this.gridLayout.getSceneObject().getChild(i)
+                    button.enabled = true;
+                    button.getChild(0).getComponent("Component.Text").text = starsMap.get(item.list_of_main_stars[i])!.name
                 }
+                this.scrollWindow.scrollDimensions = new vec2(15, listLength * 5);
+                this.scrollWindow.scrollPosition = new vec2(0, listLength * 5 / -2 )
+                this.gridLayout.rows = listLength;
+                this.gridLayout.layout()
             }
         })
     }
 
-    public destroyStarButtonList(): void 
-    {
-        const obj = this.list.getChild(0)
-        if (!obj) return;
-        obj.destroy(); 
-        this.list.enabled = false;
-    }
 }
 
 
