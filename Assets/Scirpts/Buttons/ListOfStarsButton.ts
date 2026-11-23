@@ -15,10 +15,7 @@ export class ListOfStarsButton extends BaseScriptComponent {
 
     @input
     closeBtn1: SceneObject | null = null;
-
-
-
-    
+  
     onAwake() 
     {
         this.list!.enabled = false;

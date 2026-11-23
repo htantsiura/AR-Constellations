@@ -127,6 +127,7 @@ export class Manager extends BaseScriptComponent {
                 this.listOfStarsBtnScript.hideListOfStars();
                 //starActiveToIdleVisibility(this.previousObj, this.defaultStarMat)
             }
+
         }
         this.rotateWorldToConsTarget(this.currentObj!)
         starActiveToSelectedVisibility(this.currentObj!, this.selectedStarMat)

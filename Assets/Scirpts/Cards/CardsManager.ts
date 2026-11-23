@@ -32,8 +32,15 @@ export class CardsManager extends BaseScriptComponent {
     @input starCardContentUpdateScript!: StarCardContentUpdate;
     @input target!: SceneObject;
 
+    private delayEvent!: DelayedCallbackEvent;
+
     onAwake() 
     {
+        this.delayEvent = this.createEvent("DelayedCallbackEvent")
+        this.delayEvent.bind(() => {
+            this.list!.enabled = true;
+        })
+
         this.consCard.enabled = false;
         this.starCard.enabled = false;
         this.sunCard.enabled = false;
@@ -106,6 +113,7 @@ export class CardsManager extends BaseScriptComponent {
     public showListOfStars(): void 
     {
         this.list!.enabled = true;
+        //this.delayEvent.reset(1);
 
         this.content!.getChild(1).enabled = false;
         this.content!.getChild(2).enabled = false;
