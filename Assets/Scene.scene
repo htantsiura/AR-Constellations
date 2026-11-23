@@ -22542,6 +22542,7 @@
     useSnapping: true
     itemSnapping: true
     worldSnapping: true
+    _following: true
     _showCloseButton: true
     _enableInteractionPlane: true
     _interactionPlaneOffset: true
@@ -22576,7 +22577,7 @@
       worldSnapping: false
       _showFollowButton: true
       useFollowBehavior: true
-      _following: true
+      _following: false
       _showCloseButton: false
       _enableInteractionPlane: true
       _interactionPlaneOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -23782,6 +23783,7 @@
       activeLineMat: !<reference.Material> c88be1ed-f197-46d6-8117-8d8190577bbe
       defaultStarMat: !<reference.Material> 395bac29-3971-4561-a27a-e8d1f48cd8ea
       activeStarMat: !<reference.Material> 550c1374-65f3-470c-9260-e42379b78106
+      selectedStarMat: !<reference.Material> 811797c7-7bf3-42d1-b4b0-a00b8f8e649f
   ScriptTypes:
     "":
       {}

@@ -36,6 +36,9 @@ CollapsedEntities:
       - Materials/PBR 10.mat
       - Materials/PBR 11.mat
       - Materials/PBR 12.mat
+      - Materials/PBR 13.mat
+      - Materials/PBR 14.mat
+      - Materials/PBR 15.mat
       - Materials/PBR 2.mat
       - Materials/PBR 3.mat
       - Materials/PBR 4.mat
@@ -60,18 +63,13 @@ CollapsedEntities:
       - Materials/pbr.ss_graph
       - Materials/star_active.mat
       - Materials/star_default.mat
+      - Materials/star_selected.mat
       - Materials/sun 2.mat
       - Materials/sun.mat
       - Materials/surface modified materials.lspkg
       - Meshes
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
-      - PBR 2.mat
-      - PBR 3.mat
-      - PBR.mat
-      - Particles Texture 2.png
-      - Particles Texture 3.png
-      - Particles Texture 4.png
       - Prefabs/Controller.prefab
       - Prefabs/Star Button.prefab
       - Prefabs/Star Buttons Scroll List.prefab
@@ -862,13 +860,15 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/Textures/test-image.jpg
       - SpectaclesUIKit.lspkg/package.native
       - SpectaclesUIKit.lspkg/package_dependencies.json
-      - Textures
       - Textures/Base.png
       - Textures/Echopark.hdr
       - Textures/Echopark.hdr/Diffuse
       - Textures/Echopark.hdr/Specular
       - Textures/MaterialParams.png
       - Textures/Normal.png
+      - Textures/Particles Texture 2.png
+      - Textures/Particles Texture 3.png
+      - Textures/Particles Texture 4.png
       - Textures/icon_selected.png
       - Textures/icon_targeted.png
       - TweenManager.lspkg

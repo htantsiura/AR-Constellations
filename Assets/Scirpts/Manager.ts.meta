@@ -36,6 +36,7 @@
     defaultStarMat: false
     list: false
     listOfStarsBtnScript: false
+    selectedStarMat: false
     starButton: false
     starCard: false
     starCardContentUpdateScript: false
@@ -73,6 +74,7 @@
       activeLineMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       defaultStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
       activeStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      selectedStarMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -100,4 +102,5 @@
     - // @input Asset.Material activeLineMat
     - // @input Asset.Material defaultStarMat
     - // @input Asset.Material activeStarMat
+    - // @input Asset.Material selectedStarMat
     - '// @ui {"widget":"group_end"}'

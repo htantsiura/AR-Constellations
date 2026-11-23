@@ -1,7 +1,8 @@
 import Easing from "LSTween.lspkg/TweenJS/Easing";
 import { CardContentUpdate } from "./Cards/CardContentUpdate";
 import { changeMatSlider, consIdleToActiveVisibility, consActiveToIdleVisibility, 
-    starIdleToActiveVisibility, starActiveToIdleVisibility } from "./VisibilitiModes";
+    starIdleToActiveVisibility, starActiveToIdleVisibility,
+    starActiveToSelectedVisibility, starSelectedToActiveVisibility } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
 import { consMap, starsMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, ZERO_QUAT, TW_TIME, LINE_MODE } from "./Config";
 import { getChildByName } from "./Utils";
@@ -46,6 +47,7 @@ export class Manager extends BaseScriptComponent {
     @input activeLineMat!: Material;
     @input defaultStarMat!: Material;
     @input activeStarMat!: Material;
+    @input selectedStarMat!: Material;
     @ui.group_end
 
     public currentObj: SceneObject | null = null;
@@ -90,8 +92,6 @@ export class Manager extends BaseScriptComponent {
             this.cardsManagerScript.toggleConsCard()
             return;
         }
-            
-
         if (this.previousObj) {
             if (this.previousObj.name == "s_label") {
                 starActiveToIdleVisibility( this.previousObj, this.defaultStarMat)
@@ -125,7 +125,7 @@ export class Manager extends BaseScriptComponent {
             if (this.previousObj.name == "s_label") {
                 starActiveToIdleVisibility( this.previousObj, this.defaultStarMat)
             } else {
-                consActiveToIdleVisibility(this.previousObj, this.defaultStarMat, this.defaultLineMat)
+                consActiveToIdleVisibility(this.previousObj, this.activeStarMat, this.activeLineMat)
                 this.hideShowConsBtn(this.previousObj, false)
                 //this.destroyStarButtonList()
                 this.listOfStarsBtnScript.hideListOfStars();
@@ -135,7 +135,8 @@ export class Manager extends BaseScriptComponent {
         }
         //this.currentObj!.getChild(0).getChild(3).getComponent("Component.AudioComponent").play(1);
         this.rotateWorldToConsTarget(this.currentObj!)
-        starIdleToActiveVisibility(this.currentObj!, this.activeStarMat)
+        //starIdleToActiveVisibility(this.currentObj!, this.activeStarMat)
+        starActiveToSelectedVisibility(this.currentObj!, this.selectedStarMat)
         this.cardsManagerScript.openStarCard(this.currentObj!)
         this.previousObj = this.currentObj; 
     }

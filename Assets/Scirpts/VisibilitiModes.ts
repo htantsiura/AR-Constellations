@@ -15,10 +15,13 @@ export function consIdleToActiveVisibility(object: SceneObject, matStar: Materia
     object.children.forEach((item) => {
         if(item.name === "s_label") {
             item.getChild(1).enabled = true
-            //item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            item.getChild(1).getComponent("Component.Text").renderOrder = 2;
+            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            item.getChild(0).getComponent("Component.RenderMeshVisual").renderOrder = 2;
         }
         if(item.name === "Wire") {
             item.getComponent("Component.RenderMeshVisual").mainMaterial = matLine;
+            item.getComponent("Component.RenderMeshVisual").renderOrder = 2;
         }
     })
     animateMatParameter(matLine.mainPass, "slider", LINE_MODE.idle, LINE_MODE.active, TW_TIME)
@@ -28,10 +31,13 @@ export function consActiveToIdleVisibility(object: SceneObject, matStar: Materia
     object.children.forEach((item) => {
         if(item.name === "s_label") {
             item.getChild(1).enabled = false
-            //item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            item.getChild(1).getComponent("Component.Text").renderOrder = 0;
+            item.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+            item.getChild(0).getComponent("Component.RenderMeshVisual").renderOrder = 0;
         }
         if(item.name === "Wire") {
             item.getComponent("Component.RenderMeshVisual").mainMaterial = matLine;
+            item.getComponent("Component.RenderMeshVisual").renderOrder = 0;
         }
     })
 }
@@ -74,4 +80,22 @@ export function starActiveToIdleVisibility(object: SceneObject, matStar: Materia
 
     object.getChild(1).enabled = false;
     object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+    object.getChild(0).getTransform().setLocalScale(new vec3(1, 1, 1));
+}
+
+export function starActiveToSelectedVisibility(object: SceneObject, matStar: Material) {
+
+    object.getChild(1).enabled = true;
+    object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+    animateMatParameter(matStar.mainPass, "slider", STAR_MODE.idle, STAR_MODE.active, TW_TIME)
+    const sizeA = new vec3(1, 1, 1)
+    const sizeB = new vec3(11.5, 11.5, 11.5)
+    tweenObjectScale(object.getChild(0).getTransform(), sizeA, sizeB, TW_TIME)
+}
+
+export function starSelectedToActiveVisibility(object: SceneObject, matStar: Material) {
+
+    object.getChild(1).enabled = false;
+    object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
+    object.getChild(0).getTransform().setLocalScale(new vec3(1, 1, 1));
 }
