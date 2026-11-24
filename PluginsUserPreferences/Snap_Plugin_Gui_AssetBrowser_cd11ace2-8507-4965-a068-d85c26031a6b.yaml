@@ -1,12 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 897
+    size: 871
     values:
-      - 1 Simple Line.lspkg/1 Simple Line.prefab
-      - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
-      - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.mat
-      - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph
       - Asr Module.asrModule
       - LSTween.lspkg
       - LSTween.lspkg/Examples
@@ -33,20 +29,9 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
-      - Materials/PBR 10.mat
-      - Materials/PBR 11.mat
-      - Materials/PBR 12.mat
-      - Materials/PBR 13.mat
-      - Materials/PBR 14.mat
-      - Materials/PBR 15.mat
-      - Materials/PBR 2.mat
-      - Materials/PBR 3.mat
-      - Materials/PBR 4.mat
-      - Materials/PBR 5.mat
-      - Materials/PBR 6.mat
-      - Materials/PBR 7.mat
-      - Materials/PBR 9.mat
-      - Materials/PBR.mat
+      - Materials/Simple Emitter.vfxgraph
+      - Materials/Simple Line.mat
+      - Materials/Simple Line.ss_graph
       - Materials/color.ss_graph
       - Materials/cons_active.mat
       - Materials/cons_default.mat
@@ -60,18 +45,15 @@ CollapsedEntities:
       - Materials/icon_constell.mat
       - Materials/object_icon.ss_graph
       - Materials/pbr 2.ss_graph
-      - Materials/pbr.ss_graph
       - Materials/star_active.mat
       - Materials/star_default.mat
       - Materials/star_selected.mat
       - Materials/sun 2.mat
       - Materials/sun.mat
-      - Materials/surface modified materials.lspkg
       - Meshes
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
-      - PBR 2.mat
-      - PBR.mat
+      - Prefabs/1 Simple Line.prefab
       - Prefabs/Controller.prefab
       - Prefabs/Star Button.prefab
       - Prefabs/Star Buttons Scroll List.prefab
@@ -80,9 +62,6 @@ CollapsedEntities:
       - RT
       - RT/Device Camera Texture.deviceCameraTexture
       - RT/Render Target.renderTarget
-      - SCI-FI SFX Pack.lspkg
-      - SCI-FI SFX Pack.lspkg/SCIFI__PLACE_IN_SCENE.prefab
-      - SCI-FI SFX Pack.lspkg/package.native
       - Scene.scene
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/ListOfStarsButton.ts
@@ -104,6 +83,7 @@ CollapsedEntities:
       - Scirpts/Data/StarsData.ts
       - Scirpts/Manager.ts
       - Scirpts/ModeSwitcher.ts
+      - Scirpts/Simple Line.js
       - Scirpts/SunBtn.ts
       - Scirpts/TTS.ts
       - Scirpts/Untitled TypeScript.ts
@@ -115,12 +95,6 @@ CollapsedEntities:
       - Scirpts/WireTool.js
       - Scirpts/WorldCreator.ts
       - Scirpts/scripts_holder.ts
-      - Simple Emitter.vfxgraph
-      - Soap Bubble Material.lspkg
-      - Soap Bubble Material.lspkg/Soap Bubble.mat
-      - Soap Bubble Material.lspkg/Soap Bubble.ss_graph
-      - Soap Bubble Material.lspkg/iridescence_combined.png
-      - Soap Bubble Material.lspkg/package.native
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerStartAudioTrack.wav
@@ -899,5 +873,5 @@ CollapsedEntities:
       - TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc
       - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
       - TweenManager.lspkg/package.native
-      - Untitled TypeScript.ts
+      - virtualvisualviews-spectral-candy-b-505330.mp3
   options: 4

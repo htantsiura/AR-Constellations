@@ -72,7 +72,7 @@
   PrefabRemaps:
     []
   Name: Lighting
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -10238,7 +10238,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> e61d0df1-5aad-4a11-9793-aec2c74baf2c
+    - !<reference> 95be2e09-5b0d-4220-9be1-b6a189157587
   Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
@@ -13431,7 +13431,7 @@
     []
   Name: Audio
   Enabled: true
-  AudioTrack: !<reference> 898399ca-0a0b-47dd-9e76-f3443dc191be
+  AudioTrack: !<reference> 122e12cb-8efe-470d-9008-4f35a7db9ae0
   EnableAutoplayLoop: true
   Volume: 0.500000
   EnableMixToSnap: false
@@ -14395,7 +14395,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 5b09314d-dafc-46f0-94dd-7a66ea86e47f
+    - !<reference> 95be2e09-5b0d-4220-9be1-b6a189157587
   Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
