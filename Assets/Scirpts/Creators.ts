@@ -1,7 +1,7 @@
 import { ButtonSizeSetup } from "./Buttons/ButtonSizeSetup";
 import { linearDisMap, logarithDisMap, 
     SCALE, C_SCALE, LINE_RAD, hipPositionMap, starsMap, consMap, ZERO_ROT } from "./Config";
-import { getChildByName, raDecToVec3, raDecToVec3Cons, remap } from "./Utils/Utils";
+import { getChildByName, raDecToVec3, raDecToVec3Cons, remap } from "./Utils";
 
 export function createConstellation(
     item: any, 

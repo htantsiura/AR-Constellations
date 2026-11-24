@@ -1,8 +1,12 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 857
+    size: 881
     values:
+      - 1 Simple Line.lspkg/1 Simple Line.prefab
+      - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.js
+      - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.mat
+      - 1 Simple Line.lspkg/WireTool/1 Simple Line/Simple Line.ss_graph
       - Asr Module.asrModule
       - LSTween.lspkg
       - LSTween.lspkg/Examples
@@ -29,9 +33,7 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
-      - Materials/Simple Emitter.vfxgraph
-      - Materials/Simple Line.mat
-      - Materials/Simple Line.ss_graph
+      - Materials/PBR.mat
       - Materials/color.ss_graph
       - Materials/cons_active.mat
       - Materials/cons_default.mat
@@ -45,14 +47,17 @@ CollapsedEntities:
       - Materials/icon_constell.mat
       - Materials/object_icon.ss_graph
       - Materials/pbr 2.ss_graph
+      - Materials/pbr.ss_graph
       - Materials/star_active.mat
       - Materials/star_default.mat
       - Materials/star_selected.mat
       - Materials/sun.mat
+      - Materials/targets.mat
       - Meshes
       - Meshes/Pyramid.mesh
       - Meshes/Sphere.mesh
-      - Prefabs/1 Simple Line.prefab
+      - PBR 2.mat
+      - PBR.mat
       - Prefabs/Controller.prefab
       - Prefabs/Star Button.prefab
       - Prefabs/Star Buttons Scroll List.prefab
@@ -61,6 +66,9 @@ CollapsedEntities:
       - RT
       - RT/Device Camera Texture.deviceCameraTexture
       - RT/Render Target.renderTarget
+      - SCI-FI SFX Pack.lspkg
+      - SCI-FI SFX Pack.lspkg/SCIFI__PLACE_IN_SCENE.prefab
+      - SCI-FI SFX Pack.lspkg/package.native
       - Scene.scene
       - Scirpts/Buttons/ButtonSizeSetup.ts
       - Scirpts/Buttons/ListOfStarsButton.ts
@@ -72,6 +80,7 @@ CollapsedEntities:
       - Scirpts/Cards/FrameController.ts
       - Scirpts/Cards/StarCardContentUpdate.ts
       - Scirpts/Config.ts
+      - Scirpts/ConsBtn.ts
       - Scirpts/Controller.ts
       - Scirpts/ControllerBtn.ts
       - Scirpts/Creators.ts
@@ -81,12 +90,23 @@ CollapsedEntities:
       - Scirpts/Data/StarsData.ts
       - Scirpts/Manager.ts
       - Scirpts/ModeSwitcher.ts
-      - Scirpts/Simple Line.js
+      - Scirpts/SunBtn.ts
+      - Scirpts/TTS.ts
+      - Scirpts/Untitled TypeScript.ts
+      - Scirpts/Utils
+      - Scirpts/Utils.ts
       - Scirpts/Utils/MyTweenFuncs.ts
       - Scirpts/VisibilitiModes.ts
+      - Scirpts/Voice Control.ts
       - Scirpts/WireTool.js
       - Scirpts/WorldCreator.ts
       - Scirpts/scripts_holder.ts
+      - Simple Emitter.vfxgraph
+      - Soap Bubble Material.lspkg
+      - Soap Bubble Material.lspkg/Soap Bubble.mat
+      - Soap Bubble Material.lspkg/Soap Bubble.ss_graph
+      - Soap Bubble Material.lspkg/iridescence_combined.png
+      - Soap Bubble Material.lspkg/package.native
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerStartAudioTrack.wav
@@ -825,6 +845,9 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/package.native
       - SpectaclesUIKit.lspkg/package_dependencies.json
       - Textures/Base.png
+      - Textures/Echopark.hdr
+      - Textures/Echopark.hdr/Diffuse
+      - Textures/Echopark.hdr/Specular
       - Textures/MaterialParams.png
       - Textures/Normal.png
       - Textures/Particles Texture 4.png
@@ -860,4 +883,5 @@ CollapsedEntities:
       - TweenManager.lspkg/Tween/TweenTypes/TweenValue.lsc
       - TweenManager.lspkg/TweenManager__PLACE_IN_SCENE.prefab
       - TweenManager.lspkg/package.native
+      - Untitled TypeScript.ts
   options: 4

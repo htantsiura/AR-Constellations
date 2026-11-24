@@ -2,11 +2,16 @@ data:
   externalSources:
     - 055445e4-bf31-499a-972f-22621c5e7dfe: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - 0848ba60-80ec-4984-94b5-110e0ceb6729: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
+    - 173a06f6-3417-4631-a423-532be3680080: /Users/hennadii/Work/AR Constellaions/AR Constellations Project/Assets/Scirpts/ConsBtn.ts
     - 1cb773fc-eccd-4285-b5b7-5a8d214894e1: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - 1fb148a0-570a-491c-98d6-3aa3ba131bbc: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - 292f2cba-c0a6-40b8-9609-5e0fff3441fe: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - 309e4e77-7ca5-4409-ac79-821e35a81f71: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/EmptyMaterial/Resources/empty.ss_graph
+    - 346c4eb0-5f64-4949-a0d4-d836276bc857: /Users/hennadii/Work/AR Constellaions/AR Constellations Project/Assets/Scirpts/ConsController.ts
     - 394645d2-6fb2-4322-ab4b-1d345f89c78d: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/Resources/Normal.png
+    - 3d49b847-3b4e-47d5-a77b-e2679edcdac6: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/PBRMaterial/Resources/pbr.ss_graph
+    - 405f6e5f-b6e0-4f17-9945-8b77e6c3bfa9: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
+    - 447b438d-d47b-46e0-8468-82dbffab48c5: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - 52b3eba9-367e-4a19-a0e3-44c9b441dbec: /Applications/LS Specs.app/Contents/Plugins/Es_VFXGraph_Presets.bundle/Assets/Simple Emitter.vfxgraph
     - 5c8271c4-a66f-4327-ac54-a5b3b2e3ef99: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/EmptyMaterial/Resources/empty.ss_graph
     - 615cc9cf-659c-4fe1-83ff-ee0ce6f93d8a: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
@@ -31,6 +36,7 @@ data:
     - d30faebd-e708-412e-9c77-82c17d5543a6: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - d8804bd3-5a82-4966-bb81-4ba67d99f6c2: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - d9fab668-e43f-46d7-ba61-c5d4ddf61e59: /Users/hennadii/Downloads/icon_targeted.png
+    - da73fd0d-cef5-4107-bfad-741fa598ecb8: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - db240916-85f5-46d7-963d-2cb6c627aa63: /Users/hennadii/Work/AR Constellaions/AR Constellations Project/Assets/Scirpts/ConsController.ts
     - de711ff1-44cb-45bc-9436-d339239d5a92: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts
     - e0e89038-4050-453a-86d7-999bdead48f0: /Applications/LS Specs.app/Contents/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts

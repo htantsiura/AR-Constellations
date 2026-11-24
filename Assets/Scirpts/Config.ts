@@ -1,6 +1,6 @@
 import { ConstellationData } from "./Data/ConstellationData";
 import { StarsData } from "./Data/StarsData";
-import { mappingConstellationDistances } from "./Utils/Utils";
+import { mappingConstellationDistances } from "./Utils";
 
 export const SCALE: number = 1;
 export const IS_LOGARITH: boolean = true;

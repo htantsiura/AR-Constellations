@@ -5,7 +5,7 @@ import { changeMatSlider, consIdleToActiveVisibility, consActiveToIdleVisibility
     starActiveToSelectedVisibility, starSelectedToActiveVisibility } from "./VisibilitiModes";
 import { LSTween } from "LSTween.lspkg/LSTween";
 import { consMap, starsMap, CTRL_START_SCALE, CTRL_IDLE_SCALE, BTN_SCALE, ZERO_QUAT, TW_TIME, LINE_MODE } from "./Config";
-import { getChildByName } from "./Utils/Utils";
+import { getChildByName } from "./Utils";
 import { tweenObjectMove, tweenObjectScale, tweenObjectRotateTo } from "./Utils/MyTweenFuncs";
 import { ConstellationData } from "./Data/ConstellationData";
 import { GridLayout } from "SpectaclesUIKit.lspkg/Scripts/Components/GridLayout/GridLayout";

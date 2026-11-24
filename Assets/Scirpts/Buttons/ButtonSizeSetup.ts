@@ -1,5 +1,5 @@
 import { RectangleButton } from "SpectaclesUIKit.lspkg/Scripts/Components/Button/RectangleButton";
-import { remap } from "Scirpts/Utils/Utils";
+import { remap } from "Scirpts/Utils";
 
 @component
 export class ButtonSizeSetup extends BaseScriptComponent {
