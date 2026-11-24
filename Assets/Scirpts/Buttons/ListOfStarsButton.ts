@@ -1,5 +1,5 @@
 import { Manager } from "Scirpts/Manager";
-import { getChildByName } from "Scirpts/Utils";
+import { getChildByName } from "Scirpts/Utils/Utils";
 
 @component
 export class ListOfStarsButton extends BaseScriptComponent {

@@ -90,8 +90,8 @@ CollapsedEntities:
       - Scirpts/TTS.ts
       - Scirpts/Untitled TypeScript.ts
       - Scirpts/Utils
-      - Scirpts/Utils.ts
       - Scirpts/Utils/MyTweenFuncs.ts
+      - Scirpts/Utils/Utils.ts
       - Scirpts/VisibilitiModes.ts
       - Scirpts/Voice Control.ts
       - Scirpts/WireTool.js

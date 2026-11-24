@@ -1,5 +1,5 @@
 import { ConstellationData } from "../Data/ConstellationData";
-import { formatDec, formatRA } from "../Utils";
+import { formatDec, formatRA } from "../Utils/Utils";
 
 @component
 export class CardContentUpdate extends BaseScriptComponent {

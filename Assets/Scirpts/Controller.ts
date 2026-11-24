@@ -29,11 +29,9 @@ export class Controller extends BaseScriptComponent {
 
         this.delayEvent = this.createEvent("DelayedCallbackEvent")
         this.delayEvent.bind(() => {
-            print("DELAY")
             this.appManager.ctrlConsPos = this.appManager.currentObj!.getChild(0).getChild(4).getTransform().getWorldPosition()
             this.appManager.ctrlHandPos = this.objectTrf.getWorldPosition()
             this.appManager.hideController()
-
         }) 
         //delayEvent.reset(1);
     }
