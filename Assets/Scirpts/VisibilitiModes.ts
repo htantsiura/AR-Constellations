@@ -71,31 +71,31 @@ export function starIdleToActiveVisibility(object: SceneObject, matStar: Materia
     object.getChild(1).enabled = true;
     object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
     animateMatParameter(matStar.mainPass, "slider", STAR_MODE.idle, STAR_MODE.active, TW_TIME)
-    const sizeA = new vec3(1, 1, 1)
+    /* const sizeA = new vec3(1, 1, 1)
     const sizeB = new vec3(1.5, 1.5, 1.5)
-    tweenObjectScale(object.getChild(0).getTransform(), sizeA, sizeB, TW_TIME)
+    tweenObjectScale(object.getChild(0).getTransform(), sizeA, sizeB, TW_TIME) */
 }
 
 export function starActiveToIdleVisibility(object: SceneObject, matStar: Material) {
 
     object.getChild(1).enabled = false;
     object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
-    object.getChild(0).getTransform().setLocalScale(new vec3(1, 1, 1));
-}
+/*     object.getChild(0).getTransform().setLocalScale(new vec3(1, 1, 1));
+ */}
 
 export function starActiveToSelectedVisibility(object: SceneObject, matStar: Material) {
 
     object.getChild(1).enabled = true;
     object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
     animateMatParameter(matStar.mainPass, "slider", STAR_MODE.idle, STAR_MODE.active, TW_TIME)
-    const sizeA = new vec3(1, 1, 1)
+    /* const sizeA = new vec3(1, 1, 1)
     const sizeB = new vec3(1.5, 1.5, 1.5)
-    tweenObjectScale(object.getChild(0).getTransform(), sizeA, sizeB, TW_TIME)
+    tweenObjectScale(object.getChild(0).getTransform(), sizeA, sizeB, TW_TIME) */
 }
 
 export function starSelectedToActiveVisibility(object: SceneObject, matStar: Material) {
 
     object.getChild(1).enabled = false;
     object.getChild(0).getComponent("Component.RenderMeshVisual").mainMaterial = matStar;
-    object.getChild(0).getTransform().setLocalScale(new vec3(1, 1, 1));
-}
+/*     object.getChild(0).getTransform().setLocalScale(new vec3(1, 1, 1));
+ */}
