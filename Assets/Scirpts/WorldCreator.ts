@@ -4,7 +4,7 @@ import { SCALE, IS_LOGARITH, C_SCALE, S_SCALE } from "./Config";
 import { linearDisMap, logarithDisMap, hipPositionMap, ZERO_ROT } from "./Config";
 import { createConstellation, createStar, createLine } from "./Creators";
 import { LinesData } from "./Data/LinesData_SnT";
-import { mappingConstellationDistances } from "./Utils";
+import { mappingConstellationDistances } from "./Utils/Utils";
 
 @component
 export class WorldCreator extends BaseScriptComponent {

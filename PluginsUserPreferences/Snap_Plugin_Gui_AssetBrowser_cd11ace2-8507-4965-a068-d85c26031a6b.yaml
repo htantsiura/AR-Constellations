@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 871
+    size: 861
     values:
       - Asr Module.asrModule
       - LSTween.lspkg
@@ -48,7 +48,6 @@ CollapsedEntities:
       - Materials/star_active.mat
       - Materials/star_default.mat
       - Materials/star_selected.mat
-      - Materials/sun 2.mat
       - Materials/sun.mat
       - Meshes
       - Meshes/Pyramid.mesh
@@ -73,7 +72,6 @@ CollapsedEntities:
       - Scirpts/Cards/FrameController.ts
       - Scirpts/Cards/StarCardContentUpdate.ts
       - Scirpts/Config.ts
-      - Scirpts/ConsBtn.ts
       - Scirpts/Controller.ts
       - Scirpts/ControllerBtn.ts
       - Scirpts/Creators.ts
@@ -84,14 +82,8 @@ CollapsedEntities:
       - Scirpts/Manager.ts
       - Scirpts/ModeSwitcher.ts
       - Scirpts/Simple Line.js
-      - Scirpts/SunBtn.ts
-      - Scirpts/TTS.ts
-      - Scirpts/Untitled TypeScript.ts
-      - Scirpts/Utils
-      - Scirpts/Utils.ts
       - Scirpts/Utils/MyTweenFuncs.ts
       - Scirpts/VisibilitiModes.ts
-      - Scirpts/Voice Control.ts
       - Scirpts/WireTool.js
       - Scirpts/WorldCreator.ts
       - Scirpts/scripts_holder.ts
@@ -838,8 +830,6 @@ CollapsedEntities:
       - Textures/Echopark.hdr/Specular
       - Textures/MaterialParams.png
       - Textures/Normal.png
-      - Textures/Particles Texture 2.png
-      - Textures/Particles Texture 3.png
       - Textures/Particles Texture 4.png
       - Textures/icon_selected.png
       - Textures/icon_targeted.png
