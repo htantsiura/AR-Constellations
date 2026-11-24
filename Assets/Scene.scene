@@ -10,7 +10,6 @@
     - !<own> 9e331e33-73cc-4309-aef3-014f23e3ea59
     - !<own> 1dd551a8-5500-42be-a97e-1924bc1df10e
     - !<own> 5aa0f98b-e799-448c-a2dc-cae5d04fa2a4
-    - !<own> 3684927d-cccd-4b5d-9485-6ebdf6761a80
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -3381,21 +3380,6 @@
     - !<own> cec3821f-e84a-4432-a830-d0bf1b45ee88
   Components:
     []
-- !<SceneObject/3684927d-cccd-4b5d-9485-6ebdf6761a80>
-  PrefabRemaps:
-    []
-  Name: virtualvisualviews-spectral-candy-b-505330
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> be2112c4-6a4d-4d34-9d57-befa9136f71f
 - !<SceneObject/37610a1f-0eca-4abb-bd7b-a5432ffe7774>
   PrefabRemaps:
     - 37610a1f-0eca-4abb-bd7b-a5432ffe7774: e75d6748-403b-46ad-696c-82f7bef3b22b
@@ -13313,23 +13297,6 @@
   ScriptTypes:
     "":
       {}
-- !<AudioComponent/be2112c4-6a4d-4d34-9d57-befa9136f71f>
-  PrefabRemaps:
-    []
-  Name: Audio
-  Enabled: true
-  AudioTrack: !<reference> 122e12cb-8efe-470d-9008-4f35a7db9ae0
-  EnableAutoplayLoop: true
-  Volume: 0.500000
-  EnableMixToSnap: false
-  RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
-  CurveType: Logarithm
-  MinDistance: 0.000000
-  MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
 - !<SceneObject/be2f846c-c414-438f-b0a8-363e1dd5dcbe>
   PrefabRemaps:
     []
