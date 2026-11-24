@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 861
+    size: 858
     values:
       - Asr Module.asrModule
       - LSTween.lspkg
@@ -825,9 +825,6 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/package.native
       - SpectaclesUIKit.lspkg/package_dependencies.json
       - Textures/Base.png
-      - Textures/Echopark.hdr
-      - Textures/Echopark.hdr/Diffuse
-      - Textures/Echopark.hdr/Specular
       - Textures/MaterialParams.png
       - Textures/Normal.png
       - Textures/Particles Texture 4.png
